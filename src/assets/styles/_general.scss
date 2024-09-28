@@ -1,0 +1,72 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Manrope";
+  font-size: 4rem;
+  line-height: 1.4;
+  font-weight: 500;
+  color: rgb(87, 69, 69);
+  background-color: #e7ffc3;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+a,
+input,
+button,
+select,
+textarea {
+  border: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 0;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  max-width: 144.4rem;
+  margin: 0 auto;
+  padding: 0rem 2.4rem;
+
+  @include breakpoint($sm-bp) {
+    padding: 0rem 1.6rem;
+  }
+
+  @include breakpoint($xs-bp) {
+    padding: 0rem 0.8rem;
+  }
+}
+
+.lazy:not(.loaded) {
+  filter: blur(0.4rem);
+}
+
+// <-- SWIPER
+.swiper {
+  width: 100%;
+}
+
+// -->
