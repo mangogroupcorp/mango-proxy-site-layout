@@ -7,6 +7,10 @@
     }
   }
 
+  @include breakpoint($xs-bp) {
+    display: none;
+  }
+
   &::before {
     content: "";
     position: absolute;

@@ -8,7 +8,10 @@ import DefaultBtn from "@components/UI/DefaultBtn/DefaultBtn.astro";
   <div class="container">
     <div class="header__container">
       <a href="#" class="header__logo">
-        <Sprite name="logo" />
+        <picture>
+          <source media="(max-width: 600px)" srcset="./img/logo-min.svg" />
+          <img src="./img/logo.svg" alt="" />
+        </picture>
       </a>
 
       <HeaderMenu />
@@ -26,6 +29,10 @@ import DefaultBtn from "@components/UI/DefaultBtn/DefaultBtn.astro";
           <Sprite name="global" />
            Ru
         </a>
+        <button type="button" class="header-btns__menu">
+          <Sprite name="burger" />
+          <Sprite name="close" />
+        </button>
       </div>
     </div>
   </div>
