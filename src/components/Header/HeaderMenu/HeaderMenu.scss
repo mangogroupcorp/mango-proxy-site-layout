@@ -1,4 +1,12 @@
 .header-menu {
+  pointer-events: none;
+
+  @include hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -7,6 +15,9 @@
     width: 100%;
     height: calc(100vh - 100%);
     background-color: $c-modal-bg;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s;
   }
 
   &__container {
@@ -17,6 +28,8 @@
 }
 
 .header-menu-item {
+  pointer-events: fill;
+
   @include hover {
     .header-menu-item {
       &__btn {
@@ -78,7 +91,7 @@
   &__content {
     width: 100%;
     padding: 3.2rem;
-    background-color: $white;
+    background-color: $grey-2;
     border: 0.1rem solid $grey-5;
     border-radius: 2.4rem;
   }
@@ -107,6 +120,11 @@
     align-items: center;
     justify-content: space-between;
     border-radius: 0.8rem;
+
+    &_color {
+      background-color: $c-500;
+      border-color: $c-500;
+    }
   }
 }
 
@@ -148,4 +166,51 @@
     flex-direction: column;
     gap: 0.8rem;
   }
+}
+
+.header-menu-price-methods {
+  width: 39.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  &__text {
+    padding: 1.6rem 2.6rem;
+    border: 0.1rem solid $grey-3;
+    border-radius: 1.6rem;
+    background-color: $white;
+  }
+}
+
+.header-menu-price {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2.4rem;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 52.9rem);
+    gap: 4rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+}
+
+.header-menu-case {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.6rem;
+  }
+}
+
+.header-menu-source {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.6rem;
 }

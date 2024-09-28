@@ -121,8 +121,86 @@ import { Sprite } from "astro-icon";
         <Sprite name="chevron-down" />
       </a>
       <div class="header-menu-item__container">
-        <div class="header-menu-item__content">
-          <h1>Цены</h1>
+        <div class="header-menu-item__content header-menu-price">
+          <div class="header-menu-price__container">
+            <div class="header-menu-box">
+              <span class="header-menu-box__title">Прокси</span>
+              <div class="header-menu-price__list">
+                <MenuLink
+                  icon="./img/icons/resedential.svg"
+                  title="Резидентские прокси"
+                  label="Популярный"
+                  price="$2.87/GB"
+                >
+                  Глобальный пул, точный таргетинг и отсутствие контрактов
+                </MenuLink>
+                <MenuLink
+                  icon="./img/icons/Mpbile.svg"
+                  title="Мобильные прокси"
+                  label="New"
+                  price="$2.87/GB"
+                >
+                  Глобальный пул, точный таргетинг и отсутствие контрактов
+                </MenuLink>
+                <MenuLink
+                  icon="./img/icons/IPS.svg"
+                  title="Статические (ISP) прокси"
+                  price="$2.87/GB"
+                >
+                  Глобальный пул, точный таргетинг и отсутствие контрактов
+                </MenuLink>
+                <MenuLink
+                  icon="./img/icons/Server proxies.svg"
+                  title="Серверные прокси"
+                  price="$2.87/GB"
+                >
+                  Глобальный пул, точный таргетинг и отсутствие контрактов
+                </MenuLink>
+                <MenuLink
+                  icon="./img/icons/Datacenter.svg"
+                  title="Datacenter прокси"
+                  price="$2.87/GB"
+                >
+                  Глобальный пул, точный таргетинг и отсутствие контрактов
+                </MenuLink>
+              </div>
+            </div>
+            <div class="header-menu-box">
+              <span class="header-menu-box__title">Прокси</span>
+              <div class="header-menu-price__list">
+                <MenuLink
+                  icon="./img/icons/SERP.svg"
+                  title="Скрапер. SERP"
+                  price="$2.87/GB"
+                >
+                  Глобальный пул, точный таргетинг и отсутствие контрактов
+                </MenuLink>
+                <MenuLink
+                  icon="./img/icons/E-commerce.svg"
+                  title="Скрапер. E-commerce"
+                  price="$2.87/GB"
+                >
+                  Глобальный пул, точный таргетинг и отсутствие контрактов
+                </MenuLink>
+                <MenuLink
+                  icon="./img/icons/SERP-web.svg"
+                  title="Скрапер. Web"
+                  price="$2.87/GB"
+                >
+                  Глобальный пул, точный таргетинг и отсутствие контрактов
+                </MenuLink>
+              </div>
+            </div>
+          </div>
+          <div class="header-menu-box header-menu-price-methods">
+            <span class="header-menu-box__title header-menu-box__title_color">
+              Способы оплаты
+            </span>
+            <p class="label-l header-menu-price-methods__text">
+              Оплатить наш сервис вы можете криптовалютой и любой картой мира
+              (кроме карт, выпущенных в РФ)
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -132,8 +210,24 @@ import { Sprite } from "astro-icon";
         <Sprite name="chevron-down" />
       </a>
       <div class="header-menu-item__container">
-        <div class="header-menu-item__content">
-          <h1>Кейсы</h1>
+        <div class="header-menu-item__content header-menu-case">
+          <div class="header-menu-box">
+            <span class="header-menu-box__title">Кейсы применения</span>
+            <div class="header-menu-case__list">
+              <MenuLink icon="./img/icons/SERP-web.svg" title="Web Scraping">
+                Глобальный пул, точный таргетинг и отсутствие контрактов
+              </MenuLink>
+              <MenuLink icon="./img/icons/E-commerce.svg" title="E-commerce">
+                Глобальный пул, точный таргетинг и отсутствие контрактов
+              </MenuLink>
+              <MenuLink icon="./img/icons/proxy.svg" title="Multi Accounting">
+                Глобальный пул, точный таргетинг и отсутствие контрактов
+              </MenuLink>
+              <MenuLink icon="./img/icons/SERP.svg" title="SEO & SERP">
+                Глобальный пул, точный таргетинг и отсутствие контрактов
+              </MenuLink>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -143,8 +237,25 @@ import { Sprite } from "astro-icon";
         <Sprite name="chevron-down" />
       </a>
       <div class="header-menu-item__container">
-        <div class="header-menu-item__content">
-          <h1>Ресурсы</h1>
+        <div class="header-menu-item__content header-menu-source">
+          <MenuLink icon="./img/icons/IP.svg" title="Локации">
+            Можно использовать со всем популярным софтом
+          </MenuLink>
+          <MenuLink
+            icon="./img/icons/Simple authentication.svg"
+            title="Интеграция"
+          >
+            Можно использовать со всем популярным софтом
+          </MenuLink>
+          <MenuLink
+            icon="./img/icons/developer-mode.svg"
+            title="Для разработчиков"
+          >
+            Можно использовать со всем популярным софтом
+          </MenuLink>
+          <MenuLink icon="./img/icons/Read.svg" title="Блог">
+            Можно использовать со всем популярным софтом
+          </MenuLink>
         </div>
       </div>
     </div>

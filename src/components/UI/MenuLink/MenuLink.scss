@@ -20,9 +20,24 @@
     object-position: center;
   }
 
+  &__container {
+    display: flex;
+    align-items: stretch;
+    gap: 1.6rem;
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
+  }
+
+  &__price {
+    height: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-left: 1.2rem;
+    border-left: 0.1rem solid $grey-6;
   }
 }

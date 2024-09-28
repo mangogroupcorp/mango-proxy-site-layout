@@ -3,9 +3,10 @@ interface Props {
   icon: string;
   title: string;
   label?: string;
+  price?: string;
 }
 
-const { icon, title, label, ...rest } = Astro.props;
+const { icon, title, label, price, ...rest } = Astro.props;
 ---
 
 <a href="#" class="menu-link" {...rest}>
@@ -20,5 +21,6 @@ const { icon, title, label, ...rest } = Astro.props;
         <slot />
       </span>
     </div>
+    {price && <span class="label-l bold menu-link__price">{price}</span>}
   </div>
 </a>
