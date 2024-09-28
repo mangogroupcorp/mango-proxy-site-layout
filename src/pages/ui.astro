@@ -1,6 +1,7 @@
 ---
-import DefaultBtn from "@components/DefaultBtn/DefaultBtn.astro";
+import DefaultBtn from "@components/UI/DefaultBtn/DefaultBtn.astro";
 import Layout from "../layouts/Layout.astro";
+import IconBtn from "@components/UI/IconBtn/IconBtn.astro";
 ---
 
 <Layout title="Разводящая">
@@ -49,6 +50,13 @@ import Layout from "../layouts/Layout.astro";
       <DefaultBtn icon variant="stroke" size="small">Button</DefaultBtn>
       <DefaultBtn icon color="primary" size="small">Button</DefaultBtn>
       <DefaultBtn icon color="secondary" size="small">Button</DefaultBtn>
+    </div>
+
+    <div class="box">
+      <IconBtn />
+      <IconBtn disabled />
+      <IconBtn color="secondary" />
+      <IconBtn disabled color="secondary" />
     </div>
   </div>
 
