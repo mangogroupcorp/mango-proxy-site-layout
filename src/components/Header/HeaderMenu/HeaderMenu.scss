@@ -17,7 +17,7 @@
     background-color: $c-modal-bg;
     opacity: 0;
     pointer-events: none;
-    transition: .3s;
+    transition: .5s;
   }
 
   &__container {
@@ -50,8 +50,12 @@
       }
 
       &__container {
-        opacity: 1;
         pointer-events: all;
+      }
+
+      &__content {
+        opacity: 1;
+        translate: 0;
       }
     }
   }
@@ -83,7 +87,6 @@
     max-width: 179.2rem;
     // padding-top: 2.6rem;
     padding-top: 0.8rem;
-    opacity: 0;
     pointer-events: none;
     transition: .3s;
   }
@@ -94,6 +97,11 @@
     background-color: $grey-2;
     border: 0.1rem solid $grey-5;
     border-radius: 2.4rem;
+    max-height: calc(100vh - 4rem);
+    overflow: auto;
+    opacity: 0;
+    translate: 0 4rem;
+    transition: .5s;
   }
 }
 
