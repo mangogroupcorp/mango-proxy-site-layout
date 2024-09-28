@@ -11,11 +11,11 @@
     }
   }
 
-  @media (hover: none) {
-    &:active {
-      @content;
-    }
-  }
+  // @media (hover: none) {
+  //   &:active {
+  //     @content;
+  //   }
+  // }
 }
 
 @mixin img() {

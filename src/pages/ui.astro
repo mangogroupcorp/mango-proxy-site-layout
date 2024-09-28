@@ -1,0 +1,73 @@
+---
+import DefaultBtn from "@components/DefaultBtn/DefaultBtn.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Разводящая">
+  <div class="page-container">
+    <div class="box">
+      <DefaultBtn>Button</DefaultBtn>
+      <DefaultBtn icon>Button</DefaultBtn>
+      <DefaultBtn disabled icon>Button</DefaultBtn>
+    </div>
+
+    <div class="box">
+      <DefaultBtn variant="stroke">Button</DefaultBtn>
+      <DefaultBtn icon variant="stroke">Button</DefaultBtn>
+      <DefaultBtn disabled icon variant="stroke">Button</DefaultBtn>
+    </div>
+
+    <div class="box">
+      <DefaultBtn color="primary">Button</DefaultBtn>
+      <DefaultBtn icon color="primary">Button</DefaultBtn>
+      <DefaultBtn disabled icon color="primary">Button</DefaultBtn>
+    </div>
+
+    <div class="box">
+      <DefaultBtn color="secondary">Button</DefaultBtn>
+      <DefaultBtn icon color="secondary">Button</DefaultBtn>
+      <DefaultBtn disabled icon color="secondary">Button</DefaultBtn>
+    </div>
+    <!--  -->
+    <div class="box">
+      <DefaultBtn size="medium">Button</DefaultBtn>
+      <DefaultBtn variant="stroke" size="medium">Button</DefaultBtn>
+      <DefaultBtn color="primary" size="medium">Button</DefaultBtn>
+      <DefaultBtn color="secondary" size="medium">Button</DefaultBtn>
+
+      <DefaultBtn icon size="medium">Button</DefaultBtn>
+      <DefaultBtn icon variant="stroke" size="medium">Button</DefaultBtn>
+      <DefaultBtn icon color="primary" size="medium">Button</DefaultBtn>
+      <DefaultBtn icon color="secondary" size="medium">Button</DefaultBtn>
+    </div>
+    <div class="box">
+      <DefaultBtn size="small">Button</DefaultBtn>
+      <DefaultBtn variant="stroke" size="small">Button</DefaultBtn>
+      <DefaultBtn color="primary" size="small">Button</DefaultBtn>
+      <DefaultBtn color="secondary" size="small">Button</DefaultBtn>
+      <DefaultBtn icon size="small">Button</DefaultBtn>
+      <DefaultBtn icon variant="stroke" size="small">Button</DefaultBtn>
+      <DefaultBtn icon color="primary" size="small">Button</DefaultBtn>
+      <DefaultBtn icon color="secondary" size="small">Button</DefaultBtn>
+    </div>
+  </div>
+
+  <style is:inline>
+    body {
+      background-color: #686565;
+    }
+    .page-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 3.2rem;
+      padding: 5rem 2rem;
+    }
+    .box {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.2rem;
+    }
+  </style>
+</Layout>

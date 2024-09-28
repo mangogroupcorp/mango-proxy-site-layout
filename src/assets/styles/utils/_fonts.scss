@@ -1,37 +1,57 @@
 // 
 @font-face {
-  font-family: "Manrope";
-  src: url("../fonts/Manrope-Regular.ttf") format("truetype");
+  font-family: "Sora";
+  src: url("../fonts/Sora-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Manrope";
-  src: url("../fonts/Manrope-Medium.ttf") format("truetype");
+  font-family: "Sora";
+  src: url("../fonts/Sora-Medium.ttf") format("truetype");
   font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url("../fonts/Sora-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url("../fonts/Sora-Bold.ttf") format("truetype");
+  font-weight: 700;
   font-style: normal;
 }
 
 // 
 @font-face {
-  font-family: "Nekst";
-  src: url("../fonts/Nekst-Regular.otf") format("truetype");
+  font-family: "DMSans";
+  src: url("../fonts/DMSans-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Nekst";
-  src: url("../fonts/Nekst-Medium.otf") format("truetype");
+  font-family: "DMSans";
+  src: url("../fonts/DMSans-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
-// 
 @font-face {
-  font-family: "PTMono";
-  src: url("../fonts/PTMono-Regular.ttf") format("truetype");
-  font-weight: 400;
+  font-family: "DMSans";
+  src: url("../fonts/DMSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DMSans";
+  src: url("../fonts/DMSans-Bold.ttf") format("truetype");
+  font-weight: 700;
   font-style: normal;
 }

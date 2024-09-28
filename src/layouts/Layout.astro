@@ -1,6 +1,7 @@
 ---
 import { Sprite } from "astro-icon";
 import "../assets/styles/style.scss";
+import Header from "@components/Header/Header.astro";
 
 interface Props {
   title?: string;
@@ -19,13 +20,10 @@ const { title = "заголовок страницы" } = Astro.props;
     <meta name="generator" content={Astro.generator} />
 
     <title>{title}</title>
-
-    <script
-      src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=de8b84da-ef52-4fe3-a58b-64374e973f5a"
-      type="text/javascript"></script>
   </head>
   <body>
     <Sprite.Provider>
+      <Header />
       <main class="page">
         <slot />
       </main>

@@ -1,5 +1,6 @@
 ---
 // @ts-nocheck
+import { Sprite } from "astro-icon";
 import type { IUIButtonAttributes, IUIVariableComponent } from "src/interface";
 
 interface Props
@@ -7,12 +8,14 @@ interface Props
     IUIVariableComponent,
     astroHTML.JSX.ButtonHTMLAttributes {
   variant?: "stroke";
-  size?: "sm";
-  color?: "red" | "white";
+  size?: "medium" | "small";
+  color?: "primary" | "secondary";
+  icon?: boolean;
 }
 
 const {
   component: Wrapper = "button",
+  icon,
   variant,
   size,
   color,
@@ -21,9 +24,10 @@ const {
 ---
 
 <Wrapper
-  class="text-btn default-btn"
+  class="default-btn label-l"
   class:list={[
     {
+      "default-btn_icon": icon,
       ["default-btn_" + color]: color,
       ["default-btn_" + variant]: variant,
       ["default-btn_" + size]: size,
@@ -31,5 +35,18 @@ const {
   ]}
   {...props}
 >
-  <slot />
+  {
+    icon ? (
+      <>
+        <span class="default-btn__text">
+          <slot />
+        </span>
+        <span class="default-btn__icon">
+          <Sprite name="arrow-right" />
+        </span>
+      </>
+    ) : (
+      <slot />
+    )
+  }
 </Wrapper>

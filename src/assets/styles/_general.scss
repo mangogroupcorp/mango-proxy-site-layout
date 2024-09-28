@@ -3,12 +3,15 @@ html {
 }
 
 body {
-  font-family: "Manrope";
-  font-size: 4rem;
+  font-family: $f-sans;
+  font-size: 2rem;
   line-height: 1.4;
-  font-weight: 500;
-  color: rgb(87, 69, 69);
-  background-color: #e7ffc3;
+  font-weight: 400;
+  color: $grey-13;
+  background-color: $grey-2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 input::-webkit-outer-spin-button,
@@ -38,12 +41,12 @@ textarea {
   border-radius: 0;
 }
 
-.page {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
+// .page {
+//   min-height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+//   position: relative;
+// }
 
 .container {
   width: 100%;
@@ -70,3 +73,86 @@ textarea {
 }
 
 // -->
+
+// TEXT
+h1,
+.title-1 {
+  font-family: $f-sora;
+  font-size: 6.4rem;
+  line-height: 1.06;
+  font-weight: 600;
+}
+
+h2,
+.title-2 {
+  font-family: $f-sora;
+  font-size: 4.8rem;
+  line-height: 1.08;
+  font-weight: 600;
+}
+
+h3,
+.title-3 {
+  font-family: $f-sora;
+  font-size: 3.2rem;
+  line-height: 1.125;
+}
+
+h4,
+.title-4 {
+  font-family: $f-sora;
+  font-size: 2.4rem;
+  line-height: 1.08;
+}
+
+h5,
+.title-5 {
+  font-family: $f-sora;
+  font-size: 2.2rem;
+  line-height: 1.4;
+}
+
+h6,
+.title-6 {
+  font-family: $f-sora;
+  font-size: 2rem;
+  line-height: 1.4;
+}
+
+.label-l {
+  font-size: 1.8rem;
+  line-height: 1.33;
+}
+
+.label-m {
+  font-size: 1.6rem;
+  line-height: 1.25;
+}
+
+.label-s {
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+// FONT WEIGHT
+.reguldar {
+  font-weight: 400;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+// DECORATION
+.underline {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
