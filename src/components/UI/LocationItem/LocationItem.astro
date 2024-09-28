@@ -1,0 +1,24 @@
+---
+// @ts-nocheck
+import { Sprite } from "astro-icon";
+import type { IUIButtonAttributes, IUIVariableComponent } from "src/interface";
+
+interface Props
+  extends IUIButtonAttributes,
+    IUIVariableComponent,
+    astroHTML.JSX.ButtonHTMLAttributes {
+  img: string;
+  title: string;
+  text: string;
+}
+
+const { component: Wrapper = "a", img, title, text, ...props } = Astro.props;
+---
+
+<Wrapper class="location-item" class:list={[]} {...props}>
+  <img src={img} alt="" class="location-item__img" />
+  <span class="location-item__inner">
+    <span class="label-l location-item__title" set:html={title} />
+    <span class="label-m c-grey-8 location-item__text" set:html={text} />
+  </span>
+</Wrapper>

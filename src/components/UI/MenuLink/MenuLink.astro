@@ -1,0 +1,24 @@
+---
+interface Props {
+  icon: string;
+  title: string;
+  label?: string;
+}
+
+const { icon, title, label, ...rest } = Astro.props;
+---
+
+<a href="#" class="menu-link" {...rest}>
+  <img src={icon} alt="" class="menu-link__icon" />
+  <div class="menu-link__container">
+    <div class="menu-link__inner">
+      <span class="label-l bold menu-link__title">
+        {title}
+        {label && <span class="label-m regular label">{label}</span>}
+      </span>
+      <span class="label-l c-greu-7 menu-link__text">
+        <slot />
+      </span>
+    </div>
+  </div>
+</a>

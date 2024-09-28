@@ -1,0 +1,155 @@
+---
+import DefaultBtn from "@components/UI/DefaultBtn/DefaultBtn.astro";
+import LocationItem from "@components/UI/LocationItem/LocationItem.astro";
+import MenuLink from "@components/UI/MenuLink/MenuLink.astro";
+import { Sprite } from "astro-icon";
+---
+
+<nav class="header-menu">
+  <div class="header-menu__container">
+    <div class="header-menu-item">
+      <a href="#" class="label-m header-menu-item__btn">
+        Продукты
+        <Sprite name="chevron-down" />
+      </a>
+      <div class="header-menu-item__container">
+        <div class="header-menu-item__content header-menu-prod">
+          <div class="header-menu-prod__container">
+            <div
+              class="header-menu-box header-menu-prod__box header-menu-prod__box_big"
+            >
+              <span class="label-l header-menu-box__title">Прокси</span>
+              <div class="header-menu-prod__list">
+                <MenuLink
+                  icon="./img/icons/resedential.svg"
+                  title="Резидентские прокси"
+                  label="Популярный"
+                >
+                  Глобальный пул, точный таргетинг и отсутствие контрактов
+                </MenuLink>
+                <MenuLink
+                  icon="./img/icons/Server proxies.svg"
+                  title="Серверные прокси"
+                >
+                  Глобальный пул, точный таргетинг и отсутствие контрактов
+                </MenuLink>
+                <MenuLink
+                  icon="./img/icons/Mpbile.svg"
+                  title="Мобильные прокси"
+                  label="New"
+                >
+                  Глобальный пул, точный таргетинг и отсутствие контрактов
+                </MenuLink>
+                <MenuLink
+                  icon="./img/icons/Datacenter.svg"
+                  title="Datacenter прокси"
+                >
+                  Глобальный пул, точный таргетинг и отсутствие контрактов
+                </MenuLink>
+                <MenuLink
+                  icon="./img/icons/IPS.svg"
+                  title="Статические (ISP) прокси"
+                >
+                  Глобальный пул, точный таргетинг и отсутствие контрактов
+                </MenuLink>
+              </div>
+            </div>
+            <div class="header-menu-box header-menu-prod__box">
+              <span class="label-l header-menu-box__title">Скраперы</span>
+              <div class="header-menu-prod__list">
+                <MenuLink icon="./img/icons/SERP.svg" title="Скрапер. SERP">
+                  Глобальный пул, точный таргетинг и отсутствие контрактов
+                </MenuLink>
+                <MenuLink
+                  icon="./img/icons/E-commerce.svg"
+                  title="Скрапер. E-commerce"
+                >
+                  Глобальный пул, точный таргетинг и отсутствие контрактов
+                </MenuLink>
+                <MenuLink icon="./img/icons/SERP-web.svg" title="Скрапер. Web">
+                  Глобальный пул, точный таргетинг и отсутствие контрактов
+                </MenuLink>
+              </div>
+            </div>
+          </div>
+          <div class="header-menu-box header-menu-location">
+            <DefaultBtn component="a" href="#" class="header-menu-box__link">
+              Локации
+              <Sprite name="arrow-link" />
+            </DefaultBtn>
+
+            <div class="header-menu-location__list">
+              <LocationItem
+                href="#"
+                img="./img/DE.svg"
+                title="Германия"
+                text="439,886 IPs"
+              />
+              <LocationItem img="./img/US.svg" title="США" text="439,886 IPs" />
+              <LocationItem
+                href="#"
+                img="./img/BR.svg"
+                title="Бразилия"
+                text="12,629,978 IPs"
+              />
+              <LocationItem
+                href="#"
+                img="./img/FR.svg"
+                title="Франция"
+                text="12,629,978 IPs"
+              />
+              <LocationItem
+                href="#"
+                img="./img/JP.svg"
+                title="Япония"
+                text="12,629,978 IPs"
+              />
+              <LocationItem
+                href="#"
+                img="./img/PL.svg"
+                title="Польша"
+                text="12,629,978 IPs"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-menu-item">
+      <a href="#" class="label-m header-menu-item__btn">
+        Цены
+        <Sprite name="chevron-down" />
+      </a>
+      <div class="header-menu-item__container">
+        <div class="header-menu-item__content">
+          <h1>Цены</h1>
+        </div>
+      </div>
+    </div>
+    <div class="header-menu-item">
+      <a href="#" class="label-m header-menu-item__btn">
+        Кейсы
+        <Sprite name="chevron-down" />
+      </a>
+      <div class="header-menu-item__container">
+        <div class="header-menu-item__content">
+          <h1>Кейсы</h1>
+        </div>
+      </div>
+    </div>
+    <div class="header-menu-item">
+      <a href="#" class="label-m header-menu-item__btn">
+        Ресурсы
+        <Sprite name="chevron-down" />
+      </a>
+      <div class="header-menu-item__container">
+        <div class="header-menu-item__content">
+          <h1>Ресурсы</h1>
+        </div>
+      </div>
+    </div>
+    <div class="header-menu-item">
+      <a href="#" class="label-m header-menu-item__btn">Быстрый тест</a>
+    </div>
+  </div>
+</nav>

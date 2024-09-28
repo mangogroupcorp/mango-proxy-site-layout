@@ -1,0 +1,32 @@
+.location-item {
+  padding: 1.6rem 2.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  border: 0.1rem solid $grey-3;
+  border-radius: 1.6rem;
+  background-color: $white;
+  transition: .3s;
+
+  @include hover {
+    box-shadow: 0 0.4rem 1.6rem rgba(20, 20, 20, 0.1),
+      0 0.2rem 0.8rem rgba(20, 20, 20, 0.08);
+  }
+
+  &__img {
+    flex: none;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+}

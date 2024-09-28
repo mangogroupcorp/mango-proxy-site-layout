@@ -1,0 +1,28 @@
+.menu-link {
+  padding: 1.6rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0.8rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  transition: .3s;
+
+  @include hover {
+    background-color: $grey-3;
+    border-color: $grey-5;
+  }
+
+  &__icon {
+    flex: none;
+    width: 4rem;
+    height: 4rem;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+}

@@ -1,6 +1,7 @@
 ---
 import { Sprite } from "astro-icon";
 import HeaderMenu from "./HeaderMenu/HeaderMenu.astro";
+import DefaultBtn from "@components/UI/DefaultBtn/DefaultBtn.astro";
 ---
 
 <header class="header">
@@ -12,7 +13,20 @@ import HeaderMenu from "./HeaderMenu/HeaderMenu.astro";
 
       <HeaderMenu />
 
-      <div class="header__btns"></div>
+      <div class="header-btns">
+        <div class="header-btns__inner">
+          <button type="button" class="label-l hover:600 header-btns__login">
+            Вход</button
+          >
+          <DefaultBtn size="small" class="header-btns__signup">
+            Регистрация
+          </DefaultBtn>
+        </div>
+        <a href="#" class="bold header-btns__lang">
+          <Sprite name="global" />
+           Ru
+        </a>
+      </div>
     </div>
   </div>
 </header>
