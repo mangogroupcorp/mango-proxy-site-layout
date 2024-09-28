@@ -4,8 +4,8 @@ $sm-bp: 768px;
 $xs-bp: 600px;
 
 // fonts
-$f-sans: "DMSans";
-$f-sora: "Sora";
+$f-sans: "DM Sans", system-ui;
+$f-sora: "Sora", system-ui;
 
 // colors
 $white: #FFFFFF;
@@ -16,6 +16,7 @@ $grey-7: #8C8C8C;
 $grey-8: #595959;
 $grey-9: #434343;
 $grey-10: #262626;
+$grey-11: #1F1F1F;
 $grey-13: #0D0D0D;
 
 $c-500: #FDB602;

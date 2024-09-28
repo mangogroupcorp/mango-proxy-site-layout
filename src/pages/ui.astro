@@ -2,6 +2,7 @@
 import DefaultBtn from "@components/UI/DefaultBtn/DefaultBtn.astro";
 import Layout from "../layouts/Layout.astro";
 import IconBtn from "@components/UI/IconBtn/IconBtn.astro";
+import AdditionalBtn from "@components/UI/AdditionalBtn/AdditionalBtn.astro";
 ---
 
 <Layout title="Разводящая">
@@ -57,6 +58,14 @@ import IconBtn from "@components/UI/IconBtn/IconBtn.astro";
       <IconBtn disabled />
       <IconBtn color="secondary" />
       <IconBtn disabled color="secondary" />
+    </div>
+    <div class="box">
+      <AdditionalBtn>Посмотреть все браузеры</AdditionalBtn>
+      <AdditionalBtn disabled>Посмотреть все браузеры</AdditionalBtn>
+      <AdditionalBtn size="small">Посмотреть все браузеры</AdditionalBtn>
+      <AdditionalBtn disabled size="small">
+        Посмотреть все браузеры
+      </AdditionalBtn>
     </div>
   </div>
 

@@ -1,0 +1,57 @@
+.additional-btn {
+  flex: none;
+  height: 7.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 0rem 2.3rem;
+  border: 0.1rem solid $c-500;
+  border-radius: 10rem;
+  background-color: $grey-11;
+  color: $white;
+  transition: .3s;
+
+  @include hover {
+    color: $c-400;
+    border-color: $c-400;
+
+    svg {
+      color: $c-400;
+    }
+  }
+
+  &:active {
+    color: $c-300;
+    border-color: $c-300;
+
+    svg {
+      color: $c-300;
+    }
+  }
+
+  &:disabled {
+    background-color: $grey-7;
+    border-color: $grey-7;
+    color: $grey-9;
+
+    svg {
+      color: $grey-9;
+    }
+  }
+
+  svg {
+    width: 2.4rem;
+    height: 2.4rem;
+    color: $c-500;
+    transition: color .3s;
+
+  }
+
+  // size
+  &_small {
+    height: 5.6rem;
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+}
