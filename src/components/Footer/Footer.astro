@@ -1,0 +1,98 @@
+---
+import DefaultBtn from "@components/UI/DefaultBtn/DefaultBtn.astro";
+import { Sprite } from "astro-icon";
+---
+
+<footer class="footer">
+  <div class="container footer__container">
+    <div class="footer__top">
+      <div class="footer__head">
+        <a href="#" class="footer__logo">
+          <img src="./img/logo_white.svg" alt="" />
+        </a>
+        <div class="footer-soc">
+          <a href="#" class="footer-soc__link">
+            <Sprite name="telegram" />
+          </a>
+          <a href="#" class="footer-soc__link">
+            <Sprite name="facebook" />
+          </a>
+          <a href="#" class="footer-soc__link">
+            <Sprite name="whatsapp" />
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer-nav">
+        <div class="footer-nav__box">
+          <a href="" class="hover:600 label-m footer-nav__link">Продукты</a>
+          <div class="c-grey-6 footer-nav__list">
+            <a href="" class="hover:600 label-m footer-nav__link">
+              Резидентские прокси
+            </a>
+            <a href="" class="hover:600 label-m footer-nav__link">
+              Мобильные прокси
+            </a>
+            <a href="" class="hover:600 label-m footer-nav__link">
+              Статические (ISP) прокси
+            </a>
+            <a href="" class="hover:600 label-m footer-nav__link">
+              Datacenter прокси
+            </a>
+            <a href="" class="hover:600 label-m footer-nav__link">
+              Скрапер. SERP
+            </a>
+            <a href="" class="hover:600 label-m footer-nav__link">
+              Скрапер. E-commerce
+            </a>
+            <a href="" class="hover:600 label-m footer-nav__link">
+              Скрапер. Web
+            </a>
+          </div>
+        </div>
+        <div class="footer-nav__box">
+          <a href="" class="hover:600 label-m footer-nav__link">Кейсы</a>
+          <div class="c-grey-6 footer-nav__list">
+            <a href="" class="hover:600 label-m footer-nav__link">
+              Веб скрапинг
+            </a>
+            <a href="" class="hover:600 label-m footer-nav__link">E-commerce</a>
+            <a href="" class="hover:600 label-m footer-nav__link">SEO & SERP</a>
+            <a href="" class="hover:600 label-m footer-nav__link">
+              Multi Accounting
+            </a>
+          </div>
+        </div>
+        <div class="footer-nav__box">
+          <a href="" class="hover:600 label-m footer-nav__link">Ресурсы</a>
+          <div class="c-grey-6 footer-nav__list">
+            <a href="" class="hover:600 label-m footer-nav__link">Цены</a>
+            <a href="" class="hover:600 label-m footer-nav__link">Интеграции</a>
+            <a href="" class="hover:600 label-m footer-nav__link">
+              Для разработчиков
+            </a>
+            <a href="" class="hover:600 label-m footer-nav__link">Блог</a>
+          </div>
+        </div>
+      </nav>
+
+      <DefaultBtn icon component="a" href="#" class="footer__test-btn">
+        Быстрый тест
+      </DefaultBtn>
+    </div>
+    <div class="uppercase c-grey-6 footer-legal">
+      <div class="footer-legal__inner">
+        <a href="#" class="hover:600 label-m footer-legal__link">
+          Terms of Use
+        </a>
+        <a href="#" class="hover:600 label-m footer-legal__link">
+          Privacy Policy
+        </a>
+        <a href="#" class="hover:600 label-m footer-legal__link">Cookies</a>
+      </div>
+      <a href="#" class="hover:600 label-m footer-legal__link">
+        Разработка сайта
+      </a>
+    </div>
+  </div>
+</footer>

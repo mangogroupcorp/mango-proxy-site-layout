@@ -159,9 +159,17 @@ h6,
   text-underline-offset: 0.2em;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 // color
 .c-grey-7 {
   color: $grey-7;
+}
+
+.c-grey-6 {
+  color: $grey-6;
 }
 
 .c-grey-8 {

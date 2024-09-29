@@ -20,6 +20,12 @@
     border-color: $c-400;
   }
 
+  @include breakpoint($xs-bp) {
+    --mw: 19.8rem;
+    --iw: 5rem;
+    height: 5rem;
+  }
+
   &:active {
     background-color: $c-300;
     border-color: $c-300;

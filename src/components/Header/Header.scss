@@ -38,6 +38,7 @@ body._open-menu {
 
   @include breakpoint($xs-bp) {
     padding: 0.8rem 0 0;
+    background-color: transparent;
   }
 
   &__container {
