@@ -16,6 +16,7 @@ import { initSwipers } from "./utils/swiper";
 import { initSelectItems } from "./utils/select";
 import { initFileInputs } from "./utils/FileInput";
 import { initSectionsNav } from "./utils/sectionsNav";
+import { initHeaderMenu } from "@components/Header/Header";
 
 Swiper.use([Navigation, Thumbs, EffectFade, Pagination, Autoplay, Scrollbar]);
 
@@ -38,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initSectionsNav();
 
   // компоненты
-
+  initHeaderMenu();
   // <--
 
   // События

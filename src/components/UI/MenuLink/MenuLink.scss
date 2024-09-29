@@ -12,12 +12,20 @@
     border-color: $grey-5;
   }
 
+  @include breakpoint($xs-bp) {
+    padding: 0.8rem 1.6rem;
+  }
+
   &__icon {
     flex: none;
     width: 4rem;
     height: 4rem;
     object-fit: contain;
     object-position: center;
+
+    @include breakpoint($xs-bp) {
+      display: none;
+    }
   }
 
   &__container {
@@ -32,6 +40,12 @@
     gap: 0.4rem;
   }
 
+  &__text {
+    @include breakpoint($xs-bp) {
+      @include label-s();
+    }
+  }
+
   &__price {
     height: auto;
     display: flex;
@@ -39,5 +53,9 @@
     justify-content: flex-start;
     padding-left: 1.2rem;
     border-left: 0.1rem solid $grey-6;
+
+    @include breakpoint($xs-bp) {
+      display: none;
+    }
   }
 }

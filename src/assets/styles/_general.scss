@@ -114,11 +114,21 @@ h6,
 .label-l {
   font-size: 1.8rem;
   line-height: 1.33;
+
+  @include breakpoint($xs-bp) {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
 }
 
 .label-m {
   font-size: 1.6rem;
   line-height: 1.25;
+
+  @include breakpoint($xs-bp) {
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
 }
 
 .label-s {

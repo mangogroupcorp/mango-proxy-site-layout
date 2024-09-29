@@ -7,8 +7,8 @@ import { Sprite } from "astro-icon";
 
 <nav class="header-menu">
   <div class="header-menu__container">
-    <div class="header-menu-item">
-      <a href="#" class="label-m header-menu-item__btn">
+    <div class="header-menu-item" data-dropdown>
+      <a href="#" class="label-m header-menu-item__btn" data-btn>
         Продукты
         <Sprite name="chevron-down" />
       </a>
@@ -115,8 +115,8 @@ import { Sprite } from "astro-icon";
         </div>
       </div>
     </div>
-    <div class="header-menu-item">
-      <a href="#" class="label-m header-menu-item__btn">
+    <div class="header-menu-item" data-dropdown>
+      <a href="#" class="label-m header-menu-item__btn" data-btn>
         Цены
         <Sprite name="chevron-down" />
       </a>
@@ -192,11 +192,13 @@ import { Sprite } from "astro-icon";
               </div>
             </div>
           </div>
-          <div class="header-menu-box header-menu-price-methods">
-            <span class="header-menu-box__title header-menu-box__title_color">
+          <div class="header-menu-box header-menu-pay">
+            <span
+              class="header-menu-box__title header-menu-box__title_color header-menu-pay__title"
+            >
               Способы оплаты
             </span>
-            <p class="label-l header-menu-price-methods__text">
+            <p class="label-l header-menu-pay__text">
               Оплатить наш сервис вы можете криптовалютой и любой картой мира
               (кроме карт, выпущенных в РФ)
             </p>
@@ -204,8 +206,8 @@ import { Sprite } from "astro-icon";
         </div>
       </div>
     </div>
-    <div class="header-menu-item">
-      <a href="#" class="label-m header-menu-item__btn">
+    <div class="header-menu-item" data-dropdown>
+      <a href="#" class="label-m header-menu-item__btn" data-btn>
         Кейсы
         <Sprite name="chevron-down" />
       </a>
@@ -231,36 +233,50 @@ import { Sprite } from "astro-icon";
         </div>
       </div>
     </div>
-    <div class="header-menu-item">
-      <a href="#" class="label-m header-menu-item__btn">
+    <div class="header-menu-item" data-dropdown>
+      <a href="#" class="label-m header-menu-item__btn" data-btn>
         Ресурсы
         <Sprite name="chevron-down" />
       </a>
       <div class="header-menu-item__container">
         <div class="header-menu-item__content header-menu-source">
-          <MenuLink icon="./img/icons/IP.svg" title="Локации">
-            Можно использовать со всем популярным софтом
-          </MenuLink>
-          <MenuLink
-            icon="./img/icons/Simple authentication.svg"
-            title="Интеграция"
-          >
-            Можно использовать со всем популярным софтом
-          </MenuLink>
-          <MenuLink
-            icon="./img/icons/developer-mode.svg"
-            title="Для разработчиков"
-          >
-            Можно использовать со всем популярным софтом
-          </MenuLink>
-          <MenuLink icon="./img/icons/Read.svg" title="Блог">
-            Можно использовать со всем популярным софтом
-          </MenuLink>
+          <div class="header-menu-source__list">
+            <MenuLink icon="./img/icons/IP.svg" title="Локации">
+              Можно использовать со всем популярным софтом
+            </MenuLink>
+            <MenuLink
+              icon="./img/icons/Simple authentication.svg"
+              title="Интеграция"
+            >
+              Можно использовать со всем популярным софтом
+            </MenuLink>
+            <MenuLink
+              icon="./img/icons/developer-mode.svg"
+              title="Для разработчиков"
+            >
+              Можно использовать со всем популярным софтом
+            </MenuLink>
+            <MenuLink icon="./img/icons/Read.svg" title="Блог">
+              Можно использовать со всем популярным софтом
+            </MenuLink>
+          </div>
         </div>
       </div>
     </div>
     <div class="header-menu-item">
       <a href="#" class="label-m header-menu-item__btn">Быстрый тест</a>
+    </div>
+
+    <div class="header-menu-box header-menu-pay">
+      <span
+        class="header-menu-box__title header-menu-box__title_color header-menu-pay__title"
+      >
+        Способы оплаты
+      </span>
+      <p class="label-l header-menu-pay__text">
+        Оплатить наш сервис вы можете криптовалютой и любой картой мира (кроме
+        карт, выпущенных в РФ)
+      </p>
     </div>
   </div>
 </nav>

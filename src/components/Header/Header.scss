@@ -1,6 +1,39 @@
+body._open-menu {
+  @include breakpoint($xs-bp) {
+    overflow: hidden;
+
+    .header-btns__inner {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .header-btns__menu {
+      svg {
+        &:nth-child(1) {
+          opacity: 0;
+          scale: 0;
+        }
+
+        &:nth-child(2) {
+          opacity: 1;
+          scale: 1;
+        }
+      }
+    }
+
+    .header-menu {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}
+
 .header {
   background-color: $grey-2;
-  position: relative;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 5000;
 
   @include breakpoint($xs-bp) {
@@ -71,6 +104,7 @@
         right: 4.8rem;
         opacity: 0;
         pointer-events: none;
+        transition: .3s;
       }
     }
 
