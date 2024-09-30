@@ -1,0 +1,27 @@
+---
+import DefaultBtn from "@components/UI/DefaultBtn/DefaultBtn.astro";
+---
+
+<section class="ip-count">
+  <div class="ip-count__bg">
+    <img src="./img/ip-bg.png" alt="" />
+  </div>
+  <div class="container ip-count__container">
+    <div class="ip-count__head">
+      <h3 class="title-2 ip-count__title">Новые IP каждый день!</h3>
+      <p class="label-l c-grey-9 ip-count__text">
+        Наши пулы IP-адресов пополняются ежедневно. Вы всегда можете
+        рассчитывать на актуальные и надежные решения.
+      </p>
+    </div>
+    <div class="ip-count-info">
+      <span class="label-l c-grey-8 ip-count-info__subtitle"
+        >Добавлено сегодня</span
+      >
+      <span class="ip-count-info__value"> +459 IPs</span>
+    </div>
+    <div class="ip-count__btns">
+      <DefaultBtn component="a" href="#" icon>Быстрый тест</DefaultBtn>
+    </div>
+  </div>
+</section>

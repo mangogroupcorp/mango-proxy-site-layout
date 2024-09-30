@@ -1,0 +1,105 @@
+.ip-count {
+  position: relative;
+  overflow: hidden;
+  padding: 25rem 0rem 0rem;
+
+  @include breakpoint($xs-bp) {
+    padding: 17.7rem 0rem 0rem;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    translate: -60% 0;
+    width: 100%;
+    height: 96rem;
+
+    @include breakpoint($xs-bp) {
+      width: 130rem;
+      height: 80rem;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7.2rem;
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+    text-align: center;
+    max-width: 82.5rem;
+  }
+
+  &__title {
+    @include breakpoint($xs-bp) {
+      max-width: 26.8rem;
+    }
+  }
+
+  &__text {
+    max-width: 65rem;
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+    text-align: center;
+
+    &__value {
+      font-size: 10rem;
+      line-height: 1;
+      font-family: $f-sora;
+      font-weight: 600;
+
+      @include breakpoint($xs-bp) {
+        font-size: 4.8rem;
+      }
+    }
+  }
+
+  &__btns {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &::after {
+      content: "";
+      height: 48rem;
+      width: 0.2rem;
+      background: linear-gradient(0deg, $c-300, $c-500);
+
+      @include breakpoint($xs-bp) {
+        height: 20rem;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1.2rem;
+      height: 1.2rem;
+      background-color: #FFE647;
+      border-radius: 50%;
+      bottom: 0;
+    }
+  }
+}
