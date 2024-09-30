@@ -10,12 +10,24 @@ interface Props
   img: string;
   title: string;
   text: string;
+  size?: "big";
 }
 
-const { component: Wrapper = "a", img, title, text, ...props } = Astro.props;
+const {
+  component: Wrapper = "a",
+  img,
+  title,
+  text,
+  size,
+  ...props
+} = Astro.props;
 ---
 
-<Wrapper class="location-item" class:list={[]} {...props}>
+<Wrapper
+  class="location-item"
+  class:list={[{ ["location-item_" + size]: size }]}
+  {...props}
+>
   <img src={img} alt="" class="location-item__img" />
   <span class="location-item__inner">
     <span class="label-l location-item__title" set:html={title} />

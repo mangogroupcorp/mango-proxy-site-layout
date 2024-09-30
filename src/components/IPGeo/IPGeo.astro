@@ -1,0 +1,173 @@
+---
+import DefaultBtn from "@components/UI/DefaultBtn/DefaultBtn.astro";
+import LocationItem from "@components/UI/LocationItem/LocationItem.astro";
+import { Sprite } from "astro-icon";
+---
+
+<section class="ip-geo">
+  <div class="container ip-geo__container">
+    <div class="ip-geo__head">
+      <h3 class="title-2 ip-geo__title">
+        География IP-адресов: откройте для себя мир без границ
+      </h3>
+      <p class="label-l c-grey-9 ip-geo__text">
+        Наша обширная сеть, охватывающая <b>более 200 локаций</b> и включающая
+        <b>более 10 миллионов IP-адресов</b>, предоставляет вам доступ
+        к неограниченным возможностям.
+      </p>
+    </div>
+
+    <div class="ip-geo__btns">
+      <span class="label-l ip-geo__info">
+        <Sprite name="flag" />
+         Если нужной страны не найдется, мы оперативно решим эту проблему.
+      </span>
+      <DefaultBtn component="a" href="#" icon>Быстрый тест</DefaultBtn>
+    </div>
+  </div>
+
+  <div class="ip-geo__sliders">
+    <div
+      class="swiper ip-geo__swiper"
+      data-swiper-init
+      data-props={`{"slidesPerView":"auto","spaceBetween":8,"autoplay":{"delay":0,"disableOnInteraction":false},"loop":true,"speed":4000,"breakpoints":{"601":{"spaceBetween":16}}}`}
+    >
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <LocationItem
+            size="big"
+            href="#"
+            img="./img/flags/GB.svg"
+            title="Великобритания"
+            text="421,700 IPs"
+          />
+        </div>
+        <div class="swiper-slide">
+          <LocationItem
+            size="big"
+            href="#"
+            img="./img/flags/DE.svg"
+            title="Германия"
+            text="439,886 IPs"
+          />
+        </div>
+        <div class="swiper-slide">
+          <LocationItem
+            size="big"
+            href="#"
+            img="./img/flags/US.svg"
+            title="США"
+            text="1,450,886 IPs"
+          />
+        </div>
+        <div class="swiper-slide">
+          <LocationItem
+            size="big"
+            href="#"
+            img="./img/flags/BR.svg"
+            title="Бразилия"
+            text="12,629,978 IPs"
+          />
+        </div>
+        <div class="swiper-slide">
+          <LocationItem
+            size="big"
+            href="#"
+            img="./img/flags/FR.svg"
+            title="Франция"
+            text="1,450,886 IPs"
+          />
+        </div>
+        <div class="swiper-slide">
+          <LocationItem
+            size="big"
+            href="#"
+            img="./img/flags/JP.svg"
+            title="Япония"
+            text="1,178,404 IPs"
+          />
+        </div>
+        <div class="swiper-slide">
+          <LocationItem
+            size="big"
+            href="#"
+            img="./img/flags/PL.svg"
+            title="Польша"
+            text="1,450,886 IPs"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="swiper ip-geo__swiper"
+      data-swiper-init
+      data-props={`{"slidesPerView":"auto","spaceBetween":8,"autoplay":{"delay":0,"disableOnInteraction":false,"reverseDirection":true},"loop":true,"speed":4000,"breakpoints":{"601":{"spaceBetween":16}}}`}
+    >
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <LocationItem
+            size="big"
+            href="#"
+            img="./img/flags/GB.svg"
+            title="Великобритания"
+            text="421,700 IPs"
+          />
+        </div>
+        <div class="swiper-slide">
+          <LocationItem
+            size="big"
+            href="#"
+            img="./img/flags/VN.svg"
+            title="Вьетнам"
+            text="890,886 IPs"
+          />
+        </div>
+        <div class="swiper-slide">
+          <LocationItem
+            size="big"
+            href="#"
+            img="./img/flags/CA.svg"
+            title="Канада"
+            text="3,693,481 IPs"
+          />
+        </div>
+        <div class="swiper-slide">
+          <LocationItem
+            size="big"
+            href="#"
+            img="./img/flags/IT.svg"
+            title="Италия"
+            text="1,274,731 IPs"
+          />
+        </div>
+        <div class="swiper-slide">
+          <LocationItem
+            size="big"
+            href="#"
+            img="./img/flags/TR.svg"
+            title="Турция"
+            text="265,445 IPs"
+          />
+        </div>
+        <div class="swiper-slide">
+          <LocationItem
+            size="big"
+            href="#"
+            img="./img/flags/PH.svg"
+            title="Филиппины"
+            text="3,535,922 IPs"
+          />
+        </div>
+        <div class="swiper-slide">
+          <LocationItem
+            size="big"
+            href="#"
+            img="./img/flags/RU.svg"
+            title="Россия"
+            text="3,484,926 IPs"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

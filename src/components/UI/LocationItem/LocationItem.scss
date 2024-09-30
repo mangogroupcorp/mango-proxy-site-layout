@@ -29,4 +29,55 @@
     align-items: flex-start;
     gap: 0.4rem;
   }
+
+  // size
+  &_big {
+    flex-direction: column;
+    justify-content: center;
+    gap: 3.2rem;
+    width: 28rem;
+    height: 26rem;
+    padding: 1.6rem;
+
+    @include breakpoint($xs-bp) {
+      width: 17.2rem;
+      height: 16.4rem;
+      gap: 1.6rem;
+    }
+
+    .location-item {
+      &__img {
+        width: 9rem;
+        height: 9rem;
+
+        @include breakpoint($xs-bp) {
+          width: 4.8rem;
+          height: 4.8rem;
+        }
+      }
+
+      &__inner {
+        align-items: center;
+        text-align: center;
+        gap: 1.2rem;
+      }
+
+      &__title {
+        @include title-4();
+
+        @include breakpoint($xs-bp) {
+          @include label-m();
+        }
+      }
+
+      &__text {
+        @include label-l();
+        font-weight: 700;
+
+        @include breakpoint($xs-bp) {
+          @include label-m();
+        }
+      }
+    }
+  }
 }
