@@ -55,6 +55,7 @@
     @include breakpoint($xs-bp) {
       border-radius: 1.6rem;
       align-items: flex-start;
+      @include label-s();
     }
 
     svg {

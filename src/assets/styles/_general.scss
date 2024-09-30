@@ -4,8 +4,7 @@ html {
 
 body {
   font-family: $f-sans;
-  font-size: 2rem;
-  line-height: 1.4;
+  @include label-l();
   font-weight: 400;
   color: $grey-13;
   background-color: $grey-2;
@@ -217,6 +216,14 @@ h6,
 
 .c-grey-9 {
   color: $grey-9;
+}
+
+.c-grey-10 {
+  color: $grey-10;
+}
+
+.c-grey-11 {
+  color: $grey-11;
 }
 
 // hover 

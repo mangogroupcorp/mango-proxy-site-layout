@@ -1,0 +1,178 @@
+.main-api {
+  margin: 10rem 0rem;
+
+  @include breakpoint($xs-bp) {
+    margin: 5rem 0rem;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+
+    @include breakpoint($xs-bp) {
+      gap: 3.2rem;
+    }
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+    text-align: center;
+    max-width: 118.6rem;
+
+    @include breakpoint($xs-bp) {
+      gap: 0.8rem;
+    }
+  }
+
+  &__text {
+    max-width: 85.1rem;
+  }
+
+  &__logo {
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    height: 26rem;
+
+    @include breakpoint($xs-bp) {
+      width: calc(100% + 3.2rem);
+      margin: 0rem -1.6rem;
+      height: 7.2rem;
+    }
+  }
+
+  &__list {
+    margin-top: -13.6rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2.4rem;
+
+    @include breakpoint($xs-bp) {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      width: calc(100% + 1.6rem);
+      margin: -3.6rem -0.8rem 0;
+    }
+  }
+}
+
+.main-api-card {
+  border: 0.1rem solid $grey-5;
+  border-radius: 1.6rem;
+  background-color: $white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @include breakpoint($xs-bp) {
+    min-height: 40rem;
+  }
+
+  &:nth-child(3n + 1) {
+    grid-column: span 5;
+  }
+
+  &:nth-child(3n + 2) {
+    grid-column: span 4;
+  }
+
+  &:nth-child(3n + 3) {
+    grid-column: span 3;
+
+    .main-api-card {
+      &__container {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+      }
+
+      &__img {
+        position: absolute;
+        width: 35rem;
+        height: 35rem;
+        left: 50%;
+        translate: -50% 0;
+        bottom: 5.3rem;
+        box-shadow: none;
+        border-radius: 0;
+
+        @include breakpoint($xs-bp) {
+          width: 29rem;
+          height: 29rem;
+          bottom: 1.8rem;
+        }
+
+        img {
+          object-fit: contain;
+          object-position: center;
+        }
+      }
+    }
+  }
+
+  &__container {
+    padding: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.4rem;
+
+    @include breakpoint($xs-bp) {
+      padding: 2.4rem 2.4rem 1.8rem 2.4rem;
+      flex: 1;
+    }
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    @include breakpoint($xs-bp) {
+      gap: 0.8rem;
+    }
+  }
+
+  &__num {
+    padding: 0.2rem 0.4rem;
+    background-color: $c-100;
+  }
+
+  &__img {
+    flex: none;
+    height: 31rem;
+    width: calc(100% - 8.8rem);
+    margin-left: auto;
+    box-shadow: 0.1rem 0 0.4rem rgba(12, 12, 13, 0.05), -0.4rem -0.4rem 2.4rem -0.8rem rgba(12, 12, 13, 0.15);
+    border-radius: 0.8rem 0 0;
+    overflow: hidden;
+
+    @include breakpoint($xs-bp) {
+      height: 23.2rem;
+      width: calc(100% - 2.4rem);
+    }
+
+    img {
+      object-fit: cover;
+      object-position: left top;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__btn {
+    margin-top: auto;
+  }
+}
