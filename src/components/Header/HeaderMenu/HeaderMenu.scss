@@ -84,13 +84,14 @@
 
         &__content {
           opacity: 1;
-          translate: 0;
         }
       }
     }
   }
 
   @include breakpoint($xs-bp) {
+    pointer-events: unset;
+
     &._dropped {
       .header-menu-item {
         &__btn {
@@ -174,7 +175,6 @@
     max-height: calc(100vh - 4rem);
     overflow: auto;
     opacity: 0;
-    translate: 0 4rem;
     transition: .5s;
 
     @include breakpoint($xs-bp) {
