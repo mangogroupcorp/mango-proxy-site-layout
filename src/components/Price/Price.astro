@@ -1,0 +1,40 @@
+---
+import DefaultBtn from "@components/UI/DefaultBtn/DefaultBtn.astro";
+import { Sprite } from "astro-icon";
+
+interface Props {}
+
+const { ...rest } = Astro.props;
+---
+
+<section class="price" class:list={[]} {...rest}>
+  <div class="price__bg">
+    <img src="./img/price-bg-1.png" alt="" />
+    <img src="./img/price-bg-2.png" alt="" />
+  </div>
+  <div class="container price__container">
+    <h2 class="title-2 price__title">
+      Цены, которые масштабируются вместе с вами.
+    </h2>
+    <div class="price-value">
+      <span class="c-grey-7 price-value__desc">от</span>
+      <div class="price-value__price">
+        <Sprite name="dollar" />
+         2
+      </div>
+      <span class="c-grey-7 price-value__desc">за GB</span>
+    </div>
+
+    <div class="price-info">
+      <div class="price-info__inner">
+        <h4 class="title-4 price-info__title">
+          Не знаешь, какой прокси выбрать для своих задач?
+        </h4>
+        <p class="label-m c-grey-6 price-info__text">
+          Пройдите быстрый квиз и получите оптимальное решение!
+        </p>
+      </div>
+      <DefaultBtn component="a" href="#">Подабрать тариф</DefaultBtn>
+    </div>
+  </div>
+</section>

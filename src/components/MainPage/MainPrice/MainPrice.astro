@@ -1,0 +1,99 @@
+---
+import DefaultBtn from "@components/UI/DefaultBtn/DefaultBtn.astro";
+import { Sprite } from "astro-icon";
+---
+
+<section class="main-price" class:list={[]}>
+  <div class="main-price-adv">
+    <div class="container main-price-adv__list">
+      <div class="main-price-adv-item">
+        <div class="main-price-adv-item__content">
+          <div class="main-price-adv-item__inner">
+            <h3 class="title-2 regular main-price-adv-item__title">
+              Почему мы?
+            </h3>
+            <p class="label-m c-grey-8 main-price-adv-item__text">
+              Lacus arcu ultricies condimentum mauris cras. Netus felis
+              ullamcorper ut suscipit non.
+            </p>
+          </div>
+          <div class="template label-l main-price-adv-item__desc">
+            <ul>
+              <li><b>90M+</b> IP адресов</li>
+              <li><b>220+</b> локаций</li>
+              <li><b>$0,99 = 1GB</b> лучшая цена</li>
+              <li><b>100 000+</b> довольных клиентов</li>
+            </ul>
+          </div>
+        </div>
+        <div class="main-price-adv-item__img">
+          <img src="./img/main-price-adv-1.png" alt="" />
+        </div>
+      </div>
+      <div class="main-price-adv-item">
+        <div class="main-price-adv-item__content">
+          <div class="main-price-adv-item__inner">
+            <h3 class="title-3 regular main-price-adv-item__title">
+              Безопасно
+            </h3>
+            <p class="label-m c-grey-8 main-price-adv-item__text">
+              Lacus arcu ultricies condimentum mauris cras. Netus felis
+              ullamcorper ut suscipit non commodo nulla tristique.
+            </p>
+          </div>
+        </div>
+        <div class="main-price-adv-item__img">
+          <img src="./img/main-price-adv-2.png" alt="" />
+        </div>
+      </div>
+      <div class="main-price-adv-item">
+        <div class="main-price-adv-item__content">
+          <div class="main-price-adv-item__inner">
+            <h3 class="title-3 regular main-price-adv-item__title">Быстро</h3>
+            <p class="label-m c-grey-8 main-price-adv-item__text">
+              Lacus arcu ultricies condimentum mauris cras. Netus felis
+              ullamcorper ut suscipit non commodo nulla tristique.
+            </p>
+          </div>
+        </div>
+        <div class="main-price-adv-item__img">
+          <img src="./img/main-price-adv-3.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-price__wrapper">
+    <div class="price">
+      <div class="price__bg">
+        <img src="./img/price-bg-1.png" alt="" />
+        <img src="./img/price-bg-2.png" alt="" />
+      </div>
+      <div class="container price__container">
+        <h2 class="title-2 price__title">
+          Цены, которые масштабируются вместе с вами.
+        </h2>
+        <div class="price-value">
+          <span class="title-3 regular c-grey-7 price-value__desc">от</span>
+          <div class="price-value__price">
+            <Sprite name="dollar" />
+             2
+          </div>
+          <span class="title-3 regular c-grey-7 price-value__desc">за GB</span>
+        </div>
+
+        <div class="price-info">
+          <div class="price-info__inner">
+            <h4 class="title-4 uppercase price-info__title">
+              Не знаешь, какой прокси выбрать для своих задач?
+            </h4>
+            <p class="label-m c-grey-6 price-info__text">
+              Пройдите быстрый квиз и получите оптимальное решение!
+            </p>
+          </div>
+          <DefaultBtn component="a" href="#" icon>Подабрать тариф</DefaultBtn>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

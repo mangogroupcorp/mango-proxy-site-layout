@@ -86,6 +86,11 @@ h2,
   font-size: 4.8rem;
   line-height: 1.08;
   font-weight: 600;
+
+  @include breakpoint($xs-bp) {
+    font-size: 3.2rem;
+    line-height: 1.125;
+  }
 }
 
 h3,
@@ -93,6 +98,11 @@ h3,
   font-family: $f-sora;
   font-size: 3.2rem;
   line-height: 1.125;
+
+  @include breakpoint($xs-bp) {
+    font-size: 2.4rem;
+    line-height: 1.08;
+  }
 }
 
 h4,
@@ -100,6 +110,11 @@ h4,
   font-family: $f-sora;
   font-size: 2.4rem;
   line-height: 1.08;
+
+  @include breakpoint($xs-bp) {
+    font-size: 2.2rem;
+    line-height: 1.4;
+  }
 }
 
 h5,
@@ -107,6 +122,11 @@ h5,
   font-family: $f-sora;
   font-size: 2.2rem;
   line-height: 1.4;
+
+  @include breakpoint($xs-bp) {
+    font-size: 2rem;
+    line-height: 1.4;
+  }
 }
 
 h6,
@@ -114,6 +134,11 @@ h6,
   font-family: $f-sora;
   font-size: 2rem;
   line-height: 1.4;
+
+  @include breakpoint($xs-bp) {
+    font-size: 1.8rem;
+    line-height: 1.33;
+  }
 }
 
 .label-l {
