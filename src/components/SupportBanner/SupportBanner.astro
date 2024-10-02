@@ -1,0 +1,39 @@
+---
+import DefaultBtn from "@components/UI/DefaultBtn/DefaultBtn.astro";
+---
+
+<section class="support-banner">
+  <div class="container">
+    <div class="support-banner__container">
+      <div class="support-banner__bg">
+        <img src="./img/support-banner.png" alt="" />
+      </div>
+      <div class="support-banner__icon">
+        <img src="./img/voice.svg" alt="" />
+      </div>
+      <div class="support-banner__content">
+        <div class="support-banner__head">
+          <h3 class="title-2 support-banner__title">Поддержка 24/7</h3>
+          <p class="label-l c-grey-6 support-banner__text">
+            Не стесняйтесь обращаться к нам, даже если у вас нестандартный
+            запрос. Мы найдем индивидуальное решение для вашей задачи.
+          </p>
+        </div>
+        <div class="template label-l support-banner__info">
+          <ul>
+            <li>Среднее время ответа <b>менее 10 минут</b></li>
+            <li>
+              <b>Круглосуточная поддержка</b> в любое время и в любом месте
+            </li>
+            <li>
+              <b>Персональное обслуживание</b>
+            </li>
+          </ul>
+        </div>
+        <DefaultBtn component="a" href="#" class="support-banner__btn" icon>
+          Задать вопрос
+        </DefaultBtn>
+      </div>
+    </div>
+  </div>
+</section>
