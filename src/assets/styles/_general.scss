@@ -364,3 +364,11 @@ h6,
     max-width: 82.4rem;
   }
 }
+
+[data-tab] {
+  &:not(._active) {
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+}

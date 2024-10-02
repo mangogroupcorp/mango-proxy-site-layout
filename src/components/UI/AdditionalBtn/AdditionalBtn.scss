@@ -21,6 +21,10 @@
     }
   }
 
+  @include breakpoint($xs-bp) {
+    height: 5.6rem;
+  }
+
   &:active {
     color: $c-300;
     border-color: $c-300;

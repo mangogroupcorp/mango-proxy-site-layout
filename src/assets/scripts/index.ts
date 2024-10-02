@@ -13,10 +13,8 @@ import { vBoxHandler } from "./vBox";
 import { PopupController } from "./utils/popup";
 import { initDropdownItems } from "./utils/dropdown";
 import { initSwipers } from "./utils/swiper";
-import { initSelectItems } from "./utils/select";
-import { initFileInputs } from "./utils/FileInput";
-import { initSectionsNav } from "./utils/sectionsNav";
 import { initHeaderMenu } from "@components/Header/Header";
+import { initTabController } from "./utils/tabController";
 
 Swiper.use([Navigation, Thumbs, EffectFade, Pagination, Autoplay, Scrollbar]);
 
@@ -33,10 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // общие
   formValidateInit(".fv");
   initDropdownItems();
-  initSelectItems();
   initSwipers();
-  initFileInputs();
-  initSectionsNav();
+  initTabController();
 
   // компоненты
   initHeaderMenu();

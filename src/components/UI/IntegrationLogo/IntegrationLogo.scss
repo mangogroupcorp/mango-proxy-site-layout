@@ -1,0 +1,37 @@
+.integration-logo {
+  height: 7.2rem;
+  padding: 0rem 2.4rem;
+  border-radius: 10rem;
+  background-color: $white;
+  min-width: 23.9rem;
+  color: $grey-13;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  box-shadow: -0.7rem 3.8rem 3.2rem -2.4rem rgba(0, 0, 0, 0.25),
+    3.2rem -0.2rem 4.4rem -0.9rem rgba(0, 0, 0, 0.25);
+
+  @include breakpoint($xs-bp) {
+    height: 5.6rem;
+    min-width: 21rem;
+  }
+
+  &__img {
+    flex: none;
+    width: 4rem;
+    height: 4rem;
+
+    @include breakpoint($xs-bp) {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+
+    img {
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

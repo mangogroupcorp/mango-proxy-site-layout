@@ -1,0 +1,177 @@
+---
+import AdditionalBtn from "@components/UI/AdditionalBtn/AdditionalBtn.astro";
+import DefaultBtn from "@components/UI/DefaultBtn/DefaultBtn.astro";
+import IntegrationLogo from "@components/UI/integrationLogo/integrationLogo.astro";
+---
+
+<section class="tools" data-tab-controller>
+  <div class="container">
+    <div class="tools-switch" data-tab-btns>
+      <button
+        type="button"
+        class="label-m uppercase c-grey-7 hover:600 tools-switch__btn _active"
+        data-tab-btn="1"
+      >
+        скрапинг инструменты
+      </button>
+      <span class="tools-switch__icon"></span>
+      <button
+        type="button"
+        class="label-m uppercase c-grey-7 hover:600 tools-switch__btn"
+        data-tab-btn="2"
+      >
+        антидетект-браузеры
+      </button>
+    </div>
+  </div>
+
+  <div class="tools__tabs">
+    <div class="tools-tab _active" data-tab="1">
+      <div class="container tools-tab__head">
+        <h3 class="title-2 tools-tab__title">
+          Совместимость с антидетект-браузерами
+        </h3>
+        <p class="label-l c-grey-6 tools-tab__text">
+          Гарантия бесперебойной работы независимо от используемых инструментов.
+        </p>
+      </div>
+      <div
+        class="swiper tools-tab__swiper"
+        data-swiper-init
+        data-props={`{"slidesPerView":"auto","spaceBetween":16,"autoplay":{"delay":0,"disableOnInteraction":false},"loop":true,"speed":4000}`}
+      >
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <IntegrationLogo img="./img/logo/logo-1.svg">
+              Dolphin Anty
+            </IntegrationLogo>
+          </div>
+          <div class="swiper-slide">
+            <IntegrationLogo img="./img/logo/logo-2.svg">
+              GoLogin Proxy
+            </IntegrationLogo>
+          </div>
+          <div class="swiper-slide">
+            <IntegrationLogo img="./img/logo/logo-3.svg">
+              Incogniton
+            </IntegrationLogo>
+          </div>
+          <div class="swiper-slide">
+            <IntegrationLogo img="./img/logo/logo-4.svg">
+              Octo Browser
+            </IntegrationLogo>
+          </div>
+          <div class="swiper-slide">
+            <IntegrationLogo img="./img/logo/logo-5.svg">
+              Multilogin
+            </IntegrationLogo>
+          </div>
+          <div class="swiper-slide">
+            <IntegrationLogo img="./img/logo/logo-6.svg">
+              Undetectable
+            </IntegrationLogo>
+          </div>
+          <div class="swiper-slide">
+            <IntegrationLogo img="./img/logo/logo-1.svg">
+              Dolphin Anty
+            </IntegrationLogo>
+          </div>
+          <div class="swiper-slide">
+            <IntegrationLogo img="./img/logo/logo-2.svg">
+              GoLogin Proxy
+            </IntegrationLogo>
+          </div>
+          <div class="swiper-slide">
+            <IntegrationLogo img="./img/logo/logo-3.svg">
+              Incogniton
+            </IntegrationLogo>
+          </div>
+          <div class="swiper-slide">
+            <AdditionalBtn component="a" href="#">
+              Посмотреть все браузеры
+            </AdditionalBtn>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tools-tab" data-tab="2">
+      <div class="container tools-tab__head">
+        <h3 class="title-2 tools-tab__title">
+          Совместимость со скрапинг инструментами
+        </h3>
+        <p class="label-l c-grey-6 tools-tab__text">
+          Гарантия бесперебойной работы независимо от используемых инструментов.
+        </p>
+      </div>
+      <div
+        class="swiper tools-tab__swiper"
+        data-swiper-init
+        data-props={`{"slidesPerView":"auto","spaceBetween":16,"autoplay":{"delay":0,"disableOnInteraction":false},"loop":true,"speed":4000}`}
+      >
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <IntegrationLogo img="./img/logo/logo-7.svg">
+              PhantomBuster
+            </IntegrationLogo>
+          </div>
+          <div class="swiper-slide">
+            <IntegrationLogo img="./img/logo/logo-8.svg">
+              Octoparse
+            </IntegrationLogo>
+          </div>
+          <div class="swiper-slide">
+            <IntegrationLogo img="./img/logo/logo-9.svg">
+              ParseHub
+            </IntegrationLogo>
+          </div>
+          <div class="swiper-slide">
+            <IntegrationLogo img="./img/logo/logo-10.svg">
+              Helium Scraper
+            </IntegrationLogo>
+          </div>
+          <div class="swiper-slide">
+            <IntegrationLogo img="./img/logo/logo-7.svg">
+              PhantomBuster
+            </IntegrationLogo>
+          </div>
+          <div class="swiper-slide">
+            <IntegrationLogo img="./img/logo/logo-8.svg">
+              Octoparse
+            </IntegrationLogo>
+          </div>
+          <div class="swiper-slide">
+            <IntegrationLogo img="./img/logo/logo-7.svg">
+              PhantomBuster
+            </IntegrationLogo>
+          </div>
+          <div class="swiper-slide">
+            <IntegrationLogo img="./img/logo/logo-8.svg">
+              Octoparse
+            </IntegrationLogo>
+          </div>
+          <div class="swiper-slide">
+            <IntegrationLogo img="./img/logo/logo-9.svg">
+              ParseHub
+            </IntegrationLogo>
+          </div>
+          <div class="swiper-slide">
+            <AdditionalBtn component="a" href="#">
+              Посмотреть все браузеры
+            </AdditionalBtn>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container tools-info">
+    <p class="label-l uppercase c-grey-6 tools-info__text">
+      Вы можете положиться на нашу систему: она обеспечит стабильное и надежное
+      соединение, подходящее для любых ваших настроек.
+    </p>
+    <DefaultBtn component="a" href="#" icon>
+      Подключиться прямо сейчас
+    </DefaultBtn>
+  </div>
+</section>

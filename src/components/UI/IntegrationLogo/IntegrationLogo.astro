@@ -1,0 +1,12 @@
+---
+interface Props {
+  img: string;
+}
+
+const { img } = Astro.props;
+---
+
+<div class="label-l integration-logo">
+  <img src={img} alt="" class="integration-logo__img" />
+  <slot />
+</div>
