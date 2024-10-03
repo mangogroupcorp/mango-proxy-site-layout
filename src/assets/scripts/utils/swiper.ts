@@ -12,6 +12,9 @@ export function initSwipers() {
       const scrollbarContainer =
         wrapper.querySelector<HTMLElement>("[data-scrollbar]");
 
+      const paginationContainer =
+        wrapper.querySelector<HTMLElement>("[data-pagination]");
+
       const swiperProps =
         JSON.parse(swiperContainer.getAttribute("data-props") || "{}") || {};
 
@@ -26,6 +29,9 @@ export function initSwipers() {
         navigation: {
           prevEl: prevBtn,
           nextEl: nextBtn,
+        },
+        pagination: {
+          el: paginationContainer,
         },
         ...swiperProps,
       });

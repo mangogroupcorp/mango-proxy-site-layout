@@ -1,0 +1,156 @@
+---
+import { Sprite } from "astro-icon";
+---
+
+<section class="advantages">
+  <div class="container">
+    <h3 class="title-2 advantages__title">Наши клиенты ценят</h3>
+  </div>
+  <div class="container">
+    <div class="advantages__container">
+      <div class="advantages-reviews">
+        <div class="advantages-reviews__head">
+          <h6 class="label-l advantages-reviews__title">
+            <b>530+</b> компаний доверяют Mango Proxy
+          </h6>
+          <div class="advantages-reviews__imgs">
+            <div class="advantages-reviews__img">
+              <img src="./img/advantages-reviews-1.png" alt="" />
+            </div>
+            <div class="advantages-reviews__img">
+              <img src="./img/advantages-reviews-2.png" alt="" />
+            </div>
+            <div class="advantages-reviews__img">
+              <img src="./img/advantages-reviews-3.png" alt="" />
+            </div>
+            <div class="advantages-reviews__img">
+              <img src="./img/advantages-reviews-4.png" alt="" />
+            </div>
+            <div class="advantages-reviews__img">
+              <img src="./img/advantages-reviews-5.png" alt="" />
+            </div>
+            <div class="advantages-reviews__img">
+              <img src="./img/advantages-reviews-6.png" alt="" />
+            </div>
+            <div class="advantages-reviews__img">
+              <img src="./img/advantages-reviews-7.png" alt="" />
+            </div>
+            <div class="advantages-reviews__img">
+              <img src="./img/advantages-reviews-8.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="swiper advantages-reviews__swiper"
+          data-swiper-init
+          data-props=`{"spaceBetween":16}`
+        >
+          <div class="swiper-wrapper">
+            {
+              [...new Array(8)].map((el, index) => (
+                <div class="swiper-slide">
+                  <div class="advantages-reviews-item">
+                    <div class="advantages-reviews-item__head">
+                      <img
+                        src={`./img/advantages-reviews-${index + 1}.png`}
+                        alt=""
+                        class="advantages-reviews-item__img"
+                      />
+                      <div class="advantages-reviews-item__head-inner">
+                        <span class="title-4 regular advantages-reviews-item__title">
+                          Андрей
+                        </span>
+                        <span class="label-l c-grey-8 advantages-reviews-item__subtitle">
+                          MarketLab
+                        </span>
+                      </div>
+                    </div>
+                    <p class="label-l advantages-reviews-item__text">
+                      Клиентоориентированность на высоком уровне, индивидуальная
+                      работа с каждым, помощь в сложных и экстренных ситуациях,
+                      большой функционал и <b>высокая скорость</b> обслуживания
+                      байт.
+                    </p>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+          <div class="advantages-reviews-nav">
+            <button
+              type="button"
+              class="c-grey-7 hover:grey-13 advantages-reviews-nav__btn"
+              data-prev
+            >
+              <Sprite name="chevron-left" />
+            </button>
+            <div class="advantages-reviews-nav__pag" data-pagination></div>
+            <button
+              type="button"
+              class="c-grey-7 hover:grey-13 advantages-reviews-nav__btn"
+              data-next
+            >
+              <Sprite name="chevron-right" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="advantages__list">
+        <div class="advantages-item" style="--perc: 57%">
+          <span class="advantages-item__icon">
+            <Sprite name="check" />
+          </span>
+          <div class="advantages-item__head">
+            <h4 class="title-4 regular advantages-item__title">
+              Высокое качество IP адресов и размер пулов
+            </h4>
+          </div>
+          <div class="advantages-item__container">
+            <span class="title-1 advantages-item__value">57%</span>
+            <p class="label-l c-grey-8 advantages-item__text">
+              Lacus arcu ultricies condimentum mauris cras. Netus felis
+              ullamcorper ut suscipit non commodo nulla tristique. Lacus arcu
+              ultricies condimentum mauris cras. Netus felis ullamcorper ut
+              suscipit non commodo nulla
+            </p>
+          </div>
+        </div>
+        <div class="advantages-item" style="--perc: 34%">
+          <div class="advantages-item__head">
+            <h4 class="title-4 regular advantages-item__title">
+              Высокая скорость и стабильность соединения
+            </h4>
+          </div>
+          <div class="advantages-item__container">
+            <span class="title-1 advantages-item__value">34%</span>
+            <p class="label-l c-grey-8 advantages-item__text">
+              Lacus arcu ultricies condimentum mauris cras. Netus felis
+              ullamcorper ut suscipit non commodo nulla tristique. Lacus arcu
+              ultricies condimentum mauris cras. Netus felis ullamcorper ut
+              suscipit non commodo nulla tristique.Lacus arcu ultricies
+              condimentum mauris cras.
+            </p>
+          </div>
+        </div>
+        <div class="advantages-item" style="--perc: 16%">
+          <div class="advantages-item__head">
+            <h4 class="title-4 regular advantages-item__title">
+              Гибкая ценовая политика
+            </h4>
+          </div>
+          <div class="advantages-item__container">
+            <span class="title-1 advantages-item__value">16%</span>
+            <p class="label-l c-grey-8 advantages-item__text">
+              Lacus arcu ultricies condimentum mauris cras. Netus felis
+              ullamcorper ut suscipit non commodo nulla tristique. Lacus arcu
+              ultricies condimentum mauris cras. Netus felis ullamcorper ut
+              suscipit non commodo nulla
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

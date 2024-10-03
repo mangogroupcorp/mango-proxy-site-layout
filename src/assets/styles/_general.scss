@@ -202,12 +202,16 @@ h6,
 }
 
 // color
-.c-grey-7 {
-  color: $grey-7;
+.c-grey-5 {
+  color: $grey-5;
 }
 
 .c-grey-6 {
   color: $grey-6;
+}
+
+.c-grey-7 {
+  color: $grey-7;
 }
 
 .c-grey-8 {
@@ -237,6 +241,23 @@ h6,
 
     &:active {
       color: $c-500;
+    }
+
+    &:disabled,
+    .disabled {
+      color: $grey-7;
+    }
+  }
+
+  &\:grey-13 {
+    transition: .3s;
+
+    @include hover {
+      color: $grey-13;
+    }
+
+    &:active {
+      color: $grey-11;
     }
 
     &:disabled,
