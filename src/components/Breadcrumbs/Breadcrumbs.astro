@@ -11,10 +11,10 @@ const { items } = Astro.props;
     {
       items.map((el, i) => {
         if (i === items.length - 1) {
-          return <span class="breadcrumbs__link">{el}</span>;
+          return <span class="label-m breadcrumbs__link">{el}</span>;
         } else {
           return (
-            <a href="#" class="breadcrumbs__link">
+            <a href="#" class="label-m c-grey-7 hover:500 breadcrumbs__link">
               {el}
             </a>
           );

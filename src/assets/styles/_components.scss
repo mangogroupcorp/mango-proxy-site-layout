@@ -14,6 +14,8 @@
 @import "../../components/Footer/Footer.scss";
 
 // general components
+@import "../../components/Breadcrumbs/Breadcrumbs.scss";
+@import "../../components/PageBanner/PageBanner.scss";
 @import "../../components/Price/Price.scss";
 @import "../../components/IPCount/IPCount.scss";
 @import "../../components/IPGeo/IPGeo.scss";
@@ -22,6 +24,7 @@
 @import "../../components/SupportBanner/SupportBanner.scss";
 @import "../../components/Advantages/Advantages.scss";
 @import "../../components/FAQ/FAQ.scss";
+@import "../../components/RPAdvantages/RPAdvantages.scss";
 
 // page components
 @import "../../components/MainPage/MainPrice/MainPrice.scss";
