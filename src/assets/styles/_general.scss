@@ -249,6 +249,40 @@ h6,
     }
   }
 
+  &\:500 {
+    transition: .3s;
+
+    @include hover {
+      color: $c-500;
+    }
+
+    &:active {
+      color: $c-400;
+    }
+
+    &:disabled,
+    .disabled {
+      color: $grey-7;
+    }
+  }
+
+  &\:400 {
+    transition: .3s;
+
+    @include hover {
+      color: $c-400;
+    }
+
+    &:active {
+      color: $c-300;
+    }
+
+    &:disabled,
+    .disabled {
+      color: $grey-7;
+    }
+  }
+
   &\:grey-13 {
     transition: .3s;
 

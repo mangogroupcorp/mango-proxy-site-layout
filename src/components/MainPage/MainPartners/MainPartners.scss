@@ -64,7 +64,7 @@
       }
 
       &__icon {
-        rotate: 180deg;
+        rotate: 45deg;
       }
     }
   }
@@ -112,7 +112,6 @@
     width: 2.4rem;
     height: 2.4rem;
     color: $c-500;
-    rotate: 45deg;
     transition: .3s;
 
     @include breakpoint($xs-bp) {

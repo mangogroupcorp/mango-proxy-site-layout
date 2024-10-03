@@ -1,0 +1,55 @@
+---
+import DefaultBtn from "@components/UI/DefaultBtn/DefaultBtn.astro";
+import IconBtn from "@components/UI/IconBtn/IconBtn.astro";
+import { Sprite } from "astro-icon";
+---
+
+<section class="faq">
+  <div class="faq__bg">
+    <img src="./img/faq-bg.svg" alt="" />
+  </div>
+  <div class="container faq__container">
+    <div class="faq__head">
+      <div class="faq__head-inner">
+        <h3 class="title-2 faq__title">Часто задаваемые вопросы</h3>
+        <p class="label-l c-grey-9 faq__text">
+          Здесь мы ответили на самые часто задаваемые вопросы. Все равно не
+          можешь найти ответа?
+        </p>
+      </div>
+      <DefaultBtn component="a" href="#" icon>Задать вопрос</DefaultBtn>
+    </div>
+
+    <div class="faq__list">
+      {
+        [...new Array(7)].map(() => (
+          <div class="faq-item" data-dropdown data-group="faq">
+            <div class="faq-item__head">
+              <h5 class="label-l bold faq-item__title">
+                Могу ли я протестировать ваши прокси бесплатно?
+              </h5>
+              <IconBtn type="button" class="faq-item__btn" data-btn>
+                <Sprite name="plus" />
+              </IconBtn>
+            </div>
+            <div class="faq-item__container">
+              <div class="faq-item__inner">
+                <div class="template label-m c-grey-8 faq-item__text">
+                  <p>
+                    Сейчас мы не предлагаем бесплатную пробную версию,
+                    но для новых пользователей предусмотрена единовременная
+                    оплата. Он составляет всего 1,7 доллара за 1 ГБ.
+                  </p>
+                </div>
+                <a href="#" class="label-l hover:500 faq-item__link">
+                  Узнать больше
+                  <Sprite name="arrow-link" />
+                </a>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

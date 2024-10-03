@@ -22,5 +22,7 @@ const { component: Wrapper = "button", color, ...props } = Astro.props;
   ]}
   {...props}
 >
-  <Sprite name="arrow-link" />
+  <slot>
+    <Sprite name="arrow-link" />
+  </slot>
 </Wrapper>

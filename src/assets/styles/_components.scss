@@ -1,3 +1,5 @@
+@import "../../components/Template/Template.scss";
+
 // UI
 @import "../../components/UI/DefaultBtn/DefaultBtn.scss";
 @import "../../components/UI/IconBtn/IconBtn.scss";
@@ -6,13 +8,12 @@
 @import "../../components/UI/MenuLink/MenuLink.scss";
 @import "../../components/UI/IntegrationLogo/IntegrationLogo.scss";
 
-// global components
-@import "../../components/Template/Template.scss";
-
+// header/footer/menu
 @import "../../components/Header/Header.scss";
 @import "../../components/Header/HeaderMenu/HeaderMenu.scss";
 @import "../../components/Footer/Footer.scss";
 
+// general components
 @import "../../components/Price/Price.scss";
 @import "../../components/IPCount/IPCount.scss";
 @import "../../components/IPGeo/IPGeo.scss";
@@ -20,7 +21,9 @@
 @import "../../components/Cases/Cases.scss";
 @import "../../components/SupportBanner/SupportBanner.scss";
 @import "../../components/Advantages/Advantages.scss";
+@import "../../components/FAQ/FAQ.scss";
 
+// page components
 @import "../../components/MainPage/MainPrice/MainPrice.scss";
 @import "../../components/MainPage/MainAPI/MainAPI.scss";
 @import "../../components/MainPage/MainGuarantee/MainGuarantee.scss";
