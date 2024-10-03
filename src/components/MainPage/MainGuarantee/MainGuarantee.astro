@@ -1,0 +1,48 @@
+---
+import DefaultBtn from "@components/UI/DefaultBtn/DefaultBtn.astro";
+import { Sprite } from "astro-icon";
+---
+
+<section class="main-guarantee">
+  <div class="main-guarantee__bg">
+    <img src="./img/main-guarantee-bg.png" alt="" />
+  </div>
+  <div class="container main-guarantee__container">
+    <div class="main-guarantee__head">
+      <img
+        src="./img/bubble-check.svg"
+        alt=""
+        class="main-guarantee__head-icon"
+      />
+      <h3 class="title-2 main-guarantee__title">Гарантия возврата</h3>
+      <p class="label-l c-grey-6 main-guarantee__text">
+        Не беспокойтесь! Мы предлагаем для новых пользователей единовременную
+        оплату 1,7 доллара за 1 ГБ, чтобы Вы смогли оценить все преимущества
+        нашего сервиса. Если по каким-либо причинам вы останетесь недовольны, мы
+        вернем вам деньги в полном объеме.
+      </p>
+    </div>
+
+    <div class="main-guarantee-info">
+      <div class="label-l main-guarantee-info-item">
+        <Sprite name="rocket" />
+         Легкая покупка в один клик
+      </div>
+      <div class="label-l main-guarantee-info-item">
+        <Sprite name="schedule" />
+         Пробный период по специальной цене
+      </div>
+      <div class="label-l main-guarantee-info-item">
+        <Sprite name="credit-card" />
+         Вернем деньги, если сервис не понравится
+      </div>
+    </div>
+
+    <div class="main-guarantee__bottom">
+      <p class="label-l uppercase main-guarantee__desc">
+        Мы соответствуем современным стандартам безопасности
+      </p>
+      <DefaultBtn component="a" href="#" icon>Пробный период</DefaultBtn>
+    </div>
+  </div>
+</section>
