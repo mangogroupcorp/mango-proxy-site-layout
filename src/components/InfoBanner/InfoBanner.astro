@@ -1,0 +1,36 @@
+---
+import DefaultBtn from "@components/UI/DefaultBtn/DefaultBtn.astro";
+---
+
+<section class="info-banner">
+  <div class="container">
+    <div class="info-banner__container">
+      <div class="info-banner__content">
+        <div class="info-banner__head">
+          <h3 class="title-2 info-banner__title">
+            Контролируйте использование данных
+          </h3>
+          <p class="label-l c-grey-9 info-banner__text">
+            Через панель управления MangoProxy вы можете легко управлять
+            использованием прокси. Будьте уверены, что ваши проекты парсинга
+            веб-страниц никогда не остановятся неожиданно.
+          </p>
+        </div>
+
+        <ul class="template label-l info-banner__list">
+          <li>Следите за подробной статистикой использования прокси</li>
+          <li>Создание и управление субпользователями</li>
+          <li>Управление подпиской на прокси</li>
+          <li>Белые списки IP-адресов</li>
+        </ul>
+
+        <DefaultBtn component="a" href="#" icon class="info-banner__btn">
+          Зарегистрироваться
+        </DefaultBtn>
+      </div>
+      <div class="info-banner__img">
+        <img src="./img/main-api-card-1.png" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
