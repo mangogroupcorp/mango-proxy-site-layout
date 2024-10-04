@@ -1,0 +1,15 @@
+.tag {
+  padding: 0.8rem 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: $c-100;
+  border-radius: 10rem;
+
+  svg {
+    flex: none;
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+}

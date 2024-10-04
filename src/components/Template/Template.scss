@@ -1,5 +1,7 @@
 // Текст
 .template {
+
+  &:is(ul),
   ul {
     display: flex;
     flex-direction: column;
@@ -22,6 +24,7 @@
     }
   }
 
+  &:is(ol),
   ol {
     display: flex;
     flex-direction: column;
