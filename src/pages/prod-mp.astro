@@ -1,21 +1,13 @@
 ---
-import Advantages from "@components/Advantages/Advantages.astro";
 import Breadcrumbs from "@components/Breadcrumbs/Breadcrumbs.astro";
-import FAQ from "@components/FAQ/FAQ.astro";
-import InfoBanner from "@components/InfoBanner/InfoBanner.astro";
-import InfoSlider from "@components/InfoSlider/InfoSlider.astro";
-import IPGeo from "@components/IPGeo/IPGeo.astro";
+import MPAdvantages from "@components/MPAdvantages/MPAdvantages.astro";
 import PageBanner from "@components/PageBanner/PageBanner.astro";
-import Price from "@components/Price/Price.astro";
-import RPAdvantages from "@components/RPAdvantages/RPAdvantages.astro";
-import RPInfo from "@components/RPInfo/RPInfo.astro";
-import Tools from "@components/Tools/Tools.astro";
 import DefaultBtn from "@components/UI/DefaultBtn/DefaultBtn.astro";
 import Layout from "src/layouts/Layout.astro";
 ---
 
-<Layout title="Резидентские прокси">
-  <Breadcrumbs items={["Главная", "Резидентские прокси"]} />
+<Layout title="Мобильные прокси">
+  <Breadcrumbs items={["Главная", "Мобильные прокси"]} />
 
   <PageBanner>
     <div class="page-banner__content">
@@ -49,16 +41,22 @@ import Layout from "src/layouts/Layout.astro";
         </div>
       </div>
 
-      <h1 class="title-1 page-banner__title">Резидентские прокси</h1>
+      <h1 class="title-1 page-banner__title">Мобильные прокси</h1>
       <div class="template label-l page-banner__text">
-        Избегайте блокировки при очистке и легко собирайте данные с помощью
+        Избегайте блокировки при очистке и легко собирайте данные с помощью
         резидентных прокси-серверов MangoProxy.
         <br /><br />
         <ul>
-          <li><b>100M+</b> Резидентные IP-адреса</li>
-          <li><b>Бесплатно геотаргетинг</b></li>
-          <li><b>∼99,95%</b> показатели успеха</li>
-          <li><b>∼0.6 сек.</b> время ответа</li>
+          <li>
+            <b>Более 2,5 млн IP-адресов</b> с реальных мобильных устройств
+          </li>
+          <li><b>Неограниченная пропускная способность</b> и сеансы</li>
+          <li>Поддерживает <b>5G/4G/3G/LTE</b></li>
+          <li>
+            <b>Мгновенная смена IP-адресов</b> и параметры автоматической
+            ротации
+          </li>
+          <li><b>Простая интеграция</b> и поддержка API</li>
         </ul>
       </div>
     </div>
@@ -69,13 +67,5 @@ import Layout from "src/layouts/Layout.astro";
     </div>
   </PageBanner>
 
-  <RPAdvantages />
-  <IPGeo />
-  <Price />
-  <RPInfo />
-  <Tools />
-  <Advantages />
-  <InfoBanner />
-  <InfoSlider />
-  <FAQ />
+  <MPAdvantages />
 </Layout>
