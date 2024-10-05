@@ -1,12 +1,18 @@
 ---
 import DefaultBtn from "@components/UI/DefaultBtn/DefaultBtn.astro";
 
-interface Props {}
+interface Props {
+  img?: string;
+}
 
-const { ...rest } = Astro.props;
+const { img = "./img/page-banner-1.svg", ...rest } = Astro.props;
 ---
 
 <section class="page-banner" class:list={[]} {...rest}>
+  <div class="page-banner__img">
+    <div class="page-banner__img-bg"></div>
+    <img src={img} alt="" />
+  </div>
   <div class="container page-banner__container">
     <slot>
       <div class="page-banner__content">

@@ -35,6 +35,11 @@ body._open-menu {
   left: 0;
   width: 100%;
   z-index: 5000;
+  // transition: background-color .3s;
+
+  // @include hover {
+  //   background-color: $grey-2;
+  // }
 
   @include breakpoint($xs-bp) {
     padding: 0.8rem 0 0;

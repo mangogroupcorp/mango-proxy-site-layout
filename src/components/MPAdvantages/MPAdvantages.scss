@@ -80,6 +80,7 @@
   padding: 3.2rem;
   border-radius: 1.6rem;
   border: 0.1rem solid $grey-5;
+  background-color: $white;
 
   @include breakpoint($xs-bp) {
     padding: 2.4rem;

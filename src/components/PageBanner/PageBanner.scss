@@ -1,8 +1,38 @@
 .page-banner {
-  margin: 4rem 0rem 12rem;
+  margin: 4rem 0rem 16rem;
 
   @include breakpoint($xs-bp) {
     margin: 4rem 0rem 8rem;
+  }
+
+  &__img {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    width: 124.6rem;
+    height: 112.4rem;
+    overflow: hidden;
+
+    &-bg {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 139.3rem;
+      height: 139.3rem;
+      border-radius: 50%;
+      background-color: $grey-4;
+    }
+
+    @include img() {
+      object-fit: contain;
+      object-position: center;
+      width: 81rem;
+      height: 70rem;
+      position: absolute;
+      top: 7.2rem;
+      left: 33rem;
+    }
   }
 
   &__container {
