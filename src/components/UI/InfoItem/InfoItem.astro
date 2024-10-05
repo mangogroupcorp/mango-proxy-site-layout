@@ -1,0 +1,24 @@
+---
+// @ts-nocheck
+import { Sprite } from "astro-icon";
+import type { IUIVariableComponent } from "src/interface";
+
+interface Props extends IUIVariableComponent, astroHTML.JSX.HTMLAttributes {
+  icon: string;
+  title: string;
+}
+
+const { component: Wrapper = "div", icon, title, ...props } = Astro.props;
+---
+
+<Wrapper class="info-item" class:list={[]} {...props}>
+  <Sprite name={icon} class="info-item__icon" />
+  <slot name="container">
+    <div class="info-item__container">
+      <h4 class="title-4 info-item__title" set:html={title} />
+      <p class="label-l info-item__text">
+        <slot />
+      </p>
+    </div>
+  </slot>
+</Wrapper>

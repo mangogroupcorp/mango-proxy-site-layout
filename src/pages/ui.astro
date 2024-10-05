@@ -3,6 +3,10 @@ import DefaultBtn from "@components/UI/DefaultBtn/DefaultBtn.astro";
 import Layout from "../layouts/Layout.astro";
 import IconBtn from "@components/UI/IconBtn/IconBtn.astro";
 import AdditionalBtn from "@components/UI/AdditionalBtn/AdditionalBtn.astro";
+import IntegrationLogo from "@components/UI/IntegrationLogo/IntegrationLogo.astro";
+import LocationItem from "@components/UI/LocationItem/LocationItem.astro";
+import MenuLink from "@components/UI/MenuLink/MenuLink.astro";
+import Tag from "@components/UI/Tag/Tag.astro";
 ---
 
 <Layout title="Разводящая">
@@ -67,6 +71,23 @@ import AdditionalBtn from "@components/UI/AdditionalBtn/AdditionalBtn.astro";
         Посмотреть все браузеры
       </AdditionalBtn>
     </div>
+
+    <IntegrationLogo img="./img/logo/logo-2.svg">GoLogin Proxy</IntegrationLogo>
+
+    <LocationItem img="./img/flags/US.svg" title="США" text="439,886 IPs" />
+
+    <LocationItem
+      size="big"
+      img="./img/flags/US.svg"
+      title="США"
+      text="439,886 IPs"
+    />
+
+    <MenuLink icon="./img/icons/SERP.svg" title="Скрапер. SERP">
+      Глобальный пул, точный таргетинг и отсутствие контрактов
+    </MenuLink>
+
+    <Tag>Tag</Tag>
   </div>
 
   <style is:inline>

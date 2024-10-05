@@ -1,0 +1,288 @@
+.pricing {
+  padding: 15.7rem 0rem;
+  background-color: $grey-12;
+  color: $white;
+
+  @include breakpoint($xs-bp) {
+    padding: 3.2rem 0;
+  }
+
+  &._drag {
+    .pricing-scrollbar__progress {
+
+      &::before,
+      &::after {
+        transition: 0s;
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8rem;
+
+    @include breakpoint($xs-bp) {
+      gap: 4rem;
+    }
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+    text-align: center;
+    max-width: 95rem;
+
+    @include breakpoint($xs-bp) {
+      gap: 0.8rem;
+    }
+  }
+
+  &__inner {
+    width: 100%;
+    max-width: 102.3rem;
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6.5rem;
+    margin: 0 auto;
+
+    @include breakpoint($xs-bp) {
+      padding-top: 7rem;
+    }
+  }
+
+  &-scrollbar {
+    height: 44px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    @include breakpoint($xs-bp) {
+      height: 20px;
+    }
+
+    &__steps {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__step {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      flex: none;
+      background-color: $c-500;
+      position: relative;
+      z-index: 1;
+
+      @include breakpoint($xs-bp) {
+        width: 8px;
+        height: 8px;
+        position: static;
+      }
+
+      // &::after {
+      //   content: "";
+      //   position: absolute;
+      //   z-index: 1;
+      //   top: 0;
+      //   left: 0;
+      //   width: 100%;
+      //   height: 100%;
+      //   border-radius: 50%;
+      //   background-color: $c-500;
+      // }
+
+      &.swiper-pagination-bullet-active {
+        .pricing-item-info {
+          opacity: 1;
+          pointer-events: all;
+        }
+      }
+    }
+
+    &__progress {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      &::before,
+      &::after {
+        content: "";
+        transition: .3s;
+      }
+
+      &::before {
+        height: 4px;
+        background-color: $c-500;
+        width: var(--progress, 0);
+
+        @include breakpoint($xs-bp) {
+          height: 2px;
+        }
+      }
+
+      &::after {
+        height: 2px;
+        background-color: $grey-7;
+        width: calc(100% - var(--progress, 0));
+        height: 1px;
+      }
+    }
+
+    .swiper-scrollbar-drag {
+      position: absolute;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $grey-13;
+
+      &__inner {
+        position: absolute;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $c-500;
+        border-radius: 50%;
+
+        @include breakpoint($xs-bp) {
+          width: 20px;
+          height: 20px;
+        }
+
+        svg {
+          width: 28px;
+          height: 28px;
+
+          @include breakpoint($xs-bp) {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  &__swiper {
+    width: 100%;
+  }
+
+  &__info {
+    @include breakpoint($xs-bp) {
+      width: calc(100% + 3.2rem);
+      margin: 0rem -1.6rem;
+      padding: 0rem 1.6rem;
+    }
+
+    .swiper-wrapper {
+      align-items: stretch;
+    }
+
+    .swiper-slide {
+      height: auto;
+
+      @include breakpoint($xs-bp) {
+        width: 33rem;
+      }
+    }
+  }
+}
+
+.pricing-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3.2rem;
+  padding: 4rem;
+  background-color: $grey-11;
+  border: 0.1rem solid $grey-9;
+  border-radius: 1.6rem;
+
+  @include breakpoint($xs-bp) {
+    flex-direction: column;
+    padding: 2.4rem;
+  }
+
+  &-info {
+    position: absolute;
+    bottom: calc(100% + 36px);
+    left: 50%;
+    translate: -50% 0;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    padding: 1.2rem 2.4rem;
+    min-height: 7rem;
+    background-color: $grey-12;
+    border: 0.1rem solid $grey-9;
+    border-radius: 0.8rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s;
+
+    @include breakpoint($xs-bp) {
+      bottom: calc(100% + 22px);
+      min-height: 4rem;
+      padding: 0.8rem 1.6rem;
+    }
+
+    &__desc {
+      padding: 1rem 0.8rem;
+      border-left: 0.1rem solid $c-500;
+
+      @include breakpoint($xs-bp) {
+        padding: 0rem 0rem 0rem 0.8rem;
+        @include label-s();
+      }
+    }
+
+    &__value {
+      @include breakpoint($xs-bp) {
+        @include label-l();
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      translate: -50% 50%;
+      border-radius: 0 0 0 0.4rem;
+      border: 0.1rem solid $grey-9;
+      border-top: none;
+      border-right: none;
+      background-color: $grey-12;
+      width: 1rem;
+      height: 1rem;
+      rotate: -45deg;
+    }
+  }
+
+  &__price {
+    &-value {
+      @include breakpoint($xs-bp) {
+        @include title-4();
+      }
+    }
+  }
+
+  .pricing-item-info {
+    display: none;
+  }
+}

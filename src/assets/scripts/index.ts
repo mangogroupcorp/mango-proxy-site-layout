@@ -15,6 +15,7 @@ import { initDropdownItems } from "./utils/dropdown";
 import { initSwipers } from "./utils/swiper";
 import { initHeaderMenu } from "@components/Header/Header";
 import { initTabController } from "./utils/tabController";
+import { initPricingSwiper } from "@components/Pricing/Pricing";
 
 Swiper.use([Navigation, Thumbs, EffectFade, Pagination, Autoplay, Scrollbar]);
 
@@ -36,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // компоненты
   initHeaderMenu();
+  initPricingSwiper();
   // <--
 
   // События
