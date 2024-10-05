@@ -44,6 +44,19 @@
       margin: 0rem -0.8rem;
       gap: 0.8rem;
     }
+
+    .rp-info-item {
+      @media screen and (min-width: 601px) {
+        &:not(:last-child) {
+          margin-bottom: -8.4rem;
+
+          &:hover {
+            translate: 0 -10.8rem;
+            border-color: $c-500;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -57,19 +70,6 @@
   display: flex;
   align-items: stretch;
   transition: .3s;
-
-  @media screen and (min-width: 601px) {
-    &:not(:last-child) {
-      margin-bottom: -8.4rem;
-
-      &:hover {
-        translate: 0 -10.8rem;
-        border-color: $c-500;
-      }
-    }
-  }
-
-
 
   @include breakpoint($xs-bp) {
     display: flex;
@@ -138,10 +138,21 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 0.8rem;
-    margin: 1.6rem 0rem;
 
-    @include breakpoint($xs-bp) {
-      margin: 0.8rem 0rem;
+    &:not(:first-child) {
+      margin-top: 1.6rem;
+
+      @include breakpoint($xs-bp) {
+        margin-top: 0.8rem;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1.6rem;
+
+      @include breakpoint($xs-bp) {
+        margin-bottom: 0.8rem;
+      }
     }
   }
 
@@ -184,5 +195,13 @@
         height: 3rem;
       }
     }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.8rem;
+    flex-wrap: wrap;
   }
 }

@@ -1,36 +1,48 @@
 ---
+// @ts-nocheck
 import DefaultBtn from "@components/UI/DefaultBtn/DefaultBtn.astro";
+import type { IUIVariableComponent } from "src/interface";
+
+interface Props
+  extends IUIVariableComponent,
+    astroHTML.JSX.ButtonHTMLAttributes {}
+
+const { component: Wrapper = "section", ...props } = Astro.props;
 ---
 
-<section class="info-banner">
-  <div class="container">
-    <div class="info-banner__container">
-      <div class="info-banner__content">
-        <div class="info-banner__head">
-          <h3 class="title-2 info-banner__title">
-            Контролируйте использование данных
-          </h3>
-          <p class="label-l c-grey-9 info-banner__text">
-            Через панель управления MangoProxy вы можете легко управлять
-            использованием прокси. Будьте уверены, что ваши проекты парсинга
-            веб-страниц никогда не остановятся неожиданно.
-          </p>
-        </div>
+<Wrapper class="info-banner" class:list={[]} {...props}>
+  <slot name="all">
+    <div class="container">
+      <div class="info-banner__container">
+        <slot>
+          <div class="info-banner__content">
+            <div class="info-banner__head">
+              <h3 class="title-2 info-banner__title">
+                Контролируйте использование данных
+              </h3>
+              <p class="label-l c-grey-9 info-banner__text">
+                Через панель управления MangoProxy вы можете легко управлять
+                использованием прокси. Будьте уверены, что ваши проекты парсинга
+                веб-страниц никогда не остановятся неожиданно.
+              </p>
+            </div>
 
-        <ul class="template label-l info-banner__list">
-          <li>Следите за подробной статистикой использования прокси</li>
-          <li>Создание и управление субпользователями</li>
-          <li>Управление подпиской на прокси</li>
-          <li>Белые списки IP-адресов</li>
-        </ul>
+            <ul class="template label-l info-banner__list">
+              <li>Следите за подробной статистикой использования прокси</li>
+              <li>Создание и управление субпользователями</li>
+              <li>Управление подпиской на прокси</li>
+              <li>Белые списки IP-адресов</li>
+            </ul>
 
-        <DefaultBtn component="a" href="#" icon class="info-banner__btn">
-          Зарегистрироваться
-        </DefaultBtn>
-      </div>
-      <div class="info-banner__img">
-        <img src="./img/main-api-card-1.png" alt="" />
+            <DefaultBtn component="a" href="#" icon class="info-banner__btn">
+              Зарегистрироваться
+            </DefaultBtn>
+          </div>
+          <div class="info-banner__img">
+            <img src="./img/main-api-card-1.png" alt="" />
+          </div>
+        </slot>
       </div>
     </div>
-  </div>
-</section>
+  </slot>
+</Wrapper>

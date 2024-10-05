@@ -1,0 +1,144 @@
+---
+import InfoBanner from "@components/InfoBanner/InfoBanner.astro";
+import DefaultBtn from "@components/UI/DefaultBtn/DefaultBtn.astro";
+import Tag from "@components/UI/Tag/Tag.astro";
+import { Sprite } from "astro-icon";
+---
+
+<section class="mp-info">
+  <div class="container mp-info__container">
+    <h3 class="title-2 mp-info__title">
+      Еще больше возможностей мобильного прокси от Mango
+    </h3>
+
+    <div class="mp-info__inner">
+      <div class="mp-info__list">
+        <div class="rp-info-item">
+          <span class="label-m rp-info-item__num">[ 01 ]</span>
+          <div class="rp-info-item__container">
+            <div class="rp-info-item__head">
+              <h4 class="title-3 rp-info-item__title">
+                Премиальные мобильные прокси
+              </h4>
+              <p class="lable-l c-grey-8 rp-info-item__text">
+                Получите полностью свободный от блоков, высокопроизводительный и
+                экономичный опыт. Все мобильные прокси в нашем пуле поступают
+                непосредственно из сети мобильного оператора и тщательно
+                управляются для максимизации вашего успеха.
+              </p>
+              <div class="rp-info-item__tags">
+                <Tag>
+                  <Sprite name="check" />
+                   2,5 млн+IP-адресов
+                </Tag>
+                <Tag>
+                  <Sprite name="check" />
+                   Переключатель автоматического поворота
+                </Tag>
+                <Tag>
+                  <Sprite name="check" />
+                   Город
+                </Tag>
+                <Tag>
+                  <Sprite name="check" />
+                   Поддержка 5G/4G/3G
+                </Tag>
+                <Tag>
+                  <Sprite name="check" />
+                   Поддержка SOCKS5
+                </Tag>
+                <Tag>
+                  <Sprite name="check" />
+                   Доступ через API
+                </Tag>
+              </div>
+            </div>
+            <div class="rp-info-item__adv">
+              <div class="rp-advantages-item">
+                <h4 class="label-l rp-advantages-item__title">
+                  Безлимитный трафик и доступность
+                </h4>
+                <p class="label-m c-grey-8 rp-advantages-item__text">
+                  Мы предоставляем вам доступ ко всей нашей сети мобильных
+                  прокси без каких-либо ограничений.
+                </p>
+              </div>
+              <div class="rp-advantages-item">
+                <h4 class="label-l rp-advantages-item__title">
+                  Глобальная сеть мобильных прокси
+                </h4>
+                <p class="label-m c-grey-8 rp-advantages-item__text">
+                  Наш пул охватывает два континента — получайте IP-адреса именно
+                  из того места, которое вам нужно.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rp-info-item">
+          <span class="label-m rp-info-item__num">[ 02 ]</span>
+          <div class="rp-info-item__container">
+            <div class="rp-info-item__head">
+              <h4 class="title-3 rp-info-item__title">
+                Руководства и документация
+              </h4>
+              <p class="lable-l c-grey-8 rp-info-item__text">
+                Когда вы будете готовы начать использовать мобильные прокси, вы
+                можете воспользоваться нашими краткими руководствами или
+                обширной документацией, чтобы интегрировать их за считанные
+                минуты.
+              </p>
+              <ul class="template label-l rp-info-item__inc">
+                <li>Генератор конечных точек</li>
+                <li>Удобная для разработчиков документация</li>
+                <li>Интеграция со сторонним ПО</li>
+                <li>Управление пользователями прокси с помощью Public API</li>
+              </ul>
+            </div>
+            <div class="rp-info-item__btns">
+              <DefaultBtn component="a" href="#" color="secondary">
+                Документация
+              </DefaultBtn>
+              <DefaultBtn component="a" href="#" icon>
+                Краткое руководство
+              </DefaultBtn>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <InfoBanner class="mp-info-banner">
+        <div class="info-banner__container" slot="all">
+          <div class="info-banner__content">
+            <div class="info-banner__head">
+              <h3 class="title-2 info-banner__title">
+                Расширенное самообслуживание
+              </h3>
+              <p class="label-l c-grey-9 info-banner__text">
+                Панель управления MangoProxy позволяет каждому клиенту полностью
+                контролировать свои планы мобильных прокси. Каждая функция была
+                специально разработана, чтобы сделать работу с прокси-серверами
+                максимально простой.
+              </p>
+            </div>
+
+            <ul class="template label-l info-banner__list">
+              <li>Настраиваемая ротация IP-адресов</li>
+              <li>Ручное и автоматическое продление заказов</li>
+              <li>Бесшовная интеграция</li>
+              <li>И многое другое</li>
+            </ul>
+
+            <DefaultBtn component="a" href="#" icon class="info-banner__btn">
+              Зарегистрироваться
+            </DefaultBtn>
+          </div>
+          <div class="info-banner__img">
+            <img src="./img/rp-info-banner.png" alt="" />
+          </div>
+        </div>
+      </InfoBanner>
+    </div>
+  </div>
+</section>
