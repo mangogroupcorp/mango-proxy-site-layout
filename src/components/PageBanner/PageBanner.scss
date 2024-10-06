@@ -14,6 +14,10 @@
     height: 112.4rem;
     overflow: hidden;
 
+    @include breakpoint($xs-bp) {
+      display: none;
+    }
+
     &-bg {
       position: absolute;
       left: 0;

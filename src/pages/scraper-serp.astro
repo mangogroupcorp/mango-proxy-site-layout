@@ -1,0 +1,238 @@
+---
+import Advantages from "@components/Advantages/Advantages.astro";
+import Breadcrumbs from "@components/Breadcrumbs/Breadcrumbs.astro";
+import FAQ from "@components/FAQ/FAQ.astro";
+import PageBanner from "@components/PageBanner/PageBanner.astro";
+import RPInfo from "@components/RPInfo/RPInfo.astro";
+import ScraperAdv from "@components/ScraperAdv/ScraperAdv.astro";
+import DefaultBtn from "@components/UI/DefaultBtn/DefaultBtn.astro";
+import Tag from "@components/UI/Tag/Tag.astro";
+import { Sprite } from "astro-icon";
+import Layout from "src/layouts/Layout.astro";
+---
+
+<Layout title="SERP Scraper">
+  <Breadcrumbs items={["Главная", "SERP Scraper"]} />
+
+  <PageBanner img="./img/page-banner-6.svg">
+    <div class="page-banner__content">
+      <div class="page-banner-rate">
+        <div class="page-banner-rate__inner">
+          <img
+            class="page-banner-rate__logo"
+            src="./img/rate-logo-1.svg"
+            alt=""
+          />
+          <div
+            class="page-banner-rate__stars page-banner-rate__stars_v1"
+            style="--rate: 90%"
+          >
+            <img src="./img/rate-stars-1.svg" alt="" />
+          </div>
+        </div>
+        <div class="page-banner-rate__inner">
+          <img
+            class="page-banner-rate__logo"
+            src="./img/rate-logo-2.svg"
+            alt=""
+          />
+          <div
+            class="page-banner-rate__stars page-banner-rate__stars_v2"
+            style="--rate: 90%"
+          >
+            <img src="./img/rate-stars-2.svg" alt="" />
+            <img src="./img/rate-stars-2_fill.svg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <h1 class="title-1 page-banner__title">
+        Получайте данные поиска в реальном времени с помощью API-интерфейса SERP
+        Scraper
+      </h1>
+      <div class="template label-l page-banner__text">
+        <ul>
+          <li>Платите только за успешно достигнутый результат</li>
+          <li>Получите данные о точности на уровне координат</li>
+          <li>Функции Scrape SERP без скрытых комиссий</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="page-banner__btns">
+      <DefaultBtn color="secondary">Купить</DefaultBtn>
+      <DefaultBtn icon>Быстрый тест</DefaultBtn>
+    </div>
+  </PageBanner>
+
+  <ScraperAdv />
+
+  <!-- CODE BLOK -->
+
+  <RPInfo>
+    <div class="rp-info__head-inner" slot="head">
+      <h3 class="title-2 rp-info__title">
+        Возможности API-интерфейса SERP Scraper
+      </h3>
+      <p class="label-l c-grey-9 rp-info__text">
+        Свяжитесь с нашей командой, чтобы узнать еще больше о возможностях
+        скрапера или задать нам любой вопрос!
+      </p>
+    </div>
+    <DefaultBtn component="a" href="#" icon slot="head">Связаться</DefaultBtn>
+
+    <div class="rp-info-item">
+      <span class="label-m rp-info-item__num">[ 01 ]</span>
+      <div class="rp-info-item__container">
+        <div class="rp-info-item__head">
+          <h4 class="title-3 rp-info-item__title">
+            Собирайте своевременные данные из ведущих поисковых систем.
+          </h4>
+          <p class="lable-l c-grey-8 rp-info-item__text">
+            Используйте API-интерфейс SERP Scraper для сбора своевременных и
+            надежных данных о результатах поиска из самых популярных поисковых
+            систем. Получайте данные в формате HTML или структурированные JSON с
+            органическими и платными результатами.
+          </p>
+          <div class="rp-info-item__tags">
+            <Tag>
+              <Sprite name="check" />
+               Google
+            </Tag>
+            <Tag>
+              <Sprite name="check" />
+               Baidu
+            </Tag>
+            <Tag>
+              <Sprite name="check" />
+               Bing
+            </Tag>
+            <Tag>
+              <Sprite name="check" />
+               Yandex
+            </Tag>
+          </div>
+        </div>
+        <DefaultBtn component="a" href="#" icon>Начать</DefaultBtn>
+      </div>
+    </div>
+
+    <div class="rp-info-item">
+      <span class="label-m rp-info-item__num">[ 02 ]</span>
+      <div class="rp-info-item__container">
+        <div class="rp-info-item__head">
+          <h4 class="title-3 rp-info-item__title">
+            Очистите функции SERP и получите проанализированные данные
+          </h4>
+          <p class="lable-l c-grey-8 rp-info-item__text">
+            Получайте структурированные данные из поисковых систем Google SERP,
+            Google Images и Google News. Изучите обширный набор элементов
+            поиска, которые вы можете очистить:
+          </p>
+        </div>
+        <div class="rp-info-item__tags">
+          <Tag>
+            <Sprite name="check" />
+             Избранный фрагмент
+          </Tag>
+          <Tag>
+            <Sprite name="check" />
+             Локальный пакет
+          </Tag>
+          <Tag>
+            <Sprite name="check" />
+             График знаний
+          </Tag>
+          <Tag>
+            <Sprite name="check" />
+             Карусель товаров
+          </Tag>
+          <Tag>
+            <Sprite name="check" />
+             Главные новости
+          </Tag>
+          <Tag>
+            <Sprite name="check" />
+             Популярные продукты
+          </Tag>
+          <Tag>
+            <Sprite name="check" />
+             Похожие запросы
+          </Tag>
+          <Tag>
+            <Sprite name="check" />
+             Похожие запросы
+          </Tag>
+        </div>
+      </div>
+    </div>
+
+    <div class="rp-info-item">
+      <span class="label-m rp-info-item__num">[ 03 ]</span>
+      <div class="rp-info-item__container">
+        <div class="rp-info-item__head">
+          <h4 class="title-3 rp-info-item__title">
+            Доступ к результатам поиска из любого места
+          </h4>
+          <p class="lable-l c-grey-8 rp-info-item__text">
+            Разблокируйте локализованные данные поисковых систем без особых
+            усилий, где бы вы ни находились, и на любом нужном вам языке.
+          </p>
+          <ul class="template label-l rp-info-item__inc">
+            <li>Локализованные результаты поиска из 195 стран</li>
+            <li>
+              Таргетинг на страну, штат, город или даже на уровне координат.
+            </li>
+          </ul>
+        </div>
+        <DefaultBtn component="a" href="#" icon>Попробовать</DefaultBtn>
+      </div>
+    </div>
+
+    <div class="rp-info-item">
+      <span class="label-m rp-info-item__num">[ 04 ]</span>
+      <div class="rp-info-item__container">
+        <div class="rp-info-item__head">
+          <h4 class="title-3 rp-info-item__title">Простая интеграция</h4>
+          <p class="lable-l c-grey-8 rp-info-item__text">
+            Ротационные резидентные прокси Mango легко интегрировать и управлять
+            ими.
+          </p>
+          <ol class="template label-l rp-info-item__inc">
+            <li data-text="Шаг">
+              Поместите URL-адрес конечной точки, учетные данные пользователя
+              API и полезные данные в один запрос.
+            </li>
+            <li data-text="Шаг">
+              Отправьте этот запрос в наш API. Дальше мы обо всем позаботимся –
+              вам больше ничего делать не нужно.
+            </li>
+            <li data-text="Шаг">
+              Получите результат либо непосредственно из API, либо сохраните его
+              в выбранном вами облачном хранилище.
+            </li>
+          </ol>
+        </div>
+        <div class="rp-info-item-doc">
+          <DefaultBtn component="a" href="#" color="secondary">
+            Доступ к дашборду
+          </DefaultBtn>
+          <div class="rp-info-item-doc__list">
+            <img src="./img/doc-1.svg" alt="" class="rp-info-item-doc__logo" />
+            <img src="./img/doc-2.svg" alt="" class="rp-info-item-doc__logo" />
+            <img src="./img/doc-3.svg" alt="" class="rp-info-item-doc__logo" />
+            <img src="./img/doc-4.svg" alt="" class="rp-info-item-doc__logo" />
+            <img src="./img/doc-5.svg" alt="" class="rp-info-item-doc__logo" />
+            <img src="./img/doc-6.svg" alt="" class="rp-info-item-doc__logo" />
+            <img src="./img/doc-7.svg" alt="" class="rp-info-item-doc__logo" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </RPInfo>
+
+  <!--  -->
+
+  <Advantages />
+  <FAQ />
+</Layout>

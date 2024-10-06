@@ -45,6 +45,22 @@
         left: 0;
         counter-increment: section;
       }
+
+      &[data-text] {
+        padding-left: 8rem;
+
+        &::before {
+          content: "[ " attr(data-text) counter(counter) " ]";
+          flex: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+          counter-increment: section;
+          @include label-m();
+          padding: 0.2rem;
+          background-color: $c-100;
+        }
+      }
     }
   }
 }
