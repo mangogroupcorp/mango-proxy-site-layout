@@ -2,8 +2,11 @@
   margin: 5rem 0rem;
 
   &__container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    // display: grid;
+    // grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
     gap: 2.4rem;
 
     @include breakpoint($xs-bp) {
@@ -13,6 +16,9 @@
     }
 
     .rp-advantages-item {
+      flex: 1;
+      min-width: calc((100% - 2.4rem * 3) / 4);
+
       &:nth-child(4n + 2) {
         background-color: $grey-3;
       }
@@ -65,6 +71,16 @@
     @include breakpoint($xs-bp) {
       width: 3.2rem;
       height: 3.2rem;
+    }
+
+    &:is(img) {
+      width: 6.4rem;
+      height: 6.4rem;
+
+      @include breakpoint($xs-bp) {
+        width: 4rem;
+        height: 4rem;
+      }
     }
   }
 
