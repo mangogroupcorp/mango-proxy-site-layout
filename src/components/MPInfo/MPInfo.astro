@@ -3,13 +3,18 @@ import InfoBanner from "@components/InfoBanner/InfoBanner.astro";
 import DefaultBtn from "@components/UI/DefaultBtn/DefaultBtn.astro";
 import Tag from "@components/UI/Tag/Tag.astro";
 import { Sprite } from "astro-icon";
+
+interface Props {
+  title?: string;
+}
+
+const { title = "Еще больше возможностей мобильного прокси от Mango" } =
+  Astro.props;
 ---
 
 <section class="mp-info">
   <div class="container mp-info__container">
-    <h3 class="title-2 mp-info__title">
-      Еще больше возможностей мобильного прокси от Mango
-    </h3>
+    <h3 class="title-2 mp-info__title" set:html={title} />
 
     <div class="mp-info__inner">
       <div class="mp-info__list">
@@ -108,37 +113,39 @@ import { Sprite } from "astro-icon";
         </div>
       </div>
 
-      <InfoBanner class="mp-info-banner">
-        <div class="info-banner__container" slot="all">
-          <div class="info-banner__content">
-            <div class="info-banner__head">
-              <h3 class="title-2 info-banner__title">
-                Расширенное самообслуживание
-              </h3>
-              <p class="label-l c-grey-9 info-banner__text">
-                Панель управления MangoProxy позволяет каждому клиенту полностью
-                контролировать свои планы мобильных прокси. Каждая функция была
-                специально разработана, чтобы сделать работу с прокси-серверами
-                максимально простой.
-              </p>
+      <slot name="banner">
+        <InfoBanner class="mp-info-banner">
+          <div class="info-banner__container" slot="all">
+            <div class="info-banner__content">
+              <div class="info-banner__head">
+                <h3 class="title-2 info-banner__title">
+                  Расширенное самообслуживание
+                </h3>
+                <p class="label-l c-grey-9 info-banner__text">
+                  Панель управления MangoProxy позволяет каждому клиенту
+                  полностью контролировать свои планы мобильных прокси. Каждая
+                  функция была специально разработана, чтобы сделать работу с
+                  прокси-серверами максимально простой.
+                </p>
+              </div>
+
+              <ul class="template label-l info-banner__list">
+                <li>Настраиваемая ротация IP-адресов</li>
+                <li>Ручное и автоматическое продление заказов</li>
+                <li>Бесшовная интеграция</li>
+                <li>И многое другое</li>
+              </ul>
+
+              <DefaultBtn component="a" href="#" icon class="info-banner__btn">
+                Зарегистрироваться
+              </DefaultBtn>
             </div>
-
-            <ul class="template label-l info-banner__list">
-              <li>Настраиваемая ротация IP-адресов</li>
-              <li>Ручное и автоматическое продление заказов</li>
-              <li>Бесшовная интеграция</li>
-              <li>И многое другое</li>
-            </ul>
-
-            <DefaultBtn component="a" href="#" icon class="info-banner__btn">
-              Зарегистрироваться
-            </DefaultBtn>
+            <div class="info-banner__img">
+              <img src="./img/rp-info-banner.png" alt="" />
+            </div>
           </div>
-          <div class="info-banner__img">
-            <img src="./img/rp-info-banner.png" alt="" />
-          </div>
-        </div>
-      </InfoBanner>
+        </InfoBanner>
+      </slot>
     </div>
   </div>
 </section>

@@ -19,6 +19,12 @@
 
       &:nth-child(4n + 3) {
         background-color: $c-500;
+
+        .rp-advantages-item {
+          &__text {
+            color: $grey-9;
+          }
+        }
       }
 
       &:nth-child(4n + 4) {
@@ -53,10 +59,16 @@
     flex: none;
     width: 3.6rem;
     height: 3.6rem;
+    object-fit: contain;
+    object-position: center;
 
     @include breakpoint($xs-bp) {
       width: 3.2rem;
       height: 3.2rem;
     }
+  }
+
+  &__title {
+    margin-top: auto;
   }
 }
