@@ -95,6 +95,7 @@
   }
 
   &__text {
+    flex: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -109,6 +110,7 @@
   }
 
   &__icon {
+    flex: none;
     height: 100%;
     width: var(--iw, 5.6rem);
     display: flex;

@@ -1,0 +1,138 @@
+.tariff-plan {
+  padding: 20rem 0rem;
+  position: relative;
+  overflow: hidden;
+  background-color: $grey-12;
+  color: $white;
+
+  @include breakpoint($xs-bp) {
+    padding: 10rem 0 7rem;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 40%;
+      translate: -50% 0;
+      width: 192rem;
+      padding-top: 50%;
+      border-radius: 200rem 200rem 0 0;
+      background: radial-gradient(at center top, $grey-8 0%, $grey-12 80%, $grey-12 100%);
+
+      @include breakpoint($xs-bp) {
+        width: 76rem;
+        height: 36.4rem;
+        padding: 0;
+        translate: -50% 0;
+        top: 60%;
+      }
+    }
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    @include breakpoint($xs-bp) {
+      gap: 0rem;
+    }
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+    text-align: center;
+  }
+
+  &__text {
+    max-width: 66rem;
+
+    @include breakpoint($xs-bp) {
+      @include label-s();
+    }
+  }
+
+  &__swiper {
+    @media screen and (min-width: 601px) {
+      overflow: visible;
+
+      .swiper-wrapper {
+        transform: none !important;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3.2rem;
+        max-width: 135.4rem;
+        margin: 0 auto;
+      }
+
+      .swiper-slide {
+        display: grid;
+      }
+
+      &-btn {
+        display: none;
+      }
+    }
+
+    @include breakpoint($xs-bp) {
+      position: relative;
+      overflow: hidden;
+      width: calc(100% + 3.2rem);
+      margin: 0rem -1.6rem;
+      padding: 3rem 1.6rem;
+    }
+
+    .swiper-wrapper {
+      @include breakpoint($xs-bp) {
+        align-items: stretch;
+      }
+    }
+
+    .swiper-slide {
+      @include breakpoint($xs-bp) {
+        height: auto;
+        display: grid;
+        padding-right: 0.8rem;
+      }
+    }
+
+    &-btn {
+      @include breakpoint($xs-bp) {
+        position: absolute;
+        z-index: 100;
+        top: 50%;
+        translate: 0 -50%;
+
+        &[data-prev] {
+          left: 0;
+        }
+
+        &[data-next] {
+          right: 0;
+        }
+
+        &:disabled {
+          opacity: 0;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}

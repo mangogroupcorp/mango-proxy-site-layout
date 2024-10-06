@@ -1,0 +1,132 @@
+---
+import IconBtn from "@components/UI/IconBtn/IconBtn.astro";
+import TariffCard from "@components/UI/TariffCard/TariffCard.astro";
+import { Sprite } from "astro-icon";
+---
+
+<section class="tariff-plan">
+  <div class="tariff-plan__bg"></div>
+  <div class="container tariff-plan__container">
+    <div class="tariff-plan__head">
+      <h3 class="title-2 tariff-plan__title">
+        План <nobr>SERP-скрапинга</nobr>
+      </h3>
+      <p class="label-l tariff-plan__text">
+        Для новых пользователей у нас предусмотрена единовременная оплата.
+        Он составляет всего 1,7 доллара за 1 ГБ.
+      </p>
+    </div>
+
+    <div class="swiper tariff-plan__swiper" data-swiper-init>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <TariffCard />
+        </div>
+        <div class="swiper-slide">
+          <TariffCard
+            title="Scraper Starter"
+            price="$30"
+            token="10 000 токенов"
+            color="grey"
+          >
+            <div class="tariff-card-desc">
+              <p
+                class="label-m tariff-card-desc__text tariff-card-desc__text_fill"
+              >
+                Сэкономьте 25%, заплатив $3 за 1 тыс. запросов.
+              </p>
+              <span class="label-m tariff-card-desc__text"
+                >по сравнению со Scraper Mini</span
+              >
+            </div>
+          </TariffCard>
+        </div>
+        <div class="swiper-slide">
+          <TariffCard
+            title="Scraper Basic"
+            price="$40"
+            token="20 000 токенов"
+            color="grey"
+          >
+            <div class="tariff-card-desc">
+              <p
+                class="label-m tariff-card-desc__text tariff-card-desc__text_fill"
+              >
+                Сэкономьте 50%, заплатив $2 за 1 тыс. запросов.
+              </p>
+              <span class="label-m tariff-card-desc__text">
+                по сравнению со Scraper Mini
+              </span>
+            </div>
+          </TariffCard>
+        </div>
+        <div class="swiper-slide">
+          <TariffCard
+            title="Scraper Plus"
+            price="$100"
+            token="60 000 токенов"
+            label="самый популярный"
+            color="accent"
+          >
+            <div class="tariff-card-desc">
+              <p
+                class="label-m tariff-card-desc__text tariff-card-desc__text_fill"
+              >
+                Сэкономьте 58.3%, заплатив $1.67 за 1 тыс. запросов.
+              </p>
+              <span class="label-m tariff-card-desc__text">
+                по сравнению со Scraper Mini
+              </span>
+            </div>
+          </TariffCard>
+        </div>
+        <div class="swiper-slide">
+          <TariffCard
+            title="Scraper Pro"
+            price="$250"
+            token="180 000 токенов"
+            color="grey"
+          >
+            <div class="tariff-card-desc">
+              <p
+                class="label-m tariff-card-desc__text tariff-card-desc__text_fill"
+              >
+                Сэкономьте  65.3%, заплатив $1.39 за 1 тыс. запросов.
+              </p>
+              <span class="label-m tariff-card-desc__text">
+                по сравнению со Scraper Mini
+              </span>
+            </div>
+          </TariffCard>
+        </div>
+        <div class="swiper-slide">
+          <TariffCard
+            title="Scraper Ultra"
+            price="$500"
+            token="380 000 токенов"
+            label="лучшее предложение"
+            color="white"
+          >
+            <div class="tariff-card-desc">
+              <p
+                class="label-m tariff-card-desc__text tariff-card-desc__text_fill"
+              >
+                Сэкономьте 67%, заплатив $1.32 за 1 тыс. запросов.
+              </p>
+              <span class="label-m tariff-card-desc__text">
+                по сравнению со Scraper Mini
+              </span>
+            </div>
+          </TariffCard>
+        </div>
+      </div>
+
+      <IconBtn class="tariff-plan__swiper-btn" data-prev>
+        <Sprite name="arrow-left" />
+      </IconBtn>
+      <IconBtn class="tariff-plan__swiper-btn" data-next>
+        <Sprite name="arrow-right" />
+      </IconBtn>
+    </div>
+  </div>
+</section>

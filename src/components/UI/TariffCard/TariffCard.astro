@@ -1,0 +1,116 @@
+---
+import { Sprite } from "astro-icon";
+import DefaultBtn from "../DefaultBtn/DefaultBtn.astro";
+
+interface Props {
+  title?: string;
+  price?: string;
+  token?: string;
+  label?: string;
+  color?: "black" | "grey" | "accent" | "white";
+}
+
+const {
+  title = "Scraper Mini",
+  price = "$20",
+  token = "5 000 токенов",
+  label,
+  color = "black",
+  ...props
+} = Astro.props;
+---
+
+<div
+  class="tariff-card"
+  class:list={[
+    {
+      ["tariff-card_" + color]: color,
+    },
+  ]}
+  {...props}
+>
+  {label && <span class="label-l tariff-card__label" set:html={label} />}
+  <div class="tariff-card__top">
+    <div class="tariff-card__head">
+      <h4 class="title-3 regular tariff-card__title" set:html={title} />
+      <span class="tariff-card__price">
+        <span class="title-2 tariff-card__price-value" set:html={price} />
+        <span class="label-l tariff-card__price-desc">/ в месяц</span>
+      </span>
+    </div>
+
+    <slot>
+      <div class="tariff-card-desc">
+        <span class="label-l tariff-card-desc__subtitle"
+          >$4 за 1 тыс запросов</span
+        >
+        <span class="label-m tariff-card-desc__text">
+          but we have a better options →
+        </span>
+      </div>
+    </slot>
+  </div>
+  <div class="tariff-card__bottom">
+    {
+      color === "black" && (
+        <DefaultBtn
+          component="a"
+          href="#"
+          icon
+          variant="stroke"
+          class="tariff-card__btn"
+        >
+          Купить
+        </DefaultBtn>
+      )
+    }
+    {
+      color === "grey" && (
+        <DefaultBtn component="a" href="#" icon class="tariff-card__btn">
+          Купить
+        </DefaultBtn>
+      )
+    }
+    {
+      color === "accent" && (
+        <DefaultBtn
+          component="a"
+          href="#"
+          icon
+          color="primary"
+          class="tariff-card__btn"
+        >
+          Купить
+        </DefaultBtn>
+      )
+    }
+    {
+      color === "white" && (
+        <DefaultBtn component="a" href="#" icon class="tariff-card__btn">
+          Купить
+        </DefaultBtn>
+      )
+    }
+
+    <div class="tariff-card-info">
+      <span class="label-l bold tariff-card-info__item tariff-card-info__token">
+        <span class="tariff-card-info__icon tariff-card-info__icon_fill">
+          <Sprite name="check-fill" />
+        </span>
+        {token}
+      </span>
+      <span class="label-l tariff-card-info__item">
+        <span class="tariff-card-info__icon">
+          <Sprite name="check" class="tariff-card-info__icon" />
+        </span>
+         Ролловерные токены
+      </span>
+      <span class="label-l tariff-card-info__item">
+        <span class="tariff-card-info__icon">
+          <Sprite name="check" class="tariff-card-info__icon" />
+        </span>
+         18 скраперов
+      </span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,207 @@
+.tariff-card {
+  position: relative;
+  display: grid;
+  grid-auto-rows: 1fr;
+  gap: 2.8rem;
+  background-color: $grey-12;
+  border: 0.1rem solid $grey-10;
+  border-radius: 1.6rem;
+  padding: 4rem;
+
+  @include breakpoint($xs-bp) {
+    padding: 2.4rem;
+  }
+
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    padding: 0.8rem 1.6rem;
+    border-radius: 0.4rem;
+    background-color: $c-500;
+    color: $grey-13;
+    white-space: nowrap;
+    transform-origin: right top;
+    rotate: 17deg;
+    translate: -90% 4.6rem;
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 3.2rem;
+
+    @include breakpoint($xs-bp) {
+      gap: 2.8rem;
+      align-items: flex-start;
+    }
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2.8rem;
+
+
+    @include breakpoint($xs-bp) {
+      align-items: flex-start;
+    }
+  }
+
+  &-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    &__text {
+      color: $grey-7;
+
+      &_fill {
+        color: $grey-13;
+        padding: 0.8rem 1.6rem;
+        border-radius: 0.8rem;
+        background-color: $c-100;
+      }
+    }
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    @include breakpoint($xs-bp) {
+      gap: 0.8rem;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+
+      @include breakpoint($xs-bp) {
+        @include label-s();
+      }
+
+      &:not(:last-child) {
+        padding-bottom: 1.2rem;
+        border-bottom: 0.1rem solid $grey-10;
+
+        @include breakpoint($xs-bp) {
+          padding-bottom: 0.8rem;
+        }
+      }
+    }
+
+    &__icon {
+      flex: none;
+      width: 3.6rem;
+      height: 3.6rem;
+      color: $c-500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+
+      &_fill {
+        color: $grey-13;
+        fill: $c-500;
+
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  // color
+  &_grey {
+    background-color: $grey-11;
+    border-color: $grey-8;
+
+    .tariff-card {
+      &-info {
+        &__item {
+          border-color: $grey-9;
+        }
+      }
+    }
+  }
+
+  &_accent {
+    background-color: $c-500;
+    border-color: $c-500;
+    color: $grey-13;
+
+    .tariff-card {
+      &__label {
+        color: $c-500;
+        background-color: $grey-13;
+      }
+
+      &-desc {
+        &__text {
+          color: $c-900;
+
+          &_fill {
+            color: $grey-13;
+          }
+        }
+      }
+
+      &-info {
+        &__item {
+          border-color: $c-600;
+        }
+
+        &__icon {
+          color: $grey-13;
+
+          &_fill {
+            color: $c-500;
+            fill: $grey-13;
+          }
+        }
+      }
+    }
+  }
+
+  &_white {
+    background-color: $white;
+    border-color: $grey-3;
+    color: $grey-13;
+
+    .tariff-card {
+
+      &-desc {
+        &__text {
+          color: $grey-8;
+
+          &_fill {
+            color: $grey-13;
+          }
+        }
+      }
+
+      &-info {
+        &__item {
+          border-color: $grey-4;
+        }
+      }
+    }
+  }
+}
