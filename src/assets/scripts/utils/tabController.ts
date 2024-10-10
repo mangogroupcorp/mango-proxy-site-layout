@@ -20,6 +20,8 @@ class TabController {
 
     this.initTabs();
     this.initBtns();
+
+    console.log(this);
   }
 
   initTabs() {

@@ -135,4 +135,54 @@
       }
     }
   }
+
+  &-tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include breakpoint($xs-bp) {
+      margin-top: 3rem;
+    }
+
+    &__btns {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 4rem;
+
+      @include breakpoint($xs-bp) {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 0;
+      }
+    }
+
+    &__btn {
+      &:not(._active) {
+        border-color: $grey-8;
+        background-color: transparent;
+        color: $white;
+
+        @include hover {
+          border-color: $c-400;
+          color: $c-400;
+        }
+
+        &:active {
+          border-color: $c-300;
+          color: $c-300;
+        }
+      }
+    }
+
+    @media screen and (min-width: 601px) {
+      .swiper-wrapper {
+        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
 }
