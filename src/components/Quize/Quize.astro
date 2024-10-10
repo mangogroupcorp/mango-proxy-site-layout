@@ -1,0 +1,459 @@
+---
+import DefaultBtn from "@components/UI/DefaultBtn/DefaultBtn.astro";
+import IconBtn from "@components/UI/IconBtn/IconBtn.astro";
+import { Sprite } from "astro-icon";
+---
+
+<div class="quize">
+  <div class="quize-info">
+    <h2 class="title-2 quize-info__title">
+      Найдите идеальные прокси для ваших задач!
+    </h2>
+    <div class="quize-info__img">
+      <img src="./img/quize.svg" alt="" />
+    </div>
+  </div>
+
+  <div class="quize__container">
+    <div class="quize__head">
+      <div class="quize-pag">
+        <span class="swiper-pagination-active"></span>
+        <span></span>
+        <span></span>
+      </div>
+      <IconBtn color="secondary" data-vclose>
+        <Sprite name="close" />
+      </IconBtn>
+    </div>
+
+    <form class="swiper quize-form">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="quize-form__container">
+            <h3 class="h3 title-3 quize-form__title">
+              Какой тип прокси вам наиболее интересен?
+            </h3>
+            <div class="quize-form__inputs">
+              <label class="quize-form-item">
+                <input
+                  type="radio"
+                  name="quize-1"
+                  hidden
+                  class="quize-form-item__input"
+                />
+                <div class="quize-form-item__container">
+                  <img
+                    src="./img/icons/resedential.svg"
+                    alt=""
+                    class="quize-form-item__icon"
+                  />
+                  <div class="quize-form-item__inner">
+                    <span class="label-l bold quize-form-item__title">
+                      Резидентские прокси
+                    </span>
+                    <p class="label-l grey-7 quize-form-item__text">
+                      Глобальный пул, точный таргетинг и отсутствие контрактов
+                    </p>
+                  </div>
+                </div>
+              </label>
+              <label class="quize-form-item">
+                <input
+                  type="radio"
+                  name="quize-1"
+                  hidden
+                  class="quize-form-item__input"
+                />
+                <div class="quize-form-item__container">
+                  <img
+                    src="./img/icons/IPS.svg"
+                    alt=""
+                    class="quize-form-item__icon"
+                  />
+                  <div class="quize-form-item__inner">
+                    <span class="label-l bold quize-form-item__title">
+                      Статические (ISP) прокси
+                    </span>
+                    <p class="label-l grey-7 quize-form-item__text">
+                      Глобальный пул, точный таргетинг и отсутствие контрактов
+                    </p>
+                  </div>
+                </div>
+              </label>
+              <label class="quize-form-item">
+                <input
+                  type="radio"
+                  name="quize-1"
+                  hidden
+                  class="quize-form-item__input"
+                />
+                <div class="quize-form-item__container">
+                  <img
+                    src="./img/icons/Mpbile.svg"
+                    alt=""
+                    class="quize-form-item__icon"
+                  />
+                  <div class="quize-form-item__inner">
+                    <span class="label-l bold quize-form-item__title">
+                      Мобильные прокси
+                    </span>
+                    <p class="label-l grey-7 quize-form-item__text">
+                      Глобальный пул, точный таргетинг и отсутствие контрактов
+                    </p>
+                  </div>
+                </div>
+              </label>
+              <label class="quize-form-item">
+                <input
+                  type="radio"
+                  name="quize-1"
+                  hidden
+                  class="quize-form-item__input"
+                />
+                <div class="quize-form-item__container">
+                  <img
+                    src="./img/icons/Datacenter.svg"
+                    alt=""
+                    class="quize-form-item__icon"
+                  />
+                  <div class="quize-form-item__inner">
+                    <span class="label-l bold quize-form-item__title">
+                      Datacenter прокси
+                    </span>
+                    <p class="label-l grey-7 quize-form-item__text">
+                      Глобальный пул, точный таргетинг и отсутствие контрактов
+                    </p>
+                  </div>
+                </div>
+              </label>
+              <label
+                class="quize-form-item quize-form-item_empty quize-form-item_big"
+              >
+                <input
+                  type="radio"
+                  name="quize-1"
+                  hidden
+                  class="quize-form-item__input"
+                />
+                <div class="quize-form-item__container">
+                  <span class="label-l bold quize-form-item__title">
+                    Не могу определиться :(
+                  </span>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="quize-form__btns">
+            <DefaultBtn
+              type="button"
+              disabled
+              icon
+              class="quize-form__btn-next"
+              data-next
+            >
+              Выбрать
+            </DefaultBtn>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="quize-form__container">
+            <h3 class="h3 title-3 quize-form__title">
+              В какой области вы хотите использовать прокси?
+            </h3>
+            <div class="quize-form__inputs">
+              <label class="quize-form-item">
+                <input
+                  type="radio"
+                  name="quize-2"
+                  hidden
+                  class="quize-form-item__input"
+                />
+                <div class="quize-form-item__container">
+                  <img
+                    src="./img/icons/SERP-web.svg"
+                    alt=""
+                    class="quize-form-item__icon"
+                  />
+                  <div class="quize-form-item__inner">
+                    <span class="label-l bold quize-form-item__title">
+                      Web Scraping
+                    </span>
+                    <p class="label-l grey-7 quize-form-item__text">
+                      Глобальный пул, точный таргетинг и отсутствие контрактов
+                    </p>
+                  </div>
+                </div>
+              </label>
+              <label class="quize-form-item">
+                <input
+                  type="radio"
+                  name="quize-2"
+                  hidden
+                  class="quize-form-item__input"
+                />
+                <div class="quize-form-item__container">
+                  <img
+                    src="./img/icons/E-commerce.svg"
+                    alt=""
+                    class="quize-form-item__icon"
+                  />
+                  <div class="quize-form-item__inner">
+                    <span class="label-l bold quize-form-item__title">
+                      E-commerce
+                    </span>
+                    <p class="label-l grey-7 quize-form-item__text">
+                      Глобальный пул, точный таргетинг и отсутствие контрактов
+                    </p>
+                  </div>
+                </div>
+              </label>
+              <label class="quize-form-item">
+                <input
+                  type="radio"
+                  name="quize-2"
+                  hidden
+                  class="quize-form-item__input"
+                />
+                <div class="quize-form-item__container">
+                  <img
+                    src="./img/icons/proxy.svg"
+                    alt=""
+                    class="quize-form-item__icon"
+                  />
+                  <div class="quize-form-item__inner">
+                    <span class="label-l bold quize-form-item__title">
+                      Multi Accounting
+                    </span>
+                    <p class="label-l grey-7 quize-form-item__text">
+                      Глобальный пул, точный таргетинг и отсутствие контрактов
+                    </p>
+                  </div>
+                </div>
+              </label>
+              <label class="quize-form-item">
+                <input
+                  type="radio"
+                  name="quize-2"
+                  hidden
+                  class="quize-form-item__input"
+                />
+                <div class="quize-form-item__container">
+                  <img
+                    src="./img/icons/SERP.svg"
+                    alt=""
+                    class="quize-form-item__icon"
+                  />
+                  <div class="quize-form-item__inner">
+                    <span class="label-l bold quize-form-item__title">
+                      SEO & SERP
+                    </span>
+                    <p class="label-l grey-7 quize-form-item__text">
+                      Глобальный пул, точный таргетинг и отсутствие контрактов
+                    </p>
+                  </div>
+                </div>
+              </label>
+              <label
+                class="quize-form-item quize-form-item_empty quize-form-item_big"
+              >
+                <input
+                  type="radio"
+                  name="quize-2"
+                  hidden
+                  class="quize-form-item__input"
+                />
+                <div class="quize-form-item__container">
+                  <span class="label-l bold quize-form-item__title">
+                    Свой вариант
+                  </span>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="quize-form__btns">
+            <DefaultBtn type="button" color="grey" data-prev>
+              Вернуться
+            </DefaultBtn>
+            <DefaultBtn
+              type="button"
+              icon
+              class="quize-form__btn-next"
+              data-next
+            >
+              Выбрать
+            </DefaultBtn>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="quize-form__container">
+            <h3 class="h3 title-3 quize-form__title">
+              Сколько гигабайт в месяц вы планируете потреблять?
+            </h3>
+            <div class="quize-form__inputs quize-form__inputs_min">
+              <label class="quize-form-item quize-form-item_empty">
+                <input
+                  type="radio"
+                  name="quize-3"
+                  hidden
+                  class="quize-form-item__input"
+                />
+                <div class="quize-form-item__container">
+                  <span class="label-l bold quize-form-item__title">
+                    до 25 GB
+                  </span>
+                </div>
+              </label>
+              <label class="quize-form-item quize-form-item_empty">
+                <input
+                  type="radio"
+                  name="quize-3"
+                  hidden
+                  class="quize-form-item__input"
+                />
+                <div class="quize-form-item__container">
+                  <span class="label-l bold quize-form-item__title">
+                    до 50 GB
+                  </span>
+                </div>
+              </label>
+              <label class="quize-form-item quize-form-item_empty">
+                <input
+                  type="radio"
+                  name="quize-3"
+                  hidden
+                  class="quize-form-item__input"
+                />
+                <div class="quize-form-item__container">
+                  <span class="label-l bold quize-form-item__title">
+                    до 100 GB
+                  </span>
+                </div>
+              </label>
+              <label class="quize-form-item quize-form-item_empty">
+                <input
+                  type="radio"
+                  name="quize-3"
+                  hidden
+                  class="quize-form-item__input"
+                />
+                <div class="quize-form-item__container">
+                  <span class="label-l bold quize-form-item__title">
+                    до 150 GB
+                  </span>
+                </div>
+              </label>
+              <label class="quize-form-item quize-form-item_empty">
+                <input
+                  type="radio"
+                  name="quize-3"
+                  hidden
+                  class="quize-form-item__input"
+                />
+                <div class="quize-form-item__container">
+                  <span class="label-l bold quize-form-item__title">
+                    до 200 GB
+                  </span>
+                </div>
+              </label>
+              <label class="quize-form-item quize-form-item_empty">
+                <input
+                  type="radio"
+                  name="quize-3"
+                  hidden
+                  class="quize-form-item__input"
+                />
+                <div class="quize-form-item__container">
+                  <span class="label-l bold quize-form-item__title">
+                    до 250 GB
+                  </span>
+                </div>
+              </label>
+              <label class="quize-form-item quize-form-item_empty">
+                <input
+                  type="radio"
+                  name="quize-3"
+                  hidden
+                  class="quize-form-item__input"
+                />
+                <div class="quize-form-item__container">
+                  <span class="label-l bold quize-form-item__title">
+                    до 500 GB
+                  </span>
+                </div>
+              </label>
+              <label class="quize-form-item quize-form-item_empty">
+                <input
+                  type="radio"
+                  name="quize-3"
+                  hidden
+                  class="quize-form-item__input"
+                />
+                <div class="quize-form-item__container">
+                  <span class="label-l bold quize-form-item__title">
+                    до 1000 GB
+                  </span>
+                </div>
+              </label>
+              <label class="quize-form-item quize-form-item_empty">
+                <input
+                  type="radio"
+                  name="quize-3"
+                  hidden
+                  class="quize-form-item__input"
+                />
+                <div class="quize-form-item__container">
+                  <span class="label-l bold quize-form-item__title">
+                    до 2000 GB
+                  </span>
+                </div>
+              </label>
+              <label class="quize-form-item quize-form-item_empty">
+                <input
+                  type="radio"
+                  name="quize-3"
+                  hidden
+                  class="quize-form-item__input"
+                />
+                <div class="quize-form-item__container">
+                  <span class="label-l bold quize-form-item__title">
+                    до 3000 GB
+                  </span>
+                </div>
+              </label>
+              <label
+                class="quize-form-item quize-form-item_empty quize-form-item_big"
+              >
+                <input
+                  type="radio"
+                  name="quize-3"
+                  hidden
+                  class="quize-form-item__input"
+                />
+                <div class="quize-form-item__container">
+                  <span class="label-l bold quize-form-item__title">
+                    Свой вариант
+                  </span>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="quize-form__btns">
+            <DefaultBtn type="button" color="grey" data-prev>
+              Вернуться
+            </DefaultBtn>
+            <DefaultBtn
+              type="submit"
+              icon
+              class="quize-form__btn-next"
+              data-next
+            >
+              Выбрать
+            </DefaultBtn>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

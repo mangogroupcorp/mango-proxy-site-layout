@@ -12,7 +12,14 @@ import Tag from "@components/UI/Tag/Tag.astro";
 <Layout title="Разводящая">
   <div class="page-container">
     <div class="box">
-      <DefaultBtn>Button</DefaultBtn>
+      <DefaultBtn
+        component="a"
+        href="./popup/quize-popup.html"
+        data-vbox
+        data-vbtype="ajax"
+      >
+        Quize
+      </DefaultBtn>
       <DefaultBtn icon>Button</DefaultBtn>
       <DefaultBtn disabled icon>Button</DefaultBtn>
     </div>
@@ -21,6 +28,12 @@ import Tag from "@components/UI/Tag/Tag.astro";
       <DefaultBtn variant="stroke">Button</DefaultBtn>
       <DefaultBtn icon variant="stroke">Button</DefaultBtn>
       <DefaultBtn disabled icon variant="stroke">Button</DefaultBtn>
+    </div>
+
+    <div class="box">
+      <DefaultBtn color="grey">Button</DefaultBtn>
+      <DefaultBtn icon color="grey">Button</DefaultBtn>
+      <DefaultBtn disabled icon color="grey">Button</DefaultBtn>
     </div>
 
     <div class="box">

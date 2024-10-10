@@ -16,6 +16,7 @@ import { initSwipers } from "./utils/swiper";
 import { initHeaderMenu } from "@components/Header/Header";
 import { initTabController } from "./utils/tabController";
 import { initPricingSwiper } from "@components/Pricing/Pricing";
+import { initQuize } from "@components/Quize/Quize";
 
 Swiper.use([Navigation, Thumbs, EffectFade, Pagination, Autoplay, Scrollbar]);
 
@@ -38,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // компоненты
   initHeaderMenu();
   initPricingSwiper();
+  initQuize();
   // <--
 
   // События
@@ -53,5 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
     lazyLoad.update();
 
     formValidateInit(".vbox-content .fv");
+    initQuize(".vbox-content");
   });
 });
