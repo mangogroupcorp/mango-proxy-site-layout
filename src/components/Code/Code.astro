@@ -1,30 +1,201 @@
 ---
-
+import { Sprite } from "astro-icon";
 ---
 
 <section class="code">
-  <div class="container code__container">
-    <div class="code__head">
-      <h3 class="title-2 code__title">Погрузитесь в примеры кода</h3>
-      <p class="label-l c-grey-6 code__text">
-        Доступ к данным о продуктах с ведущих онлайн-торговых площадок никогда
-        не был проще. Изучите API-интерфейс E-Commerce Scraper с помощью
-        практических примеров кода.
-      </p>
-    </div>
-
-    <div class="code__swiper">
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"></div>
-        </div>
+  <div class="code__inner">
+    <div class="container">
+      <div class="code__head">
+        <h3 class="title-2 code__title">Погрузитесь в примеры кода</h3>
+        <p class="label-l c-grey-6 code__text">
+          Доступ к данным о продуктах с ведущих онлайн-торговых площадок никогда
+          не был проще. Изучите API-интерфейс E-Commerce Scraper с помощью
+          практических примеров кода.
+        </p>
       </div>
     </div>
 
+    <div class="code__swiper">
+      <div class="container">
+        <h4 class="title-4 medium uppercase code__swiper-title">
+          Входные параметры
+        </h4>
+      </div>
+      <div
+        class="swiper"
+        data-swiper-init
+        data-props={`{"slidesPerView":"auto"}`}
+      >
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="code-info" data-dropdown data-group="code-1">
+              <button type="button" class="code-info__btn" data-btn>
+                <Sprite name="plus" class="code-info__btn-icon" />
+                <span class="label-l code-info__btn-label">query</span>
+                <span class="label-l code-info__btn-text">Поисковый запрос</span
+                >
+              </button>
+              <div class="code-info__container">
+                <div class="code-info__inner">
+                  <p class="label-m c-grey-6 code-info__text">
+                    Укажите значение географического местоположения на основе
+                    UULE. (Название штата, название страны, координаты и радиус,
+                    идентификатор критерия)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="code-info" data-dropdown data-group="code-1">
+              <button type="button" class="code-info__btn" data-btn>
+                <Sprite name="plus" class="code-info__btn-icon" />
+                <span class="label-l code-info__btn-label">locale</span>
+                <span class="label-l code-info__btn-text">Язык интерфейса</span>
+              </button>
+              <div class="code-info__container">
+                <div class="code-info__inner">
+                  <p class="label-m c-grey-6 code-info__text">
+                    Укажите значение географического местоположения на основе
+                    UULE. (Название штата, название страны, координаты и радиус,
+                    идентификатор критерия)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="code-info" data-dropdown data-group="code-1">
+              <button type="button" class="code-info__btn" data-btn>
+                <Sprite name="plus" class="code-info__btn-icon" />
+                <span class="label-l code-info__btn-label">geo_location</span>
+                <span class="label-l code-info__btn-text">Локализация</span>
+              </button>
+              <div class="code-info__container">
+                <div class="code-info__inner">
+                  <p class="label-m c-grey-6 code-info__text">
+                    Укажите значение географического местоположения на основе
+                    UULE. (Название штата, название страны, координаты и радиус,
+                    идентификатор критерия)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="code-info" data-dropdown data-group="code-1">
+              <button type="button" class="code-info__btn" data-btn>
+                <Sprite name="plus" class="code-info__btn-icon" />
+                <span class="label-l code-info__btn-label">render</span>
+                <span class="label-l code-info__btn-text"
+                  >JavaScript-рендеринг</span
+                >
+              </button>
+              <div class="code-info__container">
+                <div class="code-info__inner">
+                  <p class="label-m c-grey-6 code-info__text">
+                    Укажите значение географического местоположения на основе
+                    UULE. (Название штата, название страны, координаты и радиус,
+                    идентификатор критерия)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="code-info" data-dropdown data-group="code-1">
+              <button type="button" class="code-info__btn" data-btn>
+                <Sprite name="plus" class="code-info__btn-icon" />
+                <span class="label-l code-info__btn-label">domain</span>
+                <span class="label-l code-info__btn-text">Домен Google</span>
+              </button>
+              <div class="code-info__container">
+                <div class="code-info__inner">
+                  <p class="label-m c-grey-6 code-info__text">
+                    Укажите значение географического местоположения на основе
+                    UULE. (Название штата, название страны, координаты и радиус,
+                    идентификатор критерия)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="code-info" data-dropdown data-group="code-1">
+              <button type="button" class="code-info__btn" data-btn>
+                <Sprite name="plus" class="code-info__btn-icon" />
+                <span class="label-l code-info__btn-label">
+                  results_language
+                </span>
+                <span class="label-l code-info__btn-text">
+                  Язык результатов
+                </span>
+              </button>
+              <div class="code-info__container">
+                <div class="code-info__inner">
+                  <p class="label-m c-grey-6 code-info__text">
+                    Укажите значение географического местоположения на основе
+                    UULE. (Название штата, название страны, координаты и радиус,
+                    идентификатор критерия)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="code-info" data-dropdown data-group="code-1">
+              <button type="button" class="code-info__btn" data-btn>
+                <Sprite name="plus" class="code-info__btn-icon" />
+                <span class="label-l code-info__btn-label">parse</span>
+                <span class="label-l code-info__btn-text"
+                  >Структурированные данные</span
+                >
+              </button>
+              <div class="code-info__container">
+                <div class="code-info__inner">
+                  <p class="label-m c-grey-6 code-info__text">
+                    Укажите значение географического местоположения на основе
+                    UULE. (Название штата, название страны, координаты и радиус,
+                    идентификатор критерия)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
     <div class="code__templates">
       <div class="code-box">
-        <h5 class="title-4 code-box__title"></h5>
-        <div class="code-box__content"></div>
+        <h5 class="title-4 regular code-box__title">Ввод</h5>
+        <pre
+          class="label-l code-box__content">
+        <code data-code>{`//добавлены языки javascript, python, java, php\n\nconst x = 0;\nconst y = "ASD";\n\nfunction get() {\n return x + y;\n}\nconst x = 0;\nconst y = "ASD";\n\nfunction get() {\n return x + y;\n}\nconst x = 0;\nconst y = "ASD";\n\nfunction get() {\n return x + y;\n}\nconst x = 0;\nconst y = "ASD";\n\nfunction get() {\n return x + y;\n}\nconst x = 0;\nconst y = "ASD";\n\nfunction get() {\n return x + y;\n}\nconst x = 0;\nconst y = "ASD";\n\nfunction get() {\n return x + y;\n}\nconst x = 0;\nconst y = "ASD";\n\nfunction get() {\n return x + y;\n}`}</code>
+      </pre>
+        <button type="button" class="label-l code-box__copy" data-copy>
+          <Sprite name="copy" />
+           Скопировать
+        </button>
+      </div>
+      <div class="code-box">
+        <h5 class="title-4 regular code-box__title">Вывод</h5>
+        <pre
+          class="label-l code-box__content">
+        <code data-code>{`const x = 0;\nconst y = "ASD";\n\nfunction get() {\n return x + y;\n}`}</code>
+      </pre>
+        <button type="button" class="label-l code-box__copy" data-copy>
+          <Sprite name="copy" />
+           Скопировать
+        </button>
+      </div>
+      <div class="code-box">
+        <h5 class="title-4 regular code-box__title">Превью</h5>
+        <div class="code-box__img">
+          <img src="./img/code-preview.png" alt="" />
+        </div>
       </div>
     </div>
   </div>
