@@ -30,7 +30,12 @@ import DefaultBtn from "@components/UI/DefaultBtn/DefaultBtn.astro";
             </li>
           </ul>
         </div>
-        <DefaultBtn component="a" href="#" class="support-banner__btn" icon>
+        <DefaultBtn
+          component="button"
+          onclick="Intercom('showNewMessage', 'Здравствуйте! Обращаюсь с вашего сайта.\\n\\n')"
+          class="support-banner__btn"
+          icon
+        >
           Задать вопрос
         </DefaultBtn>
       </div>

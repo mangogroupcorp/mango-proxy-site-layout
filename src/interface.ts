@@ -3,6 +3,7 @@ import type { HTMLAttributes, HTMLTag } from "astro/types";
 export interface IUIBlockAttributes extends HTMLAttributes<"div"> {}
 export interface IUIButtonAttributes extends HTMLAttributes<"a" | "button"> {
   href?: string;
+  target?: string;
 }
 export interface IUIInputAttributes
   extends HTMLAttributes<"input" | "textarea"> {}

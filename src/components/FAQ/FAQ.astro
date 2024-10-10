@@ -17,7 +17,13 @@ import { Sprite } from "astro-icon";
           можешь найти ответа?
         </p>
       </div>
-      <DefaultBtn component="a" href="#" icon>Задать вопрос</DefaultBtn>
+      <DefaultBtn
+        component="button"
+        onclick="Intercom('showNewMessage', 'Здравствуйте! Обращаюсь с вашего сайта.\\n\\n')"
+        icon
+      >
+        Задать вопрос
+      </DefaultBtn>
     </div>
 
     <div class="faq__list">
