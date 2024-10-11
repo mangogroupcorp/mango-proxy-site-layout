@@ -17,39 +17,141 @@ import { Sprite } from "astro-icon";
           можешь найти ответа?
         </p>
       </div>
-      <DefaultBtn component="a" href="#" icon>Задать вопрос</DefaultBtn>
+      <DefaultBtn
+        component="button"
+        onclick="Intercom('showNewMessage', 'Здравствуйте! Обращаюсь с вашего сайта.\\n\\n')"
+        icon
+      >
+        Задать вопрос
+      </DefaultBtn>
     </div>
 
     <div class="faq__list">
-      {
-        [...new Array(7)].map(() => (
-          <div class="faq-item" data-dropdown data-group="faq">
-            <div class="faq-item__head">
-              <h5 class="label-l bold faq-item__title">
-                Могу ли я протестировать ваши прокси бесплатно?
-              </h5>
-              <IconBtn type="button" class="faq-item__btn" data-btn>
-                <Sprite name="plus" />
-              </IconBtn>
+      <div class="faq-item" data-dropdown data-group="faq">
+        <div class="faq-item__head">
+          <h5 class="label-l bold faq-item__title">
+            Могу ли я протестировать ваши прокси бесплатно?
+          </h5>
+          <IconBtn type="button" class="faq-item__btn" data-btn>
+            <Sprite name="plus" />
+          </IconBtn>
+        </div>
+        <div class="faq-item__container">
+          <div class="faq-item__inner">
+            <div class="template label-m c-grey-8 faq-item__text">
+              <p>
+                На данный момент мы не предлагаем бесплатную пробную версию,
+                но для новых пользователей предусмотрена единовременная оплата
+                по пониженной стоимости.
+              </p>
             </div>
-            <div class="faq-item__container">
-              <div class="faq-item__inner">
-                <div class="template label-m c-grey-8 faq-item__text">
-                  <p>
-                    Сейчас мы не предлагаем бесплатную пробную версию,
-                    но для новых пользователей предусмотрена единовременная
-                    оплата. Он составляет всего 1,7 доллара за 1 ГБ.
-                  </p>
-                </div>
-                <a href="#" class="label-l hover:500 faq-item__link">
-                  Узнать больше
-                  <Sprite name="arrow-link" />
-                </a>
-              </div>
-            </div>
+            <a href="#" class="label-l hover:500 faq-item__link">
+              Узнать больше
+              <Sprite name="arrow-link" />
+            </a>
           </div>
-        ))
-      }
+        </div>
+      </div>
+      <div class="faq-item" data-dropdown data-group="faq">
+        <div class="faq-item__head">
+          <h5 class="label-l bold faq-item__title">
+            Какие предусмотрены способы оплаты?
+          </h5>
+          <IconBtn type="button" class="faq-item__btn" data-btn>
+            <Sprite name="plus" />
+          </IconBtn>
+        </div>
+        <div class="faq-item__container">
+          <div class="faq-item__inner">
+            <div class="template label-m c-grey-8 faq-item__text">
+              <p>
+                Для оплаты вам доступны к использованию криптовалюты и любые
+                карты мира (кроме карт, выпущенных в РФ).
+              </p>
+            </div>
+            <a href="#" class="label-l hover:500 faq-item__link">
+              Узнать больше
+              <Sprite name="arrow-link" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item" data-dropdown data-group="faq">
+        <div class="faq-item__head">
+          <h5 class="label-l bold faq-item__title">
+            У вас свои собственные пулы IP-адресов?
+          </h5>
+          <IconBtn type="button" class="faq-item__btn" data-btn>
+            <Sprite name="plus" />
+          </IconBtn>
+        </div>
+        <div class="faq-item__container">
+          <div class="faq-item__inner">
+            <div class="template label-m c-grey-8 faq-item__text">
+              <p>
+                Да, у нас есть собственные пулы IP-адресов. Как публичные так и
+                приватные пулы. Вся добыча IP-адресов происходит исключительно
+                этическими методами.
+              </p>
+            </div>
+            <a href="#" class="label-l hover:500 faq-item__link">
+              Узнать больше
+              <Sprite name="arrow-link" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item" data-dropdown data-group="faq">
+        <div class="faq-item__head">
+          <h5 class="label-l bold faq-item__title">
+            Как узнать размер ваших пулов IP-адресов в определенной локации?
+          </h5>
+          <IconBtn type="button" class="faq-item__btn" data-btn>
+            <Sprite name="plus" />
+          </IconBtn>
+        </div>
+        <div class="faq-item__container">
+          <div class="faq-item__inner">
+            <div class="template label-m c-grey-8 faq-item__text">
+              <p>
+                Вы всегда можете посмотреть текущий размер пулов на главной
+                странице нашего сайта.
+              </p>
+            </div>
+            <a href="#" class="label-l hover:500 faq-item__link">
+              Узнать больше
+              <Sprite name="arrow-link" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item" data-dropdown data-group="faq">
+        <div class="faq-item__head">
+          <h5 class="label-l bold faq-item__title">
+            Можете ли вы добавлять какой-то дополнительный функцинол по запросу
+            от клиентов?
+          </h5>
+          <IconBtn type="button" class="faq-item__btn" data-btn>
+            <Sprite name="plus" />
+          </IconBtn>
+        </div>
+        <div class="faq-item__container">
+          <div class="faq-item__inner">
+            <div class="template label-m c-grey-8 faq-item__text">
+              <p>
+                Да, мы очень тесто взаимодействуем с нашими клиентами и
+                стараемся дать максимум технического функционала. Вы всегда
+                можете связаться с нашими менеджерами. Они примут ваш запрос и
+                передатаут в технический отдел.
+              </p>
+            </div>
+            <a href="#" class="label-l hover:500 faq-item__link">
+              Узнать больше
+              <Sprite name="arrow-link" />
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

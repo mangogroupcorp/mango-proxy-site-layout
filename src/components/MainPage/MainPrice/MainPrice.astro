@@ -91,7 +91,13 @@ import { Sprite } from "astro-icon";
               Свяжитесь с нашим менеджером
             </p>
           </div>
-          <DefaultBtn component="a" href="#" icon>Написать</DefaultBtn>
+          <DefaultBtn
+            component="button"
+            onclick="Intercom('showNewMessage', 'Здравствуйте! Обращаюсь с сайта, хотел бы получить персональное предложение по цене.')"
+            icon
+          >
+            Написать
+          </DefaultBtn>
         </div>
       </div>
     </div>

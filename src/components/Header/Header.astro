@@ -18,10 +18,20 @@ import DefaultBtn from "@components/_UI/DefaultBtn/DefaultBtn.astro";
 
       <div class="header-btns">
         <div class="header-btns__inner">
-          <button type="button" class="label-l hover:600 header-btns__login">
-            Вход</button
+          <a
+            href="https://dashboard.mangoproxy.com"
+            target="_blank"
+            class="label-l hover:600 header-btns__login"
           >
-          <DefaultBtn size="small" class="header-btns__signup">
+            Вход</a
+          >
+          <DefaultBtn
+            component="a"
+            href="https://dashboard.mangoproxy.com/signup"
+            target="_blank"
+            size="small"
+            class="header-btns__signup"
+          >
             Регистрация
           </DefaultBtn>
         </div>

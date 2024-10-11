@@ -57,7 +57,14 @@ const { img = "./img/page-banner-1.svg", ...rest } = Astro.props;
       </div>
 
       <div class="page-banner__btns">
-        <DefaultBtn icon>Быстрый тест</DefaultBtn>
+        <DefaultBtn
+          component="a"
+          href="https://dashboard.mangoproxy.com/quick-purchase"
+          target="_blank"
+          icon
+        >
+          Быстрый тест
+        </DefaultBtn>
       </div>
     </slot>
   </div>

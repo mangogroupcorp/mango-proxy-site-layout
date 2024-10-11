@@ -76,19 +76,27 @@ import { Sprite } from "astro-icon";
         </div>
       </nav>
 
-      <DefaultBtn icon component="a" href="#" class="footer__test-btn">
+      <DefaultBtn
+        component="a"
+        href="https://dashboard.mangoproxy.com/quick-purchase"
+        target="_blank"
+        icon
+        class="footer__test-btn"
+      >
         Быстрый тест
       </DefaultBtn>
     </div>
     <div class="uppercase c-grey-6 footer-legal">
       <div class="footer-legal__inner">
-        <a href="#" class="hover:600 label-m footer-legal__link">
-          Terms of Use
+        <a href="/terms" class="hover:600 label-m footer-legal__link">
+          Terms & Conditions
         </a>
-        <a href="#" class="hover:600 label-m footer-legal__link">
+        <a href="/privacy" class="hover:600 label-m footer-legal__link">
           Privacy Policy
         </a>
-        <a href="#" class="hover:600 label-m footer-legal__link">Cookies</a>
+        <a href="/refund" class="hover:600 label-m footer-legal__link">
+          Refund policy
+        </a>
       </div>
       <a href="#" class="hover:600 label-m footer-legal__link">
         Разработка сайта
