@@ -7,10 +7,11 @@ import PageBanner from "@components/PageBanner/PageBanner.astro";
 import RPInfo from "@components/RPInfo/RPInfo.astro";
 import ScraperAdv from "@components/ScraperAdv/ScraperAdv.astro";
 import TariffPlan from "@components/TariffPlan/TariffPlan.astro";
-import DefaultBtn from "@components/UI/DefaultBtn/DefaultBtn.astro";
-import IconBtn from "@components/UI/IconBtn/IconBtn.astro";
-import Tag from "@components/UI/Tag/Tag.astro";
-import TariffCard from "@components/UI/TariffCard/TariffCard.astro";
+import WebAdv from "@components/WebAdv/WebAdv.astro";
+import DefaultBtn from "@components/_UI/DefaultBtn/DefaultBtn.astro";
+import IconBtn from "@components/_UI/IconBtn/IconBtn.astro";
+import Tag from "@components/_UI/Tag/Tag.astro";
+import TariffCard from "@components/_UI/TariffCard/TariffCard.astro";
 import { Sprite } from "astro-icon";
 import Layout from "src/layouts/Layout.astro";
 ---
@@ -73,7 +74,7 @@ import Layout from "src/layouts/Layout.astro";
     </div>
   </PageBanner>
 
-  <!-- ADV -->
+  <WebAdv />
 
   <Code />
 

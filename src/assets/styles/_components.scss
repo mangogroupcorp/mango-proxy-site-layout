@@ -2,15 +2,15 @@
 @import "../../components/Popup/Popup.scss";
 
 // UI
-@import "../../components/UI/DefaultBtn/DefaultBtn.scss";
-@import "../../components/UI/IconBtn/IconBtn.scss";
-@import "../../components/UI/AdditionalBtn/AdditionalBtn.scss";
-@import "../../components/UI/LocationItem/LocationItem.scss";
-@import "../../components/UI/MenuLink/MenuLink.scss";
-@import "../../components/UI/IntegrationLogo/IntegrationLogo.scss";
-@import "../../components/UI/Tag/Tag.scss";
-@import "../../components/UI/InfoItem/InfoItem.scss";
-@import "../../components/UI/TariffCard/TariffCard.scss";
+@import "../../components/_UI/DefaultBtn/DefaultBtn.scss";
+@import "../../components/_UI/IconBtn/IconBtn.scss";
+@import "../../components/_UI/AdditionalBtn/AdditionalBtn.scss";
+@import "../../components/_UI/LocationItem/LocationItem.scss";
+@import "../../components/_UI/MenuLink/MenuLink.scss";
+@import "../../components/_UI/IntegrationLogo/IntegrationLogo.scss";
+@import "../../components/_UI/Tag/Tag.scss";
+@import "../../components/_UI/InfoItem/InfoItem.scss";
+@import "../../components/_UI/TariffCard/TariffCard.scss";
 
 // header/footer/menu
 @import "../../components/Header/Header.scss";
@@ -40,6 +40,7 @@
 @import "../../components/TariffPlan/TariffPlan.scss";
 @import "../../components/Quize/Quize.scss";
 @import "../../components/Code/Code.scss";
+@import "../../components/WebAdv/WebAdv.scss";
 
 // page components
 @import "../../components/MainPage/MainPrice/MainPrice.scss";
