@@ -31,13 +31,17 @@ const {
 >
   {label && <span class="label-l tariff-card__label" set:html={label} />}
   <div class="tariff-card__top">
-    <div class="tariff-card__head">
-      <h4 class="title-3 regular tariff-card__title" set:html={title} />
-      <span class="tariff-card__price">
-        <span class="title-2 tariff-card__price-value" set:html={price} />
-        <span class="label-l tariff-card__price-desc">/ в месяц</span>
-      </span>
-    </div>
+    <slot name="head">
+      <div class="tariff-card__head">
+        <h4 class="title-3 regular tariff-card__title" set:html={title} />
+        <span class="tariff-card__price">
+          <div class="tariff-card__price-inner">
+            <span class="title-2 tariff-card__price-value" set:html={price} />
+            <span class="label-l tariff-card__price-desc">/ в месяц</span>
+          </div>
+        </span>
+      </div>
+    </slot>
 
     <slot>
       <div class="tariff-card-desc">
@@ -92,25 +96,29 @@ const {
       )
     }
 
-    <div class="tariff-card-info">
-      <span class="label-l bold tariff-card-info__item tariff-card-info__token">
-        <span class="tariff-card-info__icon tariff-card-info__icon_fill">
-          <Sprite name="check-fill" />
+    <slot name="info">
+      <div class="tariff-card-info">
+        <span
+          class="label-l bold tariff-card-info__item tariff-card-info__token"
+        >
+          <span class="tariff-card-info__icon tariff-card-info__icon_fill">
+            <Sprite name="check-fill" />
+          </span>
+          {token}
         </span>
-        {token}
-      </span>
-      <span class="label-l tariff-card-info__item">
-        <span class="tariff-card-info__icon">
-          <Sprite name="check" class="tariff-card-info__icon" />
+        <span class="label-l tariff-card-info__item">
+          <span class="tariff-card-info__icon">
+            <Sprite name="check" class="tariff-card-info__icon" />
+          </span>
+           Ролловерные токены
         </span>
-         Ролловерные токены
-      </span>
-      <span class="label-l tariff-card-info__item">
-        <span class="tariff-card-info__icon">
-          <Sprite name="check" class="tariff-card-info__icon" />
+        <span class="label-l tariff-card-info__item">
+          <span class="tariff-card-info__icon">
+            <Sprite name="check" class="tariff-card-info__icon" />
+          </span>
+           18 скраперов
         </span>
-         18 скраперов
-      </span>
-    </div>
+      </div>
+    </slot>
   </div>
 </div>

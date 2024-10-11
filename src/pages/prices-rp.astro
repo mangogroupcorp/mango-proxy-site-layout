@@ -1,0 +1,46 @@
+---
+import DefaultBtn from "@components/_UI/DefaultBtn/DefaultBtn.astro";
+import Breadcrumbs from "@components/Breadcrumbs/Breadcrumbs.astro";
+import Price from "@components/Price/Price.astro";
+import PriceInfo from "@components/TariffInfo/TariffInfo.astro";
+import { Sprite } from "astro-icon";
+import Layout from "src/layouts/Layout.astro";
+---
+
+<Layout title="Цены. Резидентские прокси" theme="dark">
+  <Breadcrumbs items={["Главная", "Цены. Резидентские прокси"]} theme="dark" />
+  <Price>
+    <div class="container price__container" slot="container">
+      <div class="price__head">
+        <h1 class="title-1 price__title">
+          Цены на резидентские прокси-серверы
+        </h1>
+        <p class="label-l price__text">
+          Цены, которые масштабируются вместе с вами.
+        </p>
+      </div>
+      <div class="price-value">
+        <span class="c-grey-7 price-value__desc">от</span>
+        <div class="price-value__price">
+          <Sprite name="dollar" />
+           2
+        </div>
+        <span class="c-grey-7 price-value__desc">за GB</span>
+      </div>
+
+      <div class="price-info">
+        <div class="price-info__inner">
+          <h4 class="title-4 price-info__title">
+            Не знаешь, какой прокси выбрать для своих задач?
+          </h4>
+          <p class="label-m c-grey-6 price-info__text">
+            Пройдите быстрый квиз и получите оптимальное решение!
+          </p>
+        </div>
+        <DefaultBtn component="a" href="#" icon>Быстрый тест</DefaultBtn>
+      </div>
+    </div>
+  </Price>
+
+  <PriceInfo />
+</Layout>

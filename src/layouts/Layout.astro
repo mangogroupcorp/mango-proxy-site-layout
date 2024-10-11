@@ -6,9 +6,10 @@ import Footer from "@components/Footer/Footer.astro";
 
 interface Props {
   title?: string;
+  theme?: "dark";
 }
 
-const { title = "заголовок страницы" } = Astro.props;
+const { title = "заголовок страницы", theme } = Astro.props;
 ---
 
 <!doctype html>
@@ -31,7 +32,7 @@ const { title = "заголовок страницы" } = Astro.props;
   </head>
   <body>
     <Sprite.Provider>
-      <Header />
+      <Header theme={theme} />
       <main class="page">
         <slot />
       </main>

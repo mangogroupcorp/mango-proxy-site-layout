@@ -12,29 +12,33 @@ const { ...rest } = Astro.props;
     <img src="./img/price-bg-1.png" alt="" />
     <img src="./img/price-bg-2.png" alt="" />
   </div>
-  <div class="container price__container">
-    <h2 class="title-2 price__title">
-      Цены, которые масштабируются вместе с вами.
-    </h2>
-    <div class="price-value">
-      <span class="c-grey-7 price-value__desc">от</span>
-      <div class="price-value__price">
-        <Sprite name="dollar" />
-         1,5
+  <slot name="container">
+    <div class="container price__container">
+      <div class="price__head">
+        <h2 class="title-2 price__title">
+          Цены, которые масштабируются вместе с вами.
+        </h2>
       </div>
-      <span class="c-grey-7 price-value__desc">за GB</span>
-    </div>
+      <div class="price-value">
+        <span class="c-grey-7 price-value__desc">от</span>
+        <div class="price-value__price">
+          <Sprite name="dollar" />
+           2
+        </div>
+        <span class="c-grey-7 price-value__desc">за GB</span>
+      </div>
 
-    <div class="price-info">
-      <div class="price-info__inner">
-        <h4 class="title-4 price-info__title">
-          Хотите получить персональное предложение?
-        </h4>
-        <p class="label-m c-grey-6 price-info__text">
-          Свяжитесь с нашим менеджером
-        </p>
+      <div class="price-info">
+        <div class="price-info__inner">
+          <h4 class="title-4 price-info__title">
+            Хотите получить персональное предложение?
+          </h4>
+          <p class="label-m c-grey-6 price-info__text">
+            Свяжитесь с нашим менеджером
+          </p>
+        </div>
+        <DefaultBtn component="a" href="#" icon>Написать</DefaultBtn>
       </div>
-      <DefaultBtn component="a" href="#" icon>Написать</DefaultBtn>
     </div>
-  </div>
+  </slot>
 </section>

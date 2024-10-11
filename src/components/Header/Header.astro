@@ -2,16 +2,31 @@
 import { Sprite } from "astro-icon";
 import HeaderMenu from "./HeaderMenu/HeaderMenu.astro";
 import DefaultBtn from "@components/_UI/DefaultBtn/DefaultBtn.astro";
+
+interface Props {
+  theme?: "dark";
+}
+
+const { theme } = Astro.props;
 ---
 
-<header class="header">
+<header class="header" class:list={[{ ["header_" + theme]: theme }]}>
   <div class="container">
     <div class="header__container">
       <a href="#" class="header__logo">
-        <picture>
-          <source media="(max-width: 600px)" srcset="./img/logo-min.svg" />
-          <img src="./img/logo.svg" alt="" />
-        </picture>
+        {
+          theme === "dark" ? (
+            <picture>
+              <source media="(max-width: 600px)" srcset="./img/logo-min.svg" />
+              <img src="./img/logo_white.svg" alt="" />
+            </picture>
+          ) : (
+            <picture>
+              <source media="(max-width: 600px)" srcset="./img/logo-min.svg" />
+              <img src="./img/logo.svg" alt="" />
+            </picture>
+          )
+        }
       </a>
 
       <HeaderMenu />

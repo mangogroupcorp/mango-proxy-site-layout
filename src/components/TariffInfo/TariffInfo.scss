@@ -1,0 +1,163 @@
+.tariff-info {
+  padding: 20rem 0;
+  background-color: $grey-12;
+  color: $white;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.6rem;
+  }
+
+  &__text {
+    max-width: 65rem;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  &__swiper {
+    width: calc(100% + 3.2rem);
+    margin: 0rem -1.6rem;
+    padding: 0rem 1.6rem;
+
+    .swiper-wrapper {
+      @media screen and (min-width: 601px) {
+        transform: none !important;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.4rem;
+      }
+    }
+
+    .swiper-slide {
+      @include breakpoint($xs-bp) {
+        padding-right: 0.8rem;
+      }
+    }
+
+    &-btn {
+      position: absolute;
+      z-index: 100;
+      top: 50%;
+      translate: 0 -50%;
+      display: none;
+
+      @include breakpoint($xs-bp) {
+        display: flex;
+      }
+
+      &[data-prev] {
+        left: 0.4rem;
+      }
+
+      &[data-next] {
+        right: 0.4rem;
+      }
+
+      &:disabled {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+  }
+
+}
+
+.tariff-info-content {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 3.2rem;
+  padding: 3.2rem;
+  border: 0.1rem solid $grey-9;
+  border-radius: 0.8rem;
+  background-color: $grey-12;
+
+  @include breakpoint($xs-bp) {
+    flex-direction: column;
+    padding: 2.4rem;
+    gap: 1.6rem;
+  }
+
+  &__head {
+    display: flex;
+    align-items: flex-start;
+    gap: 3.2rem;
+    width: 44.2rem;
+
+    @include breakpoint($xs-bp) {
+      width: 100%;
+      gap: 1.6rem;
+      flex-direction: column;
+    }
+
+    &-icon {
+      flex: none;
+      width: 4rem;
+      height: 4rem;
+      color: $c-500;
+    }
+
+    &-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.6rem;
+    }
+  }
+
+  &__title {
+    @include breakpoint($xs-bp) {
+      @include label-l();
+      font-weight: 700;
+    }
+  }
+
+  &__text {
+    @include breakpoint($xs-bp) {
+      @include label-s();
+    }
+  }
+
+  &__list {
+    padding-left: 3.2rem;
+    border-left: 0.1rem solid $grey-9;
+
+    @include breakpoint($xs-bp) {
+      padding: 0;
+      border: none;
+      @include label-s();
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem 3.2rem;
+
+      @include breakpoint($xs-bp) {
+        display: flex;
+      }
+    }
+  }
+
+  &__btn {
+    margin-left: auto;
+
+    @include breakpoint($xs-bp) {
+      margin-left: 0;
+      margin-top: 1.6rem;
+    }
+  }
+}

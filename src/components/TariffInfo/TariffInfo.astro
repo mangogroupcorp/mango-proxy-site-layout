@@ -1,0 +1,206 @@
+---
+import DefaultBtn from "@components/_UI/DefaultBtn/DefaultBtn.astro";
+import IconBtn from "@components/_UI/IconBtn/IconBtn.astro";
+import TariffCard from "@components/_UI/TariffCard/TariffCard.astro";
+import { Sprite } from "astro-icon";
+---
+
+<section class="tariff-info">
+  <div class="container tariff-info__container">
+    <div class="tariff-info__head">
+      <h2 class="title-2 tariff-info__title">Тарифы на API веб-скрейпера</h2>
+      <p class="label-l tariff-info__text">
+        Для новых пользователей у нас предусмотрена единовременная оплата.
+        Он составляет всего 1,7 доллара за 1 ГБ.
+      </p>
+    </div>
+
+    <div class="tariff-info__inner">
+      <div class="swiper tariff-info__swiper" data-swiper-init>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <TariffCard color="grey">
+              <div class="tariff-card__head" slot="head">
+                <h4 class="title-3 regular tariff-card__title">Pay As Go</h4>
+                <span class="tariff-card__price">
+                  <span class="title-4 regular c-500 tariff-card__price-title"
+                    >По факту использования</span
+                  >
+                  <div class="tariff-card__price-inner">
+                    <span class="title-2 tariff-card__price-value">$8.4</span>
+                    <span class="label-l tariff-card__price-desc">/ GB</span>
+                  </div>
+                </span>
+              </div>
+
+              <div class="tariff-card-desc">
+                <span class="label-l tariff-card-desc__subtitle"
+                  >Никаких обязательств</span
+                >
+              </div>
+
+              <div class="tariff-card-info" slot="info">
+                <span
+                  class="label-l tariff-card-info__item tariff-card-info__token"
+                >
+                  <span
+                    class="tariff-card-info__icon tariff-card-info__icon_fill"
+                  >
+                    <Sprite name="check-fill" />
+                  </span>
+                   Отличный план <br />
+                   для тестирования прокси в вашем бизнесе.
+                </span>
+              </div>
+            </TariffCard>
+          </div>
+          <div class="swiper-slide">
+            <TariffCard color="grey">
+              <div class="tariff-card__head" slot="head">
+                <h4 class="title-3 regular tariff-card__title">Starter</h4>
+                <span class="tariff-card__price">
+                  <span class="title-4 regular c-500 tariff-card__price-title"
+                    >69 ГБ ВКЛЮЧЕНО</span
+                  >
+                  <div class="tariff-card__price-inner">
+                    <span class="title-2 tariff-card__price-value">$7.14</span>
+                    <span class="label-l tariff-card__price-desc"> / GB</span>
+                  </div>
+                </span>
+              </div>
+
+              <div class="tariff-card-desc">
+                <span class="label-l tariff-card-desc__subtitle"
+                  ><b>$499</b> + НДС / Ежемесячная оплата</span
+                >
+              </div>
+
+              <div class="tariff-card-info" slot="info">
+                <span
+                  class="label-l tariff-card-info__item tariff-card-info__token"
+                >
+                  <span
+                    class="tariff-card-info__icon tariff-card-info__icon_fill"
+                  >
+                    <Sprite name="check-fill" />
+                  </span>
+                   Идеально подходит для малого бизнеса с умеренным
+                  использованием.
+                </span>
+              </div>
+            </TariffCard>
+          </div>
+          <div class="swiper-slide">
+            <TariffCard color="grey">
+              <div class="tariff-card__head" slot="head">
+                <h4 class="title-3 regular tariff-card__title">Growth</h4>
+                <span class="tariff-card__price">
+                  <span class="title-4 regular c-500 tariff-card__price-title">
+                    158 ГБ ВКЛЮЧЕНО
+                  </span>
+                  <div class="tariff-card__price-inner">
+                    <span class="title-2 tariff-card__price-value">$6.3</span>
+                    <span class="label-l tariff-card__price-desc">/ GB</span>
+                  </div>
+                </span>
+              </div>
+
+              <div class="tariff-card-desc">
+                <span class="label-l tariff-card-desc__subtitle">
+                  <b>$999</b> + НДС / Ежемесячная оплата
+                </span>
+              </div>
+
+              <div class="tariff-card-info" slot="info">
+                <span
+                  class="label-l tariff-card-info__item tariff-card-info__token"
+                >
+                  <span
+                    class="tariff-card-info__icon tariff-card-info__icon_fill"
+                  >
+                    <Sprite name="check-fill" />
+                  </span>
+                   Предназначен для больших команд с обширными операционными
+                  потребностями.
+                </span>
+              </div>
+            </TariffCard>
+          </div>
+          <div class="swiper-slide">
+            <TariffCard color="grey">
+              <div class="tariff-card__head" slot="head">
+                <h4 class="title-3 regular tariff-card__title">Advanced</h4>
+                <span class="tariff-card__price">
+                  <span class="title-4 regular c-500 tariff-card__price-title">
+                    339 ГБ ВКЛЮЧЕНО
+                  </span>
+                  <div class="tariff-card__price-inner">
+                    <span class="title-2 tariff-card__price-value">$8.4</span>
+                    <span class="label-l tariff-card__price-desc">/ GB</span>
+                  </div>
+                </span>
+              </div>
+
+              <div class="tariff-card-desc">
+                <span class="label-l tariff-card-desc__subtitle">
+                  <b>$1999</b> + НДС / Ежемесячная оплата
+                </span>
+              </div>
+
+              <div class="tariff-card-info" slot="info">
+                <span
+                  class="label-l tariff-card-info__item tariff-card-info__token"
+                >
+                  <span
+                    class="tariff-card-info__icon tariff-card-info__icon_fill"
+                  >
+                    <Sprite name="check-fill" />
+                  </span>
+                   Оптимизирован для крупных предприятий.
+                </span>
+              </div>
+            </TariffCard>
+          </div>
+        </div>
+        <IconBtn class="tariff-info__swiper-btn" data-prev>
+          <Sprite name="arrow-left" />
+        </IconBtn>
+        <IconBtn class="tariff-info__swiper-btn" data-next>
+          <Sprite name="arrow-right" />
+        </IconBtn>
+      </div>
+
+      <div class="tariff-info-content">
+        <div class="tariff-info-content__head">
+          <Sprite name="business" class="tariff-info-content__head-icon" />
+          <div class="tariff-info-content__head-inner">
+            <h4 class="title-4 tariff-info-content__title">
+              Вам нужно больше 1 ТБ?
+            </h4>
+            <p class="label-l tariff-info-content__text">
+              Ваш бизнес, ваши правила. Получите индивидуальный план и откройте
+              возможности для безграничного роста.
+            </p>
+          </div>
+        </div>
+
+        <div class="template label-l tariff-info-content__list">
+          <ul>
+            <li>Неограниченный масштаб</li>
+            <li>Неограниченное количество мест</li>
+            <li>Премиальный SLA</li>
+            <li>99.99% доступности сети</li>
+            <li>Бесплатный менеджер прокси</li>
+            <li>Полное охватывание данных</li>
+            <li>Индивидуальная цена за Гб</li>
+            <li>Индивидуальные решения</li>
+          </ul>
+        </div>
+
+        <DefaultBtn icon class="tariff-info-content__btn">
+          Консультация
+        </DefaultBtn>
+      </div>
+    </div>
+  </div>
+</section>

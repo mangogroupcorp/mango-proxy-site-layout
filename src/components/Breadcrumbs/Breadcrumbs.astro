@@ -1,12 +1,13 @@
 ---
 interface Props {
   items: string[];
+  theme?: "dark";
 }
 
-const { items } = Astro.props;
+const { items, theme } = Astro.props;
 ---
 
-<div class="breadcrumbs">
+<div class="breadcrumbs" class:list={[{ ["breadcrumbs_" + theme]: theme }]}>
   <div class="container breadcrumbs__container">
     {
       items.map((el, i) => {

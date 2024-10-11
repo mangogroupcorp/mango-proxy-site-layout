@@ -57,6 +57,12 @@
     }
   }
 
+  &__price {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
   &-desc {
     display: flex;
     flex-direction: column;
