@@ -1,0 +1,22 @@
+---
+import Advantages from "@components/Advantages/Advantages.astro";
+import Breadcrumbs from "@components/Breadcrumbs/Breadcrumbs.astro";
+import FAQ from "@components/FAQ/FAQ.astro";
+import PaymentBanner from "@components/PaymentBanner/PaymentBanner.astro";
+import PricesAdv from "@components/PricesPage/PricesAdv/PricesAdv.astro";
+import PricesMPBanner from "@components/PricesPage/PricesMPBanner/PricesMPBanner.astro";
+import Layout from "src/layouts/Layout.astro";
+---
+
+<Layout title="Цены. Мобильные прокси" theme="dark">
+  <Breadcrumbs items={["Главная", "Цены. Мобильные прокси"]} theme="dark" />
+
+  <PricesMPBanner />
+
+  <PricesAdv />
+
+  <PaymentBanner />
+
+  <Advantages />
+  <FAQ />
+</Layout>

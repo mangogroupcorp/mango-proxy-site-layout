@@ -1,0 +1,109 @@
+.prices-mp-banner {
+  padding: 3rem 0rem 10rem;
+  background-color: $grey-12;
+  color: $white;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+    text-align: center;
+  }
+
+  &__head {
+    max-width: 78.2rem;
+  }
+
+  &__swiper {
+    @media screen and (min-width: 601px) {
+      padding: 0rem 5.4rem;
+    }
+
+    @include breakpoint($xs-bp) {
+      width: calc(100% + 3.2rem);
+      margin: 0rem -1.6rem;
+      padding: 0rem 1.6rem;
+    }
+
+    &-btn {
+      position: absolute;
+      z-index: 100;
+      top: 50%;
+      translate: 0 -50%;
+
+      &:disabled {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      &[data-prev] {
+        left: 0.4rem;
+      }
+
+      &[data-next] {
+        right: 0.4rem;
+      }
+
+      @media screen and (min-width: 601px) {
+        display: none;
+      }
+    }
+
+    .swiper-wrapper {
+      @media screen and (min-width: 601px) {
+        transform: none !important;
+        width: 100%;
+        display: grid;
+        align-items: stretch;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.4rem;
+      }
+    }
+
+    .swiper-slide {
+      height: auto;
+
+      @include breakpoint($xs-bp) {
+        padding: 0 0.4rem;
+      }
+    }
+  }
+}
+
+.prices-mp-banner .tariff-card {
+  grid-auto-rows: auto;
+  padding-top: 12rem;
+  position: relative;
+
+  @include breakpoint($xs-bp) {
+    padding: 9.4rem 1.6rem 1.6rem;
+  }
+
+  &__days {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $c-100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 6.8rem;
+    color: $grey-13;
+    border-radius: inherit;
+
+    @include breakpoint($xs-bp) {
+      height: 4.2rem;
+      border-radius: 0.8rem;
+    }
+  }
+}

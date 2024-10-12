@@ -1,0 +1,108 @@
+---
+import DefaultBtn from "@components/_UI/DefaultBtn/DefaultBtn.astro";
+import { Sprite } from "astro-icon";
+---
+
+<section class="prices-adv">
+  <div class="container prices-adv__container">
+    <h3 class="title-2 prices-adv__title">
+      Зачем использовать наши мобильные <nobr>IP-адреса</nobr> ?
+    </h3>
+
+    <div class="prices-adv__inner">
+      <div class="prices-adv-info">
+        <div class="title-4 regular prices-adv-info__item">
+          <Sprite name="check-fill" />
+           Никакой регистрации или отслеживания
+        </div>
+        <div class="title-4 regular prices-adv-info__item">
+          <Sprite name="check-fill" />
+           Нулевая пропускная способность и ограничения сеансов
+        </div>
+        <div class="title-4 regular prices-adv-info__item">
+          <Sprite name="check-fill" />
+           Авторотация и мгновенная смена IP
+        </div>
+        <div class="title-4 regular prices-adv-info__item">
+          <Sprite name="check-fill" />
+           Более 2,5 миллионов подлинных домашних мобильных IP-адресов
+        </div>
+      </div>
+
+      <div class="swiper prices-adv__swiper" data-swiper-init>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="rp-advantages-item">
+              <img
+                src="./img/icons/unlimited-traffic.svg"
+                alt=""
+                class="rp-advantages-item__icon"
+              />
+              <h4 class="title-3 regular rp-advantages-item__title">
+                Безлимитный трафик
+              </h4>
+              <p class="label-m c-grey-8 rp-advantages-item__text">
+                Ваше ежемесячное обязательство предоставляет вам конечную точку
+                со всем нашим пулом мобильных IP-адресов и неограниченной
+                ротацией.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="rp-advantages-item">
+              <img
+                src="./img/icons/fast-mobile-proxies.svg"
+                alt=""
+                class="rp-advantages-item__icon"
+              />
+              <h4 class="title-3 regular rp-advantages-item__title">
+                Быстрые мобильные прокси
+              </h4>
+              <p class="label-m c-grey-8 rp-advantages-item__text">
+                Наши мобильные прокси 5G/4G/3G/LTE могут достигать скорости
+                загрузки до 100 Мбит/с. Никаких замедлений с нашими мобильными
+                прокси-серверами.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="rp-advantages-item">
+              <img
+                src="./img/icons/simple-authentication.svg"
+                alt=""
+                class="rp-advantages-item__icon"
+              />
+              <h4 class="title-3 regular rp-advantages-item__title">
+                Простая аутентификация
+              </h4>
+              <p class="label-m c-grey-8 rp-advantages-item__text">
+                Получите простую комбинацию USER:PASS для конечной точки
+                мобильного прокси, которая позволит вам получить доступ ко всем
+                IP-адресам.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="rp-advantages-item">
+              <img
+                src="./img/icons/private-mobile-proxies.svg"
+                alt=""
+                class="rp-advantages-item__icon"
+              />
+              <h4 class="title-3 regular rp-advantages-item__title">
+                Частные мобильные прокси
+              </h4>
+              <p class="label-m c-grey-8 rp-advantages-item__text">
+                Получите мобильный прокси, зарезервированный специально для вас.
+                Это почти как покупка мобильных устройств, но с большей
+                производительностью и экономичностью.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <DefaultBtn component="a" href="#" icon>Подробнее</DefaultBtn>
+  </div>
+</section>
