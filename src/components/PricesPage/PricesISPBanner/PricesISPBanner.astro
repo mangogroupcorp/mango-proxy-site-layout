@@ -6,144 +6,157 @@ import { Sprite } from "astro-icon";
 
 <section class="prices-isp-banner">
   <div class="container prices-isp-banner__container">
-    <div class="prices-isp-banner__head">
-      <h1 class="title-1 prices-isp-banner__title">
-        Цены на Статические (ISP) прокси
-      </h1>
-      <p class="label-l prices-isp-banner__text">
-        Цены, которые масштабируются вместе с вами.
-      </p>
-    </div>
+    <slot name="head">
+      <div class="prices-isp-banner__head">
+        <h1 class="title-1 prices-isp-banner__title">
+          Цены на Статические (ISP) прокси
+        </h1>
+        <p class="label-l prices-isp-banner__text">
+          Цены, которые масштабируются вместе с вами.
+        </p>
+      </div>
+    </slot>
 
     <div
       class="swiper prices-mp-banner__swiper prices-isp-banner__swiper"
       data-swiper-init
     >
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="tariff-card tariff-card_grey">
-            <div class="tariff-card__top">
-              <div class="tariff-card__head">
-                <h4 class="title-3 regular tariff-card__title">ISP прокси</h4>
-                <!--  -->
-                <div class="tariff-card-select">
-                  <span class="label-l tariff-card-select__text">
-                    Введите или выберите количество IP:
-                  </span>
-                </div>
-                <!--  -->
-                <span class="tariff-card__price">
-                  <div class="tariff-card__price-inner">
-                    <span class="label-l tariff-card__price-desc">от</span>
-                    <span class="title-2 tariff-card__price-value"> $750</span>
-                    <span class="label-l tariff-card__price-desc">
-                      / в месяц
+        <slot name="slide">
+          <div class="swiper-slide">
+            <div class="tariff-card tariff-card_grey">
+              <div class="tariff-card__top">
+                <div class="tariff-card__head">
+                  <h4 class="title-3 regular tariff-card__title">ISP прокси</h4>
+                  <!--  -->
+                  <div class="tariff-card-select">
+                    <span class="label-l tariff-card-select__text">
+                      Введите или выберите количество IP:
                     </span>
                   </div>
-                  <span class="tariff-card__price-desc">
-                    Цена за IP: $1.50
+                  <!--  -->
+                  <span class="tariff-card__price">
+                    <div class="tariff-card__price-inner">
+                      <span class="label-l tariff-card__price-desc">от</span>
+                      <span class="title-2 tariff-card__price-value">
+                        $750</span
+                      >
+                      <span class="label-l tariff-card__price-desc">
+                        / в месяц
+                      </span>
+                    </div>
+                    <span class="tariff-card__price-desc">
+                      Цена за IP: $1.50
+                    </span>
                   </span>
-                </span>
+                </div>
               </div>
-            </div>
-            <div class="tariff-card__bottom">
-              <DefaultBtn component="a" href="#" icon class="tariff-card__btn">
-                Купить
-              </DefaultBtn>
+              <div class="tariff-card__bottom">
+                <DefaultBtn
+                  component="a"
+                  href="#"
+                  icon
+                  class="tariff-card__btn"
+                >
+                  Купить
+                </DefaultBtn>
 
-              <div class="tariff-card-info">
-                <span class="label-l tariff-card-info__item">
-                  <span class="tariff-card-info__icon">
-                    <Sprite name="check" class="tariff-card-info__icon" />
+                <div class="tariff-card-info">
+                  <span class="label-l tariff-card-info__item">
+                    <span class="tariff-card-info__icon">
+                      <Sprite name="check" class="tariff-card-info__icon" />
+                    </span>
+                     Неограниченная пропускная способность
                   </span>
-                   Неограниченная пропускная способность
-                </span>
-                <span class="label-l tariff-card-info__item">
-                  <span class="tariff-card-info__icon">
-                    <Sprite name="check" class="tariff-card-info__icon" />
+                  <span class="label-l tariff-card-info__item">
+                    <span class="tariff-card-info__icon">
+                      <Sprite name="check" class="tariff-card-info__icon" />
+                    </span>
+                     Более 2,5 млн частных IP-пулов
                   </span>
-                   Более 2,5 млн частных IP-пулов
-                </span>
-                <span class="label-l tariff-card-info__item">
-                  <span class="tariff-card-info__icon">
-                    <Sprite name="check" class="tariff-card-info__icon" />
+                  <span class="label-l tariff-card-info__item">
+                    <span class="tariff-card-info__icon">
+                      <Sprite name="check" class="tariff-card-info__icon" />
+                    </span>
+                     API-доступ
                   </span>
-                   API-доступ
-                </span>
-                <span class="label-l tariff-card-info__item">
-                  <span class="tariff-card-info__icon">
-                    <Sprite name="check" class="tariff-card-info__icon" />
+                  <span class="label-l tariff-card-info__item">
+                    <span class="tariff-card-info__icon">
+                      <Sprite name="check" class="tariff-card-info__icon" />
+                    </span>
+                     Поддержка 5G/4G/3G
                   </span>
-                   Поддержка 5G/4G/3G
-                </span>
-                <span class="label-l tariff-card-info__item">
-                  <span class="tariff-card-info__icon">
-                    <Sprite name="check" class="tariff-card-info__icon" />
-                  </span>
-                   Auto Rotate Toggle
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="tariff-card tariff-card_grey tariff-card_order">
-            <div class="tariff-card__top">
-              <div class="tariff-card__head">
-                <h4 class="title-3 regular tariff-card__title">Премиум ISP</h4>
-                <div class="tariff-card-desc">
-                  <span class="title-4 tariff-card-desc__subtitle">
-                    Связаться с нами
+                  <span class="label-l tariff-card-info__item">
+                    <span class="tariff-card-info__icon">
+                      <Sprite name="check" class="tariff-card-info__icon" />
+                    </span>
+                     Auto Rotate Toggle
                   </span>
                 </div>
               </div>
             </div>
-            <div class="tariff-card__bottom">
-              <DefaultBtn
-                component="a"
-                href="#"
-                icon
-                variant="stroke"
-                class="tariff-card__btn"
-              >
-                Консультация
-              </DefaultBtn>
+          </div>
+          <div class="swiper-slide">
+            <div class="tariff-card tariff-card_grey tariff-card_order">
+              <div class="tariff-card__top">
+                <div class="tariff-card__head">
+                  <h4 class="title-3 regular tariff-card__title">
+                    Премиум ISP
+                  </h4>
+                  <div class="tariff-card-desc">
+                    <span class="title-4 tariff-card-desc__subtitle">
+                      Связаться с нами
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="tariff-card__bottom">
+                <DefaultBtn
+                  component="a"
+                  href="#"
+                  icon
+                  variant="stroke"
+                  class="tariff-card__btn"
+                >
+                  Консультация
+                </DefaultBtn>
 
-              <div class="tariff-card-info">
-                <span class="label-l tariff-card-info__item">
-                  <span class="tariff-card-info__icon">
-                    <Sprite name="check" class="tariff-card-info__icon" />
+                <div class="tariff-card-info">
+                  <span class="label-l tariff-card-info__item">
+                    <span class="tariff-card-info__icon">
+                      <Sprite name="check" class="tariff-card-info__icon" />
+                    </span>
+                     Неограниченная пропускная способность
                   </span>
-                   Неограниченная пропускная способность
-                </span>
-                <span class="label-l tariff-card-info__item">
-                  <span class="tariff-card-info__icon">
-                    <Sprite name="check" class="tariff-card-info__icon" />
+                  <span class="label-l tariff-card-info__item">
+                    <span class="tariff-card-info__icon">
+                      <Sprite name="check" class="tariff-card-info__icon" />
+                    </span>
+                     Более 2,5 млн частных IP-пулов
                   </span>
-                   Более 2,5 млн частных IP-пулов
-                </span>
-                <span class="label-l tariff-card-info__item">
-                  <span class="tariff-card-info__icon">
-                    <Sprite name="check" class="tariff-card-info__icon" />
+                  <span class="label-l tariff-card-info__item">
+                    <span class="tariff-card-info__icon">
+                      <Sprite name="check" class="tariff-card-info__icon" />
+                    </span>
+                     API-доступ
                   </span>
-                   API-доступ
-                </span>
-                <span class="label-l tariff-card-info__item">
-                  <span class="tariff-card-info__icon">
-                    <Sprite name="check" class="tariff-card-info__icon" />
+                  <span class="label-l tariff-card-info__item">
+                    <span class="tariff-card-info__icon">
+                      <Sprite name="check" class="tariff-card-info__icon" />
+                    </span>
+                     Поддержка 5G/4G/3G
                   </span>
-                   Поддержка 5G/4G/3G
-                </span>
-                <span class="label-l tariff-card-info__item">
-                  <span class="tariff-card-info__icon">
-                    <Sprite name="check" class="tariff-card-info__icon" />
+                  <span class="label-l tariff-card-info__item">
+                    <span class="tariff-card-info__icon">
+                      <Sprite name="check" class="tariff-card-info__icon" />
+                    </span>
+                     Auto Rotate Toggle
                   </span>
-                   Auto Rotate Toggle
-                </span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </slot>
       </div>
       <IconBtn class="prices-mp-banner__swiper-btn" data-prev>
         <Sprite name="arrow-left" />

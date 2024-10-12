@@ -1,0 +1,97 @@
+---
+import DefaultBtn from "@components/_UI/DefaultBtn/DefaultBtn.astro";
+import Advantages from "@components/Advantages/Advantages.astro";
+import Breadcrumbs from "@components/Breadcrumbs/Breadcrumbs.astro";
+import FAQ from "@components/FAQ/FAQ.astro";
+import PaymentBanner from "@components/PaymentBanner/PaymentBanner.astro";
+import PricesAdv from "@components/PricesPage/PricesAdv/PricesAdv.astro";
+import PricesISPBanner from "@components/PricesPage/PricesISPBanner/PricesISPBanner.astro";
+import { Sprite } from "astro-icon";
+import Layout from "src/layouts/Layout.astro";
+---
+
+<Layout title="Цены. Серверные прокси" theme="dark">
+  <Breadcrumbs items={["Главная", "Цены. Серверные прокси"]} theme="dark" />
+
+  <PricesISPBanner>
+    <div class="prices-isp-banner__head" slot="head">
+      <h1 class="title-1 prices-isp-banner__title">
+        Цены на Datacenter прокси
+      </h1>
+      <p class="label-l prices-isp-banner__text">
+        Цены, которые масштабируются вместе с вами.
+      </p>
+    </div>
+  </PricesISPBanner>
+
+  <PricesAdv
+    title="Зачем использовать IP-адреса наших центров обработки данных?"
+  >
+    <div class="title-4 regular prices-adv-info__item" slot="info">
+      <Sprite name="check-fill" />
+       Не делится
+    </div>
+    <div class="title-4 regular prices-adv-info__item" slot="info">
+      <Sprite name="check-fill" />
+       Нулевая пропускная способность и ограничения сеансов
+    </div>
+    <div class="title-4 regular prices-adv-info__item" slot="info">
+      <Sprite name="check-fill" />
+       Простая интеграция и поддержка API
+    </div>
+    <div class="title-4 regular prices-adv-info__item" slot="info">
+      <Sprite name="check-fill" />
+       99,9% времени безотказной работы
+    </div>
+
+    <div class="prices-adv__list" slot="list">
+      <div class="rp-advantages-item">
+        <img
+          src="./img/icons/global.svg"
+          alt=""
+          class="rp-advantages-item__icon"
+        />
+        <h4 class="title-3 regular rp-advantages-item__title">Скорость</h4>
+        <p class="label-m c-grey-8 rp-advantages-item__text">
+          Каждый прокси-сервер центра обработки данных поступает с выделенного
+          сервера с первоклассным подключением к Интернету и оборудованием.
+          Они с большим отрывом превосходят любой другой прокси-сервер
+          по скорости.
+        </p>
+      </div>
+      <div class="rp-advantages-item">
+        <img
+          src="./img/icons/data.svg"
+          alt=""
+          class="rp-advantages-item__icon"
+        />
+        <h4 class="title-3 regular rp-advantages-item__title">Надежность</h4>
+        <p class="label-m c-grey-8 rp-advantages-item__text">
+          Все IP-адреса наших центров обработки данных получены от тщательно
+          проверенных поставщиков, что позволяет нам добиться огромного времени
+          безотказной работы в 99,9%, что делает их идеальными кандидатами
+          для долгосрочного проекта.
+        </p>
+      </div>
+      <div class="rp-advantages-item">
+        <img
+          src="./img/icons/result.svg"
+          alt=""
+          class="rp-advantages-item__icon"
+        />
+        <h4 class="title-3 regular rp-advantages-item__title">Цена</h4>
+        <p class="label-m c-grey-8 rp-advantages-item__text">
+          Все IP-адреса наших центров обработки данных получены от тщательно
+          проверенных поставщиков, что позволяет нам добиться огромного времени
+          безотказной работы в 99,9%, что делает их идеальными кандидатами
+          для долгосрочного проекта.
+        </p>
+      </div>
+    </div>
+  </PricesAdv>
+
+  <PaymentBanner />
+
+  <Advantages />
+  <FAQ />
+</Layout>
