@@ -1,0 +1,26 @@
+---
+import DefaultBtn from "@components/_UI/DefaultBtn/DefaultBtn.astro";
+import Advantages from "@components/Advantages/Advantages.astro";
+import Breadcrumbs from "@components/Breadcrumbs/Breadcrumbs.astro";
+import FAQ from "@components/FAQ/FAQ.astro";
+import PaymentBanner from "@components/PaymentBanner/PaymentBanner.astro";
+import PricesData from "@components/PricesData/PricesData.astro";
+import PricesAdv from "@components/PricesPage/PricesAdv/PricesAdv.astro";
+import PricesISPBanner from "@components/PricesPage/PricesISPBanner/PricesISPBanner.astro";
+import PricesSerpBanner from "@components/PricesPage/PricesSerpBanner/PricesSerpBanner.astro";
+import { Sprite } from "astro-icon";
+import Layout from "src/layouts/Layout.astro";
+---
+
+<Layout title="Цены. SERP" theme="dark">
+  <Breadcrumbs items={["Главная", "Цены. SERP"]} theme="dark" />
+
+  <PricesSerpBanner />
+
+  <PricesData />
+
+  <PaymentBanner />
+
+  <Advantages />
+  <FAQ />
+</Layout>

@@ -1,0 +1,61 @@
+.prices-serp-banner {
+  padding: 3.6rem 0rem 10rem;
+
+  @include breakpoint($xs-bp) {
+    padding: 2.4rem 0rem 10rem;
+  }
+
+  &-info {
+    padding: 4rem;
+    background-color: $grey-12;
+    border: 0.1rem solid $grey-8;
+    border-radius: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3.2rem;
+
+    @include breakpoint($xs-bp) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 2.4rem;
+    }
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2.6rem;
+      max-width: 89.9rem;
+
+      @include breakpoint($xs-bp) {
+        gap: 1.6rem;
+      }
+    }
+
+    &__text {
+      @include breakpoint($xs-bp) {
+        @include label-s();
+      }
+    }
+
+    &__icon {
+      flex: none;
+      width: 4rem;
+      height: 4rem;
+      color: $c-500;
+
+      @media screen and (min-width: 601px) {
+        display: none;
+      }
+    }
+  }
+
+  .tariff-plan__bg {
+    &::after {
+      @include breakpoint($xs-bp) {
+        top: 35%;
+      }
+    }
+  }
+}
