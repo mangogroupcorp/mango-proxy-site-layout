@@ -1,6 +1,11 @@
 ---
 import DefaultBtn from "@components/_UI/DefaultBtn/DefaultBtn.astro";
+import Advantages from "@components/Advantages/Advantages.astro";
 import Breadcrumbs from "@components/Breadcrumbs/Breadcrumbs.astro";
+import FAQ from "@components/FAQ/FAQ.astro";
+import InfoCloud from "@components/InfoCloud/InfoCloud.astro";
+import InfoSlider from "@components/InfoSlider/InfoSlider.astro";
+import PaymentBanner from "@components/PaymentBanner/PaymentBanner.astro";
 import Price from "@components/Price/Price.astro";
 import PriceInfo from "@components/TariffInfo/TariffInfo.astro";
 import { Sprite } from "astro-icon";
@@ -43,4 +48,14 @@ import Layout from "src/layouts/Layout.astro";
   </Price>
 
   <PriceInfo />
+
+  <InfoCloud />
+
+  <PaymentBanner />
+
+  <InfoSlider
+    title="Компании развивают свой бизнес с помощью резидентных прокси"
+  />
+  <Advantages />
+  <FAQ />
 </Layout>

@@ -1,0 +1,121 @@
+.payment-banner {
+  margin: 10rem 0;
+
+  &__container {
+    position: relative;
+    padding: 6.4rem;
+    border-radius: 2.4rem;
+    background-color: $grey-13;
+    color: $white;
+    overflow: hidden;
+
+    @include breakpoint($xs-bp) {
+      padding: 2.4rem;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background-color: $grey-11;
+    }
+
+    &::before {
+      top: 15.3rem;
+      left: -15.3rem;
+      width: 90.8rem;
+      height: 76.6rem;
+
+      @include breakpoint($xs-bp) {
+        display: none;
+      }
+    }
+
+    &::after {
+      bottom: 8rem;
+      right: -15.3rem;
+      width: 98.6rem;
+      height: 98.6rem;
+
+      @include breakpoint($xs-bp) {
+        width: 42rem;
+        height: 35.5rem;
+        right: -14rem;
+        bottom: -4.7rem;
+      }
+    }
+  }
+
+  &__title {
+    @include breakpoint($xs-bp) {
+      @include title-4();
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 6.4rem;
+    position: relative;
+    z-index: 1;
+
+    @include breakpoint($xs-bp) {
+      gap: 3.2rem;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: stretch;
+    gap: 10rem;
+
+    @include breakpoint($xs-bp) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4rem;
+    flex-wrap: wrap;
+    max-width: 51rem;
+
+    @include breakpoint($xs-bp) {
+      gap: 1.6rem;
+    }
+
+    img {
+      object-fit: contain;
+      object-position: center;
+      height: 6.4rem;
+
+      @include breakpoint($xs-bp) {
+        height: 3.6rem;
+      }
+    }
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 75.4rem;
+    gap: 3.2rem;
+
+    @include breakpoint($xs-bp) {
+      gap: 0.8rem;
+    }
+
+    &__title {
+      @include breakpoint($xs-bp) {
+        @include label-l();
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+---
+import DefaultBtn from "@components/_UI/DefaultBtn/DefaultBtn.astro";
+---
+
+<section class="payment-banner">
+  <div class="container">
+    <div class="payment-banner__container">
+      <div class="payment-banner__content">
+        <h3 class="title-2 payment-banner__title">
+          Различные методы оплаты для каждого!
+        </h3>
+
+        <div class="payment-banner__inner">
+          <div class="payment-banner__list">
+            <img src="./img/payment/payment-1.svg" alt="" />
+            <img src="./img/payment/payment-2.svg" alt="" />
+            <img src="./img/payment/payment-3.svg" alt="" />
+            <img src="./img/payment/payment-4.svg" alt="" />
+            <img src="./img/payment/payment-5.svg" alt="" />
+            <img src="./img/payment/payment-6.svg" alt="" />
+            <img src="./img/payment/payment-7.svg" alt="" />
+            <img src="./img/payment/payment-8.svg" alt="" />
+            <img src="./img/payment/payment-9.svg" alt="" />
+          </div>
+
+          <div class="payment-banner-info">
+            <h4 class="title-3 regular payment-banner-info__title">
+              Оплатить наш сервис вы можете <br /> криптовалютой и любой картой
+              мира
+            </h4>
+            <DefaultBtn
+              component="a"
+              href="#"
+              class="payment-banner-info__btn"
+              icon
+            >
+              Выбрать тариф
+            </DefaultBtn>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

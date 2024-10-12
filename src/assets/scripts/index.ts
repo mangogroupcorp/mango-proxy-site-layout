@@ -18,6 +18,7 @@ import { initTabController } from "./utils/tabController";
 import { initPricingSwiper } from "@components/Pricing/Pricing";
 import { initQuize } from "@components/Quize/Quize";
 import { initCode } from "@components/Code/Code";
+import { initInfoCloud } from "@components/InfoCloud/InfoCloud";
 
 Swiper.use([Navigation, Thumbs, EffectFade, Pagination, Autoplay, Scrollbar]);
 
@@ -42,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initPricingSwiper();
   initQuize();
   initCode();
+  initInfoCloud();
   // <--
 
   // События

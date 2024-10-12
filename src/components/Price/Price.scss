@@ -20,6 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    pointer-events: none;
 
     img {
       position: absolute;
@@ -51,7 +52,7 @@
       padding-top: 50%;
       // border-radius: 50%;
       border-radius: 200rem 200rem 0 0;
-      background: radial-gradient(at center top, $grey-8 0%, $grey-12 46%, $grey-12 100%);
+      background: radial-gradient(at center top, $grey-8 0%, $grey-12 36%, $grey-12 100%);
 
       @include breakpoint($xs-bp) {
         width: 76rem;

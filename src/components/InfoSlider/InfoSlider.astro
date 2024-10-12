@@ -1,12 +1,16 @@
 ---
+interface Props {
+  title?: string;
+}
 
+const {
+  title = "Компании развивают свой бизнес с помощью резидентных прокси",
+} = Astro.props;
 ---
 
 <section class="info-slider">
   <div class="container">
-    <h3 class="title-2 info-slider__title">
-      Компании развивают свой бизнес с помощью резидентных прокси
-    </h3>
+    <h3 class="title-2 info-slider__title" set:html={title} />
   </div>
 
   <div
