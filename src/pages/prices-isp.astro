@@ -1,0 +1,100 @@
+---
+import Advantages from "@components/Advantages/Advantages.astro";
+import Breadcrumbs from "@components/Breadcrumbs/Breadcrumbs.astro";
+import FAQ from "@components/FAQ/FAQ.astro";
+import PaymentBanner from "@components/PaymentBanner/PaymentBanner.astro";
+import PricesAdv from "@components/PricesPage/PricesAdv/PricesAdv.astro";
+import PricesISPBanner from "@components/PricesPage/PricesISPBanner/PricesISPBanner.astro";
+import { Sprite } from "astro-icon";
+import Layout from "src/layouts/Layout.astro";
+---
+
+<Layout title="Цены. Статические (ISP) прокси" theme="dark">
+  <Breadcrumbs
+    items={["Главная", "Цены. Статические (ISP) прокси"]}
+    theme="dark"
+  />
+
+  <PricesISPBanner />
+
+  <PricesAdv title="Зачем использовать IP-адреса нашего интернет-провайдера?">
+    <div class="title-4 regular prices-adv-info__item" slot="info">
+      <Sprite name="check-fill" />
+       Подлинные резидентные IP-адреса
+    </div>
+    <div class="title-4 regular prices-adv-info__item" slot="info">
+      <Sprite name="check-fill" />
+       Нулевая пропускная способность и ограничения сеансов
+    </div>
+    <div class="title-4 regular prices-adv-info__item" slot="info">
+      <Sprite name="check-fill" />
+       Лучшие интернет-провайдеры
+    </div>
+    <div class="title-4 regular prices-adv-info__item" slot="info">
+      <Sprite name="check-fill" />
+       Поддержка HTTP(S) и SOCKS5
+    </div>
+
+    <div class="prices-adv__list" slot="list">
+      <div class="rp-advantages-item">
+        <img
+          src="./img/icons/IP-rotation-flexibility.svg"
+          alt=""
+          class="rp-advantages-item__icon"
+        />
+        <h4 class="title-3 regular rp-advantages-item__title">
+          Гибкость ротации IP
+        </h4>
+        <p class="label-m c-grey-8 rp-advantages-item__text">
+          Меняйте IP-адреса вручную или через наш API. При необходимости
+          создайте собственные ротационные прокси-серверы интернет-провайдеров —
+          наши функции позволят вам это сделать.
+        </p>
+      </div>
+      <div class="rp-advantages-item">
+        <img src="./img/icons/IP.svg" alt="" class="rp-advantages-item__icon" />
+        <h4 class="title-3 regular rp-advantages-item__title">
+          Премиум-провайдеры
+        </h4>
+        <p class="label-m c-grey-8 rp-advantages-item__text">
+          Мы хотим создавать лучшие прокси-серверы интернет-провайдеров, поэтому
+          весь наш пул состоит из авторитетных и высококачественных
+          интернет-провайдеров.
+        </p>
+      </div>
+      <div class="rp-advantages-item">
+        <img
+          src="./img/icons/unlimited.svg"
+          alt=""
+          class="rp-advantages-item__icon"
+        />
+        <h4 class="title-3 regular rp-advantages-item__title">
+          Неограниченный трафик
+        </h4>
+        <p class="label-m c-grey-8 rp-advantages-item__text">
+          Никаких дополнительных затрат на трафик при использовании модели
+          ценообразования с оплатой за IP.
+        </p>
+      </div>
+      <div class="rp-advantages-item">
+        <img
+          src="./img/icons/proxy.svg"
+          alt=""
+          class="rp-advantages-item__icon"
+        />
+        <h4 class="title-3 regular rp-advantages-item__title">
+          Выделенные IP-адреса
+        </h4>
+        <p class="label-m c-grey-8 rp-advantages-item__text">
+          Каждый прокси-сервер интернет-провайдера принадлежит только вам —
+          никто другой не может использовать те же IP-адреса, что и вы.
+        </p>
+      </div>
+    </div>
+  </PricesAdv>
+
+  <PaymentBanner />
+
+  <Advantages />
+  <FAQ />
+</Layout>
