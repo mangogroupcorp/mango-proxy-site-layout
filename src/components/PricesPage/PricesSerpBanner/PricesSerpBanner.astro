@@ -8,13 +8,15 @@ import { Sprite } from "astro-icon";
 <section class="tariff-plan prices-serp-banner">
   <div class="tariff-plan__bg"></div>
   <div class="container tariff-plan__container">
-    <div class="tariff-plan__head">
-      <h3 class="title-1 tariff-plan__title">План SERP-скрапинга</h3>
-      <p class="label-l tariff-plan__text">
-        Для новых пользователей у нас предусмотрена единовременная оплата.
-        Он составляет всего 1,7 доллара за 1 ГБ.
-      </p>
-    </div>
+    <slot name="head">
+      <div class="tariff-plan__head">
+        <h3 class="title-1 tariff-plan__title">План SERP-скрапинга</h3>
+        <p class="label-l tariff-plan__text">
+          Для новых пользователей у нас предусмотрена единовременная оплата.
+          Он составляет всего 1,7 доллара за 1 ГБ.
+        </p>
+      </div>
+    </slot>
 
     <div class="swiper tariff-plan__swiper" data-swiper-init>
       <div class="swiper-wrapper">

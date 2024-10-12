@@ -93,14 +93,18 @@
 
       @media screen and (min-width: 601px) {
         transform: none !important;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        flex-wrap: wrap;
         gap: 2.4rem;
       }
     }
 
     .swiper-slide {
       height: auto;
+
+      @media screen and (min-width: 601px) {
+        flex: 1;
+        min-width: calc((100% - 2.4rem * 3) / 4);
+      }
 
       @include breakpoint($xs-bp) {
         padding-right: 0.8rem;
@@ -115,15 +119,16 @@
 
     .rp-advantages-item {
       height: 100%;
-      min-height: 34.8rem;
-
-      @include breakpoint($xs-bp) {
-        min-height: 25.2rem;
-      }
 
       &__icon {
-        width: 4.8rem;
-        height: 4.8rem;
+        width: 4rem;
+        height: 4rem;
+
+        @media screen and (min-width: 601px) {
+          width: 4.8rem;
+          height: 4.8rem;
+          margin-bottom: 1.5rem;
+        }
       }
     }
   }

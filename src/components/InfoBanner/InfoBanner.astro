@@ -5,7 +5,9 @@ import type { IUIVariableComponent } from "src/interface";
 
 interface Props
   extends IUIVariableComponent,
-    astroHTML.JSX.ButtonHTMLAttributes {}
+    astroHTML.JSX.ButtonHTMLAttributes {
+  img?: string;
+}
 
 const { component: Wrapper = "section", ...props } = Astro.props;
 ---

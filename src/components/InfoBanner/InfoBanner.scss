@@ -5,6 +5,23 @@
     margin: 5rem 0;
   }
 
+  &.info-banner_contain {
+    .info-banner {
+      &__img {
+        padding: 2.2rem 0rem;
+
+        img {
+          position: static;
+          object-fit: contain;
+        }
+      }
+
+      &__container {
+        align-items: center;
+      }
+    }
+  }
+
   &__container {
     background-color: $white;
     border: 0.1rem solid $grey-5;

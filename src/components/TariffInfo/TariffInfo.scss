@@ -3,6 +3,10 @@
   background-color: $grey-12;
   color: $white;
 
+  @include breakpoint($xs-bp) {
+    padding: 10rem 0rem;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
