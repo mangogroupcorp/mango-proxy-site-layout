@@ -72,11 +72,34 @@
         }
       }
 
+      &-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.6rem;
+
+        @include breakpoint($xs-bp) {
+          gap: 0.8rem;
+        }
+      }
+
+      &-title {
+        @include breakpoint($xs-bp) {
+          @include label-l();
+        }
+      }
+
       svg {
         flex: none;
         width: 3.6rem;
         height: 3.6rem;
         fill: $c-500;
+      }
+
+      &.prices-adv-info__item_big {
+        padding: 0;
+        border: none;
+        align-items: flex-start;
       }
     }
   }

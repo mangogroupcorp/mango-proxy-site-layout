@@ -1,0 +1,72 @@
+---
+import Advantages from "@components/Advantages/Advantages.astro";
+import Breadcrumbs from "@components/Breadcrumbs/Breadcrumbs.astro";
+import FAQ from "@components/FAQ/FAQ.astro";
+import PaymentBanner from "@components/PaymentBanner/PaymentBanner.astro";
+import PricesAdv from "@components/PricesPage/PricesAdv/PricesAdv.astro";
+import PricesWebBanner from "@components/PricesPage/PricesWebBanner/PricesWebBanner.astro";
+import { Sprite } from "astro-icon";
+import Layout from "src/layouts/Layout.astro";
+---
+
+<Layout title="Цены. Web" theme="dark">
+  <Breadcrumbs items={["Главная", "Цены. Web"]} theme="dark" />
+
+  <PricesWebBanner />
+
+  <PricesAdv title="Легко преодолевайте сложные цели" list={false}>
+    <div class="prices-adv-info__item prices-adv-info__item_big" slot="info">
+      <Sprite name="check-fill" />
+      <div class="prices-adv-info__item-inner">
+        <h4 class="title-4 regular prices-adv-info__item-title">
+          Легко интегрировать
+        </h4>
+        <p class="label-m c-grey-8 prices-adv-info__item-text">
+          Web Scraper API легко интегрируется и доставляет необработанные данные
+          из любой точки данных выбранной вами цели.
+        </p>
+      </div>
+    </div>
+    <div class="prices-adv-info__item prices-adv-info__item_big" slot="info">
+      <Sprite name="check-fill" />
+      <div class="prices-adv-info__item-inner">
+        <h4 class="title-4 regular prices-adv-info__item-title">
+          Широкая доступность по всему миру
+        </h4>
+        <p class="label-m c-grey-8 prices-adv-info__item-text">
+          Безотказная работа 99,9% позволяет собирать данные, когда они вам
+          нужны, из любой точки мира.
+        </p>
+      </div>
+    </div>
+    <div class="prices-adv-info__item prices-adv-info__item_big" slot="info">
+      <Sprite name="check-fill" />
+      <div class="prices-adv-info__item-inner">
+        <h4 class="title-4 regular prices-adv-info__item-title">
+          Простое извлечение данных
+        </h4>
+        <p class="label-m c-grey-8 prices-adv-info__item-text">
+          Мы занимаемся управлением прокси на нашей стороне, поэтому вам не
+          придется это делать.
+        </p>
+      </div>
+    </div>
+    <div class="prices-adv-info__item prices-adv-info__item_big" slot="info">
+      <Sprite name="check-fill" />
+      <div class="prices-adv-info__item-inner">
+        <h4 class="title-4 regular prices-adv-info__item-title">
+          Очистка в масштабе
+        </h4>
+        <p class="label-m c-grey-8 prices-adv-info__item-text">
+          Web Scraper API поддерживает большой объем запросов, используя пул
+          прокси-серверов Mango 102M+
+        </p>
+      </div>
+    </div>
+  </PricesAdv>
+
+  <PaymentBanner />
+
+  <Advantages />
+  <FAQ />
+</Layout>

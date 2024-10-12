@@ -158,6 +158,8 @@
       &__label {
         color: $c-500;
         background-color: $grey-13;
+        padding: 0.7rem 1.5rem;
+        border: 0.1rem solid $c-500;
       }
 
       &-desc {

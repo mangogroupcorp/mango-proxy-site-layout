@@ -4,10 +4,13 @@ import { Sprite } from "astro-icon";
 
 interface Props {
   title?: string;
+  list?: boolean;
 }
 
-const { title = "Зачем использовать наши мобильные <nobr>IP-адреса</nobr> ?" } =
-  Astro.props;
+const {
+  title = "Зачем использовать наши мобильные <nobr>IP-адреса</nobr> ?",
+  list = true,
+} = Astro.props;
 ---
 
 <section class="prices-adv">
@@ -36,80 +39,84 @@ const { title = "Зачем использовать наши мобильные
         </slot>
       </div>
 
-      <slot name="list">
-        <div class="swiper prices-adv__swiper" data-swiper-init>
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="rp-advantages-item">
-                <img
-                  src="./img/icons/unlimited-traffic.svg"
-                  alt=""
-                  class="rp-advantages-item__icon"
-                />
-                <h4 class="title-3 regular rp-advantages-item__title">
-                  Безлимитный трафик
-                </h4>
-                <p class="label-m c-grey-8 rp-advantages-item__text">
-                  Ваше ежемесячное обязательство предоставляет вам конечную
-                  точку со всем нашим пулом мобильных IP-адресов и
-                  неограниченной ротацией.
-                </p>
+      {
+        list && (
+          <slot name="list">
+            <div class="swiper prices-adv__swiper" data-swiper-init>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="rp-advantages-item">
+                    <img
+                      src="./img/icons/unlimited-traffic.svg"
+                      alt=""
+                      class="rp-advantages-item__icon"
+                    />
+                    <h4 class="title-3 regular rp-advantages-item__title">
+                      Безлимитный трафик
+                    </h4>
+                    <p class="label-m c-grey-8 rp-advantages-item__text">
+                      Ваше ежемесячное обязательство предоставляет вам конечную
+                      точку со всем нашим пулом мобильных IP-адресов и
+                      неограниченной ротацией.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="rp-advantages-item">
+                    <img
+                      src="./img/icons/fast-mobile-proxies.svg"
+                      alt=""
+                      class="rp-advantages-item__icon"
+                    />
+                    <h4 class="title-3 regular rp-advantages-item__title">
+                      Быстрые мобильные прокси
+                    </h4>
+                    <p class="label-m c-grey-8 rp-advantages-item__text">
+                      Наши мобильные прокси 5G/4G/3G/LTE могут достигать
+                      скорости загрузки до 100 Мбит/с. Никаких замедлений с
+                      нашими мобильными прокси-серверами.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="rp-advantages-item">
+                    <img
+                      src="./img/icons/simple-authentication.svg"
+                      alt=""
+                      class="rp-advantages-item__icon"
+                    />
+                    <h4 class="title-3 regular rp-advantages-item__title">
+                      Простая аутентификация
+                    </h4>
+                    <p class="label-m c-grey-8 rp-advantages-item__text">
+                      Получите простую комбинацию USER:PASS для конечной точки
+                      мобильного прокси, которая позволит вам получить доступ ко
+                      всем IP-адресам.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="rp-advantages-item">
+                    <img
+                      src="./img/icons/private-mobile-proxies.svg"
+                      alt=""
+                      class="rp-advantages-item__icon"
+                    />
+                    <h4 class="title-3 regular rp-advantages-item__title">
+                      Частные мобильные прокси
+                    </h4>
+                    <p class="label-m c-grey-8 rp-advantages-item__text">
+                      Получите мобильный прокси, зарезервированный специально
+                      для вас. Это почти как покупка мобильных устройств, но с
+                      большей производительностью и экономичностью.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="rp-advantages-item">
-                <img
-                  src="./img/icons/fast-mobile-proxies.svg"
-                  alt=""
-                  class="rp-advantages-item__icon"
-                />
-                <h4 class="title-3 regular rp-advantages-item__title">
-                  Быстрые мобильные прокси
-                </h4>
-                <p class="label-m c-grey-8 rp-advantages-item__text">
-                  Наши мобильные прокси 5G/4G/3G/LTE могут достигать скорости
-                  загрузки до 100 Мбит/с. Никаких замедлений с нашими мобильными
-                  прокси-серверами.
-                </p>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="rp-advantages-item">
-                <img
-                  src="./img/icons/simple-authentication.svg"
-                  alt=""
-                  class="rp-advantages-item__icon"
-                />
-                <h4 class="title-3 regular rp-advantages-item__title">
-                  Простая аутентификация
-                </h4>
-                <p class="label-m c-grey-8 rp-advantages-item__text">
-                  Получите простую комбинацию USER:PASS для конечной точки
-                  мобильного прокси, которая позволит вам получить доступ ко
-                  всем IP-адресам.
-                </p>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="rp-advantages-item">
-                <img
-                  src="./img/icons/private-mobile-proxies.svg"
-                  alt=""
-                  class="rp-advantages-item__icon"
-                />
-                <h4 class="title-3 regular rp-advantages-item__title">
-                  Частные мобильные прокси
-                </h4>
-                <p class="label-m c-grey-8 rp-advantages-item__text">
-                  Получите мобильный прокси, зарезервированный специально для
-                  вас. Это почти как покупка мобильных устройств, но с большей
-                  производительностью и экономичностью.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </slot>
+          </slot>
+        )
+      }
     </div>
 
     <DefaultBtn component="a" href="#" icon>Подробнее</DefaultBtn>
