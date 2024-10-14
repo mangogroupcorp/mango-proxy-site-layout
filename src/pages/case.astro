@@ -1,6 +1,7 @@
 ---
 import Breadcrumbs from "@components/Breadcrumbs/Breadcrumbs.astro";
 import CaseBanner from "@components/CasesPage/CaseBanner/CaseBanner.astro";
+import CaseInfo from "@components/CasesPage/CaseInfo/CaseInfo.astro";
 import FAQ from "@components/FAQ/FAQ.astro";
 import Price from "@components/Price/Price.astro";
 import Layout from "src/layouts/Layout.astro";
@@ -10,6 +11,8 @@ import Layout from "src/layouts/Layout.astro";
   <Breadcrumbs items={["Главная", "Кейсы", "E-commerce"]} theme="dark" />
 
   <CaseBanner />
+
+  <CaseInfo />
 
   <Price />
   <FAQ />
