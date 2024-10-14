@@ -1,0 +1,68 @@
+---
+import DefaultBtn from "@components/_UI/DefaultBtn/DefaultBtn.astro";
+---
+
+<section class="case-banner">
+  <div class="container case-banner__container">
+    <div class="case-banner__bg">
+      <img src="./img/case-banner-bg.png" alt="" />
+    </div>
+
+    <div class="case-banner__content">
+      <div class="page-banner__content">
+        <div class="page-banner-rate">
+          <div class="page-banner-rate__inner">
+            <img
+              class="page-banner-rate__logo"
+              src="./img/rate-logo-1_dark.svg"
+              alt=""
+            />
+            <div
+              class="page-banner-rate__stars page-banner-rate__stars_v1"
+              style="--rate: 90%"
+            >
+              <img src="./img/rate-stars-1.svg" alt="" />
+            </div>
+          </div>
+          <div class="page-banner-rate__inner">
+            <img
+              class="page-banner-rate__logo"
+              src="./img/rate-logo-2_dark.svg"
+              alt=""
+            />
+            <div
+              class="page-banner-rate__stars page-banner-rate__stars_v2"
+              style="--rate: 90%"
+            >
+              <img src="./img/rate-stars-2.svg" alt="" />
+              <img src="./img/rate-stars-2_fill.svg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <h1 class="title-1 page-banner__title">
+          Купить прокси-серверы веб-скрапинга для извлечения данных
+        </h1>
+        <div class="template label-l page-banner__text">
+          Веб-скрапинг — это сложный процесс, который включает в себя
+          автоматическое извлечение больших объемов данных с самых разных
+          веб-сайтов. Поскольку задействована автоматизация, многие веб-сайты
+          имеют тенденцию блокировать парсеры, что приводит к снижению
+          эффективности и потере доступа к данным. Резидентные прокси чаще всего
+          используются для обхода блоков и CAPTCHA.
+        </div>
+      </div>
+
+      <div class="page-banner__btns">
+        <DefaultBtn
+          component="a"
+          href="https://dashboard.mangoproxy.com/quick-purchase"
+          target="_blank"
+          icon
+        >
+          Быстрый тест
+        </DefaultBtn>
+      </div>
+    </div>
+  </div>
+</section>

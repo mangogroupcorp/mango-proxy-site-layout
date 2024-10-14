@@ -1,0 +1,16 @@
+---
+import Breadcrumbs from "@components/Breadcrumbs/Breadcrumbs.astro";
+import CasesBanner from "@components/CasesPage/CasesBanner/CasesBanner.astro";
+import FAQ from "@components/FAQ/FAQ.astro";
+import Price from "@components/Price/Price.astro";
+import Layout from "src/layouts/Layout.astro";
+---
+
+<Layout title="Кейсы применения" theme="dark">
+  <Breadcrumbs items={["Главная", "Кейсы"]} theme="dark" />
+
+  <CasesBanner />
+
+  <Price />
+  <FAQ />
+</Layout>

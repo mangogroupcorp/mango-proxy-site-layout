@@ -1,0 +1,28 @@
+.cases-banner {
+  margin: 0;
+  padding: 1.6rem 0rem 8rem;
+  background: linear-gradient(180deg, $grey-12 0%, $grey-12 40%, $grey-2 40%, $grey-2 100%);
+
+  @include breakpoint($xs-bp) {
+    padding: 2.4rem 0rem 10rem;
+  }
+
+  .cases {
+    &__container {
+      gap: 8rem;
+
+      @include breakpoint($xs-bp) {
+        gap: 3.2rem;
+      }
+    }
+
+    &__title {
+      color: $white;
+
+      @include breakpoint($xs-bp) {
+        @include title-3();
+      }
+    }
+
+  }
+}
