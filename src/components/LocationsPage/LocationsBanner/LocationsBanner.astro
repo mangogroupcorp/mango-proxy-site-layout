@@ -5,10 +5,10 @@ interface Props {
   img?: string;
 }
 
-const { img = "./img/case-banner-bg.png" } = Astro.props;
+const { img = "./img/locations-banner-bg.svg" } = Astro.props;
 ---
 
-<section class="case-banner">
+<section class="case-banner locations-banner">
   <div class="container case-banner__container">
     <div class="case-banner__bg">
       <img src={img} alt="" />
@@ -46,16 +46,17 @@ const { img = "./img/case-banner-bg.png" } = Astro.props;
           </div>
         </div>
 
-        <h1 class="title-1 page-banner__title">
-          Купить прокси-серверы веб-скрапинга для извлечения данных
+        <h1 slot="content" class="title-1 page-banner__title">
+          Прокси по местоположению
         </h1>
-        <div class="template label-l page-banner__text">
-          Веб-скрапинг — это сложный процесс, который включает в себя
-          автоматическое извлечение больших объемов данных с самых разных
-          веб-сайтов. Поскольку задействована автоматизация, многие веб-сайты
-          имеют тенденцию блокировать парсеры, что приводит к снижению
-          эффективности и потере доступа к данным. Резидентные прокси чаще всего
-          используются для обхода блоков и CAPTCHA.
+        <div slot="content" class="template label-l page-banner__text">
+          При использовании прокси ваш IP-адрес заменяется на новый по вашему
+          выбору, что полностью анонимизирует ваш доступ в Интернет.
+          Прокси-серверы IProyal для жилых помещений и центров обработки данных
+          являются самыми быстрыми на рынке, обеспечивая время безотказной
+          работы выше 99,9%. Мы уделяем особое внимание скорости, стабильности,
+          безопасности и индивидуальному подходу для всех сценариев
+          использования.
         </div>
       </div>
 

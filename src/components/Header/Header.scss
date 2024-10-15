@@ -42,8 +42,20 @@ body._open-menu {
   // }
 
   @include breakpoint($xs-bp) {
+    position: static;
     padding: 0.8rem 0 0;
     background-color: transparent;
+    height: 6.4rem;
+  }
+
+  .container {
+    @include breakpoint($xs-bp) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding-top: 0.8rem;
+    }
   }
 
   &__container {
@@ -194,6 +206,10 @@ body._open-menu {
       .header-menu-item__btn {
         color: $white;
       }
+    }
+
+    @include breakpoint($xs-bp) {
+      background-color: $grey-12;
     }
   }
 }

@@ -1,0 +1,20 @@
+.locations-banner {
+  .case-banner {
+    &__bg {
+      top: 0;
+      bottom: unset;
+      height: auto;
+
+      @include breakpoint($xs-bp) {
+        max-width: unset;
+        height: 32.5rem;
+        bottom: 0;
+        top: unset;
+      }
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+}

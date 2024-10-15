@@ -1,0 +1,11 @@
+---
+import Breadcrumbs from "@components/Breadcrumbs/Breadcrumbs.astro";
+import LocationsBanner from "@components/LocationsPage/LocationsBanner/LocationsBanner.astro";
+import Layout from "src/layouts/Layout.astro";
+---
+
+<Layout title="Локации" theme="dark">
+  <Breadcrumbs items={["Кейсы", "Локации"]} theme="dark" />
+
+  <LocationsBanner />
+</Layout>
