@@ -1,0 +1,24 @@
+.blog-rec {
+  margin-bottom: 10rem;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    @include breakpoint($xs-bp) {
+      gap: 2.4rem;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.4rem;
+
+    @include breakpoint($xs-bp) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
