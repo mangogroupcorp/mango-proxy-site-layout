@@ -1,0 +1,24 @@
+---
+interface Props {
+  img?: string;
+}
+
+const { img = "./img/blog-1.jpeg" } = Astro.props;
+---
+
+<a href="#" class="blog-card">
+  <div class="blog-card__img">
+    <img src={img} alt="" />
+  </div>
+  <div class="blog-card__inner">
+    <div class="blog-card__tags">
+      <span class="label-m blog-card__tag">Учебные пособия</span>
+      <span class="label-m blog-card__tag">Скраперы</span>
+    </div>
+    <h5 class="label-l bold blog-card__title">
+      10 лучших поставщиков прокси-серверов для центров обработки данных для
+      очистки данных
+    </h5>
+    <span class="label-m c-grey-8 uppercase blog-card__desc"> Амбера Лвуз</span>
+  </div>
+</a>

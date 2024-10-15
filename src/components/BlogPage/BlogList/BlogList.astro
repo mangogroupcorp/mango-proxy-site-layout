@@ -1,0 +1,47 @@
+---
+import BlogCard from "@components/_UI/BlogCard/BlogCard.astro";
+---
+
+<section class="blog-list">
+  <div class="container blog-list__wrapper">
+    <div class="swiper blog-list-nav">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="#" class="blog-list-nav__btn _active">Все</a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#" class="blog-list-nav__btn">Новости</a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#" class="blog-list-nav__btn">Сбор данных</a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#" class="blog-list-nav__btn">Использование данных</a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#" class="blog-list-nav__btn">Прокси</a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#" class="blog-list-nav__btn">Обновления</a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#" class="blog-list-nav__btn">Учебные пособия</a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#" class="blog-list-nav__btn">Интеграции</a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#" class="blog-list-nav__btn">События</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-list__container">
+      {
+        [...new Array(12)].map((el, i) => (
+          <BlogCard img={`./img/blog-${i + 1}.jpeg`} />
+        ))
+      }
+    </div>
+  </div>
+</section>

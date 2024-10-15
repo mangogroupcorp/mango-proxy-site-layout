@@ -19,6 +19,7 @@ import { initPricingSwiper } from "@components/Pricing/Pricing";
 import { initQuize } from "@components/Quize/Quize";
 import { initCode } from "@components/Code/Code";
 import { initInfoCloud } from "@components/InfoCloud/InfoCloud";
+import { initBlogList } from "@components/BlogPage/BlogList/BlogList";
 
 Swiper.use([Navigation, Thumbs, EffectFade, Pagination, Autoplay, Scrollbar]);
 
@@ -44,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initQuize();
   initCode();
   initInfoCloud();
+  initBlogList();
   // <--
 
   // События
