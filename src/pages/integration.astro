@@ -1,0 +1,46 @@
+---
+import DefaultBtn from "@components/_UI/DefaultBtn/DefaultBtn.astro";
+import Breadcrumbs from "@components/Breadcrumbs/Breadcrumbs.astro";
+import FAQ from "@components/FAQ/FAQ.astro";
+import InfoBanner from "@components/InfoBanner/InfoBanner.astro";
+import IntegrationComponent from "@components/Integration/Integration.astro";
+import Price from "@components/Price/Price.astro";
+import Layout from "src/layouts/Layout.astro";
+---
+
+<Layout title="Интеграции" theme="dark">
+  <Breadcrumbs items={["Кейсы", "Интеграции"]} theme="dark" />
+
+  <IntegrationComponent />
+
+  <Price />
+  <FAQ bg={false} />
+
+  <InfoBanner class="info-banner_contain mp-info-banner">
+    <div class="info-banner__content">
+      <div class="info-banner__head">
+        <h3 class="title-2 info-banner__title">Приступить к работе</h3>
+        <p class="label-l c-grey-9 info-banner__text">
+          Ищете прокси-серверы из белого списка для своих бизнес-целей? Mango
+          здесь, чтобы предоставить вам лучшие в своем классе прокси-сервисы для
+          сбора вакансий в различных вертикалях.
+        </p>
+      </div>
+
+      <ul class="template label-l info-banner__list">
+        <li>
+          Наши клиенты используют прокси Mango для победы в конкурентной борьбе
+          в SMM, SEO, исследованиях рынка и во многих других случаях.
+        </li>
+      </ul>
+
+      <DefaultBtn component="a" href="#" icon class="info-banner__btn">
+        Зарегистрироваться
+      </DefaultBtn>
+    </div>
+
+    <div class="info-banner__img">
+      <img src="./img/prices-ec.svg" alt="" />
+    </div>
+  </InfoBanner>
+</Layout>

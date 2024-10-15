@@ -2,12 +2,22 @@
 import DefaultBtn from "@components/_UI/DefaultBtn/DefaultBtn.astro";
 import IconBtn from "@components/_UI/IconBtn/IconBtn.astro";
 import { Sprite } from "astro-icon";
+
+interface Props {
+  bg?: boolean;
+}
+
+const { bg = true } = Astro.props;
 ---
 
 <section class="faq">
-  <div class="faq__bg">
-    <img src="./img/faq-bg.svg" alt="" />
-  </div>
+  {
+    bg && (
+      <div class="faq__bg">
+        <img src="./img/faq-bg.svg" alt="" />
+      </div>
+    )
+  }
   <div class="container faq__container">
     <div class="faq__head">
       <div class="faq__head-inner">
