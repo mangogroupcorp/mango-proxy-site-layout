@@ -1,0 +1,28 @@
+---
+import Advantages from "@components/Advantages/Advantages.astro";
+import Breadcrumbs from "@components/Breadcrumbs/Breadcrumbs.astro";
+import IPGeo from "@components/IPGeo/IPGeo.astro";
+import LocationBanner from "@components/LocationsPage/LocationBanner/LocationBanner.astro";
+import Layout from "src/layouts/Layout.astro";
+---
+
+<Layout title="Прокси Индия" theme="dark">
+  <Breadcrumbs items={["Кейсы", "Локации", "Прокси Индия"]} theme="dark" />
+
+  <LocationBanner />
+
+  <IPGeo>
+    <div class="ip-geo__head" slot="content">
+      <h3 class="title-2 ip-geo__title">
+        География IP-адресов: откройте для себя мир без границ
+      </h3>
+      <p class="label-l c-grey-9 ip-geo__text">
+        Наша обширная сеть, охватывающая <b>более 200 локаций</b> и включающая
+        <b> более 10 миллионов IP-адресов</b>, предоставляет вам доступ
+        к неограниченным возможностям.
+      </p>
+    </div>
+  </IPGeo>
+
+  <Advantages />
+</Layout>
