@@ -1,0 +1,114 @@
+.location-speed {
+  position: relative;
+  height: 91.6rem;
+  overflow: hidden;
+  perspective: 100rem;
+  transform-style: preserve-3d;
+  perspective-origin: 1% 1%;
+
+  @include breakpoint($xs-bp) {
+    height: 81.2rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -5rem;
+    width: 5000rem;
+    height: 38rem;
+    background-color: $white;
+    transform-origin: left bottom;
+    transform: rotateX(80deg) rotateZ(-22deg);
+    box-shadow: 0 1.8rem 0 rgba(0, 0, 0, 0.25);
+
+    @include breakpoint($xs-bp) {
+      bottom: 18%;
+      left: -2rem;
+      transform: rotateX(100deg) rotateZ(-60deg);
+    }
+  }
+
+  &-item {
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    height: 27rem;
+    text-align: right;
+
+    @include breakpoint($xs-bp) {
+      width: calc(100% - 3.2rem);
+      height: 20.6rem;
+      gap: 0.8rem;
+    }
+
+    &:nth-child(1) {
+      bottom: 44%;
+      left: 10%;
+
+      @include breakpoint($xs-bp) {
+        flex-direction: row-reverse;
+        left: 1.6rem;
+        bottom: 20%;
+
+        .location-speed-item__inner {
+          text-align: left;
+          padding-right: 0;
+          border-right: none;
+          padding-left: 0.8rem;
+          border-left: 0.1rem solid $grey-13;
+          justify-content: flex-end;
+        }
+
+        .location-speed-item__value {
+          @include breakpoint($xs-bp) {
+            margin-top: unset;
+            margin-bottom: auto;
+          }
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      top: 0%;
+      right: 20%;
+
+      @include breakpoint($xs-bp) {
+        right: 1.6rem;
+        top: 20%;
+      }
+    }
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 1.7rem;
+      height: 100%;
+      width: 33rem;
+      padding-right: 1.6rem;
+      border-right: 0.1rem solid $grey-13;
+
+      @include breakpoint($xs-bp) {
+        gap: 0.8rem;
+        width: 24rem;
+      }
+    }
+
+    &__value {
+      margin-top: auto;
+
+      @include breakpoint($xs-bp) {
+        @include title-4();
+        width: min-content;
+      }
+    }
+
+    &__title {
+      @include breakpoint($xs-bp) {
+        @include label-l();
+      }
+    }
+  }
+}

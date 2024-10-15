@@ -40,8 +40,10 @@
     background-color: $white;
     border: 0.1rem solid $grey-5;
     border-radius: 1.6rem;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    // display: grid;
+    // grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    align-items: stretch;
     gap: 4rem;
 
     @include breakpoint($xs-bp) {
@@ -52,6 +54,8 @@
     }
 
     &__item {
+      flex: 1;
+      min-width: calc((100% - 4rem * 3) / 4);
       display: flex;
       align-items: flex-start;
       gap: 1.6rem;
@@ -94,6 +98,7 @@
         width: 3.6rem;
         height: 3.6rem;
         fill: $c-500;
+        translate: 0 -12%;
       }
 
       &.prices-adv-info__item_big {
@@ -167,6 +172,41 @@
       gap: 0.8rem;
     }
 
+    &:not(.prices-adv__list_grey) {
+      .rp-advantages-item {
+        &:nth-child(4n + 2) {
+          background-color: $grey-3;
+        }
+
+        &:nth-child(4n + 3) {
+          background-color: $c-500;
+
+          .rp-advantages-item {
+            &__text {
+              color: $grey-9;
+            }
+          }
+        }
+
+        &:nth-child(4n + 4) {
+          background-color: $grey-13;
+          color: $white;
+
+          .rp-advantages-item {
+            &__text {
+              color: $grey-6;
+            }
+          }
+        }
+      }
+    }
+
+    .rp-advantages-item {
+      &:nth-child(2n + 2) {
+        background-color: $grey-3;
+      }
+    }
+
     .rp-advantages-item {
       flex: 1;
       height: auto;
@@ -175,31 +215,6 @@
 
       @include breakpoint($xs-bp) {
         min-height: 25.2rem;
-      }
-
-      &:nth-child(4n + 2) {
-        background-color: $grey-3;
-      }
-
-      &:nth-child(4n + 3) {
-        background-color: $c-500;
-
-        .rp-advantages-item {
-          &__text {
-            color: $grey-9;
-          }
-        }
-      }
-
-      &:nth-child(4n + 4) {
-        background-color: $grey-13;
-        color: $white;
-
-        .rp-advantages-item {
-          &__text {
-            color: $grey-6;
-          }
-        }
       }
 
       &__icon {

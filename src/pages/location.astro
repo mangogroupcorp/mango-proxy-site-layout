@@ -3,6 +3,9 @@ import Advantages from "@components/Advantages/Advantages.astro";
 import Breadcrumbs from "@components/Breadcrumbs/Breadcrumbs.astro";
 import IPGeo from "@components/IPGeo/IPGeo.astro";
 import LocationBanner from "@components/LocationsPage/LocationBanner/LocationBanner.astro";
+import LocationSpeed from "@components/LocationsPage/LocationSpeed/LocationSpeed.astro";
+import PricesAdv from "@components/PricesPage/PricesAdv/PricesAdv.astro";
+import { Sprite } from "astro-icon";
 import Layout from "src/layouts/Layout.astro";
 ---
 
@@ -10,6 +13,72 @@ import Layout from "src/layouts/Layout.astro";
   <Breadcrumbs items={["Кейсы", "Локации", "Прокси Индия"]} theme="dark" />
 
   <LocationBanner />
+
+  <LocationSpeed />
+
+  <PricesAdv title="Дополнительные преимущества индийских прокси от Mango">
+    <div class="title-4 regular prices-adv-info__item" slot="info">
+      <Sprite name="check-fill" />
+       Детальный таргетинг
+    </div>
+    <div class="title-4 regular prices-adv-info__item" slot="info">
+      <Sprite name="check-fill" />
+       99% доступность
+    </div>
+    <div class="title-4 regular prices-adv-info__item" slot="info">
+      <Sprite name="check-fill" />
+       Панель управления
+    </div>
+
+    <div class="prices-adv__list prices-adv__list_grey" slot="list">
+      <div class="rp-advantages-item">
+        <img
+          src="./img/icons/global.svg"
+          alt=""
+          class="rp-advantages-item__icon"
+        />
+        <h4 class="title-3 regular rp-advantages-item__title">
+          Покрытие, по всему миру
+        </h4>
+        <p class="label-m c-grey-8 rp-advantages-item__text">
+          Прокси-серверы Mango в Индии охватывают более 3377 провайдеров с
+          гибкой настройкой доступных портов для резидентных и мобильных прокси.
+          Даже используя базовый тариф, вы можете иметь лучшую доступность и
+          широкое покрытие любого региона.
+        </p>
+      </div>
+      <div class="rp-advantages-item">
+        <img
+          src="./img/icons/unlimited-asses.svg"
+          alt=""
+          class="rp-advantages-item__icon"
+        />
+        <h4 class="title-3 regular rp-advantages-item__title">
+          Неограниченное количество сеансов
+        </h4>
+        <p class="label-m c-grey-8 rp-advantages-item__text">
+          Прокси-серверы Mango в Индии охватывают более 3377 провайдеров с
+          гибкой настройкой доступных портов для резидентных и мобильных прокси.
+          Даже используя базовый тариф, вы можете иметь лучшую доступность и
+          широкое покрытие любого региона.
+        </p>
+      </div>
+      <div class="rp-advantages-item">
+        <img
+          src="./img/icons/Support.svg"
+          alt=""
+          class="rp-advantages-item__icon"
+        />
+        <h4 class="title-3 regular rp-advantages-item__title">Поддержка</h4>
+        <p class="label-m c-grey-8 rp-advantages-item__text">
+          Мы ответим на любые ваши вопросы относительно эффективного
+          использования резидентных и мобильных индийских прокси. Особенности и
+          преимущества местных IP, преимущества того или иного тарифного пакета,
+          которые позволят провести эффективные исследования и проверку гипотез.
+        </p>
+      </div>
+    </div>
+  </PricesAdv>
 
   <IPGeo>
     <div class="ip-geo__head" slot="content">
