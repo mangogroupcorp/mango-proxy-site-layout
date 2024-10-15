@@ -1,0 +1,99 @@
+.dev-code {
+  padding: 10rem 0;
+  background-color: $grey-12;
+  color: $white;
+  overflow: hidden;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+
+    @include breakpoint($xs-bp) {
+      gap: 3.2rem;
+    }
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+    text-align: center;
+    max-width: 83.4rem;
+
+    @include breakpoint($xs-bp) {
+      gap: 0.8rem;
+    }
+  }
+
+  &__text {
+    @include breakpoint($xs-bp) {
+      @include label-s();
+    }
+  }
+
+  &-tabs {
+    @include breakpoint($xs-bp) {
+      width: calc(100% + 3.2rem);
+      margin: 0rem -1.6rem;
+      padding: 0rem 1.6rem;
+    }
+
+    .swiper-wrapper {
+      @media screen and (min-width: 601px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8rem;
+        transform: none !important;
+      }
+    }
+
+    .swiper-slide {
+      width: fit-content;
+
+      &:not(:last-child) {
+        padding-right: 0.8rem;
+      }
+    }
+
+    &__btn {
+      padding: 1.6rem 2.4rem;
+      border: 0.1rem solid $grey-8;
+      border-radius: 0.8rem;
+      transition: .3s;
+
+      @include hover {
+        color: $c-500;
+        border-color: $c-500;
+      }
+
+      @include breakpoint($xs-bp) {
+        @include label-s();
+      }
+
+      &:active {
+        color: $c-400;
+        border-color: $c-400;
+      }
+
+      &._active {
+        background-color: $c-500;
+        border-color: $c-500;
+        color: $grey-13;
+      }
+    }
+  }
+
+  &__templates {
+    width: 100%;
+
+    .code-box {
+      width: 100%;
+      max-width: 149rem;
+      margin: 0 auto;
+    }
+  }
+}
