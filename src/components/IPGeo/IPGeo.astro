@@ -6,31 +6,35 @@ import { Sprite } from "astro-icon";
 
 <section class="ip-geo">
   <div class="container ip-geo__container">
-    <div class="ip-geo__head">
-      <h3 class="title-2 ip-geo__title">
-        География IP-адресов: откройте для себя мир без границ
-      </h3>
-      <p class="label-l c-grey-9 ip-geo__text">
-        Наша обширная сеть, охватывающая <b>более 200 локаций</b> и включающая
-        <b>более 10 миллионов IP-адресов</b>, предоставляет вам доступ
-        к неограниченным возможностям.
-      </p>
-    </div>
+    <slot name="content">
+      <div class="ip-geo__head">
+        <h3 class="title-2 ip-geo__title">
+          География IP-адресов: откройте для себя мир без границ
+        </h3>
+        <p class="label-l c-grey-9 ip-geo__text">
+          Наша обширная сеть, охватывающая <b>более 200 локаций</b> и включающая
 
-    <div class="ip-geo__btns">
-      <span class="label-l ip-geo__info">
-        <Sprite name="flag" />
-         Если нужной страны не найдется, мы оперативно решим эту проблему.
-      </span>
-      <DefaultBtn
-        component="a"
-        href="https://dashboard.mangoproxy.com/quick-purchase"
-        target="_blank"
-        icon
-      >
-        Попробовать
-      </DefaultBtn>
-    </div>
+
+          <b>более 10 миллионов IP-адресов</b>, предоставляет вам доступ
+          к неограниченным возможностям.
+        </p>
+      </div>
+
+      <div class="ip-geo__btns">
+        <span class="label-l ip-geo__info">
+          <Sprite name="flag" />
+           Если нужной страны не найдется, мы оперативно решим эту проблему.
+        </span>
+        <DefaultBtn
+          component="a"
+          href="https://dashboard.mangoproxy.com/quick-purchase"
+          target="_blank"
+          icon
+        >
+          Попробовать
+        </DefaultBtn>
+      </div>
+    </slot>
   </div>
 
   <div class="ip-geo__sliders">

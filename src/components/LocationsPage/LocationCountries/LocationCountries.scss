@@ -1,0 +1,94 @@
+.location-countries {
+  margin: 10rem 0;
+
+  @include breakpoint($xs-bp) {
+    margin: 5rem 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+
+    @include breakpoint($xs-bp) {
+      gap: 0.8rem;
+    }
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+
+    @include breakpoint($xs-bp) {
+      gap: 2.4rem;
+    }
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+
+    @include breakpoint($xs-bp) {
+      gap: 0.8rem;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 4.8rem;
+    background-color: $white;
+    border: 0.1rem solid $grey-4;
+    border-radius: 1.6rem;
+
+    @include breakpoint($xs-bp) {
+      padding: 2.4rem;
+      gap: 2rem;
+    }
+
+    &-title {
+      padding: 2rem 2.4rem;
+      text-align: left;
+      color: $white;
+      background-color: $grey-12;
+      border-radius: 0.8rem;
+
+      @include breakpoint($xs-bp) {
+        @include title-4();
+        padding: 1.2rem 1.6rem;
+      }
+    }
+  }
+
+  &__list {
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+
+    @include breakpoint($xs-bp) {
+      -moz-column-count: 1;
+      -webkit-column-count: 1;
+      column-count: 1;
+      @include label-m();
+    }
+
+    li {
+      padding: 0rem 2.4rem 0.8rem 2.3rem;
+      border-left: 0.1rem solid $grey-5;
+
+      @include breakpoint($xs-bp) {
+        padding: 0rem 0rem 0.8rem 1.5rem;
+      }
+    }
+  }
+}

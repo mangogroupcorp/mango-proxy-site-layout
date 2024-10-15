@@ -1,5 +1,7 @@
 ---
 import Breadcrumbs from "@components/Breadcrumbs/Breadcrumbs.astro";
+import IPGeo from "@components/IPGeo/IPGeo.astro";
+import LocationCountries from "@components/LocationsPage/LocationCountries/LocationCountries.astro";
 import LocationsBanner from "@components/LocationsPage/LocationsBanner/LocationsBanner.astro";
 import Layout from "src/layouts/Layout.astro";
 ---
@@ -8,4 +10,19 @@ import Layout from "src/layouts/Layout.astro";
   <Breadcrumbs items={["Кейсы", "Локации"]} theme="dark" />
 
   <LocationsBanner />
+
+  <IPGeo>
+    <div class="ip-geo__head" slot="content">
+      <h3 class="title-2 ip-geo__title">
+        География IP-адресов: откройте для себя мир без границ
+      </h3>
+      <p class="label-l c-grey-9 ip-geo__text">
+        Наша обширная сеть, охватывающая <b>более 200 локаций</b> и включающая
+        <b> более 10 миллионов IP-адресов</b>, предоставляет вам доступ
+        к неограниченным возможностям.
+      </p>
+    </div>
+  </IPGeo>
+
+  <LocationCountries />
 </Layout>
