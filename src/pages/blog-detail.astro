@@ -1,0 +1,10 @@
+---
+import Blog from "@components/BlogPage/Blog/Blog.astro";
+import Breadcrumbs from "@components/Breadcrumbs/Breadcrumbs.astro";
+import Layout from "src/layouts/Layout.astro";
+---
+
+<Layout title="Страница статьи">
+  <Breadcrumbs items={["Кейсы", "Статья"]} />
+  <Blog />
+</Layout>
