@@ -1,0 +1,151 @@
+.case-browsers {
+  padding: 10rem 0;
+  color: $white;
+  background-color: $grey-12;
+
+  @include breakpoint($xs-bp) {
+    padding: 3.2rem 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+    text-align: center;
+    max-width: 85rem;
+
+    @include breakpoint($xs-bp) {
+      gap: 0.8rem;
+    }
+  }
+
+  &__text {
+    @include breakpoint($xs-bp) {
+      @include label-s();
+    }
+  }
+
+  // &__inner {
+  //   @include breakpoint($xs-bp) {
+  //     width: calc(100% + 3.2rem);
+  //     margin: 0rem -1.6rem;
+  //     padding: 0rem 1.6rem;
+  //     overflow: auto;
+  //   }
+  // }
+
+  &__list {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.4rem;
+
+    @include breakpoint($xs-bp) {
+      gap: 0.4rem;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      // width: 59.6rem;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4rem;
+    text-align: center;
+    max-width: 85rem;
+
+    @include breakpoint($xs-bp) {
+      gap: 1.6rem;
+    }
+  }
+}
+
+.case-browsers-item {
+  flex: none;
+  position: relative;
+  width: 24rem;
+  height: 24rem;
+  border-radius: 1.6rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4rem;
+  background-color: $grey-11;
+  border: 0.1rem solid $grey-11;
+  transition: .5s;
+
+  @include hover {
+    border-color: $c-500;
+
+    &::before {
+      width: 50rem;
+      height: 50rem;
+      translate: -50% -50%;
+    }
+  }
+
+  @include breakpoint($xs-bp) {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    gap: 1.2rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 36.2rem;
+    height: 36.2rem;
+    border-radius: 50%;
+    background-color: $grey-10;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    translate: -50% 0;
+    transition: .5s;
+
+    @include breakpoint($xs-bp) {
+      width: 18rem;
+      height: 18rem;
+    }
+  }
+
+  &__logo {
+    position: relative;
+    z-index: 1;
+    flex: none;
+    width: 6.4rem;
+    height: 6.4rem;
+    object-fit: contain;
+    object-position: center;
+
+    @include breakpoint($xs-bp) {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+
+    @include breakpoint($xs-bp) {
+      font-size: 0.9rem;
+    }
+  }
+}
