@@ -1,0 +1,19 @@
+---
+import Breadcrumbs from "@components/Breadcrumbs/Breadcrumbs.astro";
+import DevAdv from "@components/DevPage/DevAdv/DevAdv.astro";
+import DevBanner from "@components/DevPage/DevBanner/DevBanner.astro";
+import FAQ from "@components/FAQ/FAQ.astro";
+import Price from "@components/Price/Price.astro";
+import Layout from "src/layouts/Layout.astro";
+---
+
+<Layout title="Для разработчиков" theme="dark">
+  <Breadcrumbs items={["Кейсы", "Для разработчиков"]} theme="dark" />
+
+  <DevBanner />
+
+  <DevAdv />
+
+  <Price />
+  <FAQ bg={false} />
+</Layout>

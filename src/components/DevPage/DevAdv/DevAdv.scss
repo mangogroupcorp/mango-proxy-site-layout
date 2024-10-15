@@ -1,0 +1,92 @@
+.dev-adv {
+  margin-top: -13.2rem;
+  margin-bottom: 10rem;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.4rem;
+
+    @include breakpoint($xs-bp) {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .rp-info-item {
+      padding: 4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2.4rem;
+      overflow: hidden;
+
+      @include breakpoint($xs-bp) {
+        padding: 2.4rem;
+        min-height: 49rem;
+      }
+
+      &__container {
+        flex: 1;
+        position: relative;
+        z-index: 1;
+      }
+
+      &__num {
+        position: static;
+        z-index: 1;
+      }
+
+      &__title {
+        max-width: 60.3rem;
+      }
+
+      &__text {
+        @include breakpoint($xs-bp) {
+          @include label-s();
+        }
+      }
+
+      @media screen and (min-width: 601px) {
+        &:nth-child(4n + 2) {
+          &::before {
+            content: "";
+            width: 90rem;
+            height: 90rem;
+            border-radius: 50%;
+            background-color: $grey-3;
+            position: absolute;
+            top: -40rem;
+            right: -30rem;
+          }
+        }
+
+        &:nth-child(4n + 4) {
+          &::before {
+            content: "";
+            width: 90rem;
+            height: 90rem;
+            border-radius: 50%;
+            background-color: $grey-11;
+            position: absolute;
+            top: -40rem;
+            right: -30rem;
+          }
+        }
+      }
+
+      &:nth-child(4n + 3),
+      &:nth-child(4n + 4) {
+        background-color: $grey-12;
+
+        .rp-info-item__title {
+          color: $white;
+        }
+
+        .rp-info-item__text {
+          color: $grey-6;
+        }
+      }
+    }
+  }
+}
