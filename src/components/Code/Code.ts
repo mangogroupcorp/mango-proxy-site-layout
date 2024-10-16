@@ -10,7 +10,7 @@ import python from "highlight.js/lib/languages/python";
 import bash from "highlight.js/lib/languages/bash";
 import vbscript from "highlight.js/lib/languages/vbscript";
 import vbnet from "highlight.js/lib/languages/vbnet";
-import "highlight.js/styles/stackoverflow-dark.min.css";
+// import "highlight.js/styles/stackoverflow-dark.min.css";
 
 hljs.registerLanguage("javascript", javascript);
 hljs.registerLanguage("csharp", csharp);
