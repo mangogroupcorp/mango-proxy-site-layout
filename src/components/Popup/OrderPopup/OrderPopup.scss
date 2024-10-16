@@ -513,3 +513,56 @@
     }
   }
 }
+
+.order-popup-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4rem;
+
+  @include breakpoint($xs-bp) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.2rem;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+    @include breakpoint($xs-bp) {
+      flex-direction: column;
+      gap: 0.8rem;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    max-width: 21rem;
+
+    @include breakpoint($xs-bp) {
+      @include label-s();
+    }
+  }
+
+  .case-browsers-item {
+    background-color: $white;
+    border-color: $grey-5;
+
+    &::before {
+      background-color: $grey-3;
+
+      @include breakpoint($xs-bp) {
+        width: 25rem;
+        height: 25rem;
+      }
+    }
+
+    &__title {
+      @include breakpoint($xs-bp) {
+        @include label-s();
+      }
+    }
+  }
+}
