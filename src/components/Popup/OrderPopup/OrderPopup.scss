@@ -91,7 +91,7 @@
   }
 
   &__head {
-    padding: 7rem 3.8rem 0rem 6.4rem;
+    padding: 7rem 0 0rem 6.4rem;
     overflow: hidden;
 
     @include breakpoint($xs-bp) {
@@ -102,6 +102,7 @@
     &-container {
       height: 100%;
       padding-bottom: 6.4rem;
+      padding-right: 3.8rem;
       overflow: auto;
       @include scroll();
       display: grid;
@@ -564,5 +565,18 @@
         @include label-s();
       }
     }
+  }
+}
+
+.order-popup-price {
+  padding: 2.4rem 6.4rem 2.4rem 3.2rem;
+  background-color: #FFC229;
+  width: calc(100% + 3.8rem);
+  margin: 0rem -3.8rem 0rem 0rem;
+
+  @include breakpoint($xs-bp) {
+    width: calc(100% + 3.2rem);
+    margin: 0rem -1.6rem;
+    text-align: center;
   }
 }

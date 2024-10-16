@@ -37,161 +37,165 @@ import { Sprite } from "astro-icon";
 
   <div class="order-popup__container">
     <div class="order-popup__content">
-      <form action="#" class="order-popup-form" data-action="form-submit">
-        <div class="order-popup-form__head">
-          <h2 class="title-2 order-popup-form__title">Форма заказа</h2>
-          <p class="label-l c-grey-9 order-popup-form__text">
-            Ваши IP адреса будут доступны в течении 5–15 минут в зависимости
-            от времени поступления платежа.
-          </p>
-        </div>
+      <slot name="form">
+        <form action="#" class="order-popup-form" data-action="form-submit">
+          <div class="order-popup-form__head">
+            <h2 class="title-2 order-popup-form__title">Форма заказа</h2>
+            <p class="label-l c-grey-9 order-popup-form__text">
+              Ваши IP адреса будут доступны в течении 5–15 минут в зависимости
+              от времени поступления платежа.
+            </p>
+          </div>
 
-        <div class="order-popup-form__inner">
-          <div class="order-popup-tariff">
-            <span class="label-l order-popup-tariff__title">Пакеты трафика</span
-            >
-            <div class="order-popup-tariff__container">
-              <label class="order-popup-tariff-item">
-                <input type="radio" name="tariff" hidden checked />
-                <div class="order-popup-tariff-item__container">
-                  <span class="label-m order-popup-tariff-item__title"
-                    >Тест</span
-                  >
-                  <div class="order-popup-tariff-item__inner">
-                    <span class="order-popup-tariff-item__icon"></span>
-                    <span class="label-l order-popup-tariff-item__value">
-                      3GB
-                    </span>
+          <div class="order-popup-form__inner">
+            <div class="order-popup-tariff">
+              <span class="label-l order-popup-tariff__title"
+                >Пакеты трафика</span
+              >
+              <div class="order-popup-tariff__container">
+                <label class="order-popup-tariff-item">
+                  <input type="radio" name="tariff" hidden checked />
+                  <div class="order-popup-tariff-item__container">
+                    <span class="label-m order-popup-tariff-item__title"
+                      >Тест</span
+                    >
+                    <div class="order-popup-tariff-item__inner">
+                      <span class="order-popup-tariff-item__icon"></span>
+                      <span class="label-l order-popup-tariff-item__value">
+                        3GB
+                      </span>
+                    </div>
                   </div>
+                </label>
+                <label class="order-popup-tariff-item">
+                  <input type="radio" name="tariff" hidden />
+                  <div class="order-popup-tariff-item__container">
+                    <span class="label-m order-popup-tariff-item__title"
+                      >Тест</span
+                    >
+                    <div class="order-popup-tariff-item__inner">
+                      <span class="order-popup-tariff-item__icon"></span>
+                      <span class="label-l order-popup-tariff-item__value">
+                        4GB
+                      </span>
+                    </div>
+                  </div>
+                </label>
+                <label class="order-popup-tariff-item">
+                  <input type="radio" name="tariff" hidden />
+                  <div class="order-popup-tariff-item__container">
+                    <span class="label-m order-popup-tariff-item__title"
+                      >Тест</span
+                    >
+                    <div class="order-popup-tariff-item__inner">
+                      <span class="order-popup-tariff-item__icon"></span>
+                      <span class="label-l order-popup-tariff-item__value">
+                        5GB
+                      </span>
+                    </div>
+                  </div>
+                </label>
+                <label class="order-popup-tariff-item">
+                  <input type="radio" name="tariff" hidden />
+                  <div class="order-popup-tariff-item__container">
+                    <span class="label-m order-popup-tariff-item__title"
+                      >Тест</span
+                    >
+                    <div class="order-popup-tariff-item__inner">
+                      <span class="order-popup-tariff-item__icon"></span>
+                      <span class="label-l order-popup-tariff-item__value">
+                        6GB
+                      </span>
+                    </div>
+                  </div>
+                </label>
+                <label class="order-popup-tariff-item">
+                  <input type="radio" name="tariff" hidden />
+                  <div class="order-popup-tariff-item__container">
+                    <span class="label-m order-popup-tariff-item__title"
+                      >Тест</span
+                    >
+                    <div class="order-popup-tariff-item__inner">
+                      <span class="order-popup-tariff-item__icon"></span>
+                      <span class="label-l order-popup-tariff-item__value">
+                        7GB
+                      </span>
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <TextInput
+              className="fv"
+              placeholder="E-mail*"
+              clear
+              required
+              data-action="required-email"
+              error="Обязательное поле для заполнения"
+            />
+
+            <div class="order-popup-pay">
+              <label class="order-popup-pay-item">
+                <input type="radio" name="pay" hidden checked />
+                <span class="order-popup-pay-item__icon"></span>
+                <div class="order-popup-pay-item__inner">
+                  <div class="order-popup-pay-item__logo">
+                    <img src="./img/logo/logo-name-5.svg" alt="" />
+                  </div>
+                  <span class="label-l c-grey-8 order-popup-pay-item__text">
+                    Криптовалюта
+                  </span>
                 </div>
               </label>
-              <label class="order-popup-tariff-item">
-                <input type="radio" name="tariff" hidden />
-                <div class="order-popup-tariff-item__container">
-                  <span class="label-m order-popup-tariff-item__title"
-                    >Тест</span
-                  >
-                  <div class="order-popup-tariff-item__inner">
-                    <span class="order-popup-tariff-item__icon"></span>
-                    <span class="label-l order-popup-tariff-item__value">
-                      4GB
-                    </span>
+              <label class="order-popup-pay-item">
+                <input type="radio" name="pay" hidden />
+                <span class="order-popup-pay-item__icon"></span>
+                <div class="order-popup-pay-item__inner">
+                  <div class="order-popup-pay-item__logo">
+                    <img src="./img/logo/logo-name-6.svg" alt="" />
                   </div>
-                </div>
-              </label>
-              <label class="order-popup-tariff-item">
-                <input type="radio" name="tariff" hidden />
-                <div class="order-popup-tariff-item__container">
-                  <span class="label-m order-popup-tariff-item__title"
-                    >Тест</span
-                  >
-                  <div class="order-popup-tariff-item__inner">
-                    <span class="order-popup-tariff-item__icon"></span>
-                    <span class="label-l order-popup-tariff-item__value">
-                      5GB
-                    </span>
-                  </div>
-                </div>
-              </label>
-              <label class="order-popup-tariff-item">
-                <input type="radio" name="tariff" hidden />
-                <div class="order-popup-tariff-item__container">
-                  <span class="label-m order-popup-tariff-item__title"
-                    >Тест</span
-                  >
-                  <div class="order-popup-tariff-item__inner">
-                    <span class="order-popup-tariff-item__icon"></span>
-                    <span class="label-l order-popup-tariff-item__value">
-                      6GB
-                    </span>
-                  </div>
-                </div>
-              </label>
-              <label class="order-popup-tariff-item">
-                <input type="radio" name="tariff" hidden />
-                <div class="order-popup-tariff-item__container">
-                  <span class="label-m order-popup-tariff-item__title"
-                    >Тест</span
-                  >
-                  <div class="order-popup-tariff-item__inner">
-                    <span class="order-popup-tariff-item__icon"></span>
-                    <span class="label-l order-popup-tariff-item__value">
-                      7GB
-                    </span>
-                  </div>
+                  <span class="label-l c-grey-8 order-popup-pay-item__text">
+                    Криптовалюта
+                  </span>
                 </div>
               </label>
             </div>
-          </div>
 
-          <TextInput
-            className="fv"
-            placeholder="E-mail*"
-            clear
-            required
-            data-action="required-email"
-            error="Обязательное поле для заполнения"
-          />
-
-          <div class="order-popup-pay">
-            <label class="order-popup-pay-item">
-              <input type="radio" name="pay" hidden checked />
-              <span class="order-popup-pay-item__icon"></span>
-              <div class="order-popup-pay-item__inner">
-                <div class="order-popup-pay-item__logo">
-                  <img src="./img/logo/logo-name-5.svg" alt="" />
+            <div class="order-popup-result">
+              <span class="order-popup-result__label">
+                <Sprite name="sale" />
+                 Экономия до $4 при покупке от 3 Gb
+              </span>
+              <div class="order-popup-result__inner">
+                <div class="order-popup-result__prop">
+                  <span class="label-l order-popup-result__prop-name">
+                    Стоимость за 1 Gb:
+                  </span>
+                  <span class="title-4 order-popup-result__prop-value">$2</span>
                 </div>
-                <span class="label-l c-grey-8 order-popup-pay-item__text">
-                  Криптовалюта
-                </span>
-              </div>
-            </label>
-            <label class="order-popup-pay-item">
-              <input type="radio" name="pay" hidden />
-              <span class="order-popup-pay-item__icon"></span>
-              <div class="order-popup-pay-item__inner">
-                <div class="order-popup-pay-item__logo">
-                  <img src="./img/logo/logo-name-6.svg" alt="" />
+                <div class="order-popup-result__prop">
+                  <span class="title-4 regular order-popup-result__prop-title">
+                    Итого:
+                  </span>
+                  <span class="title-4 order-popup-result__prop-value">$10</span
+                  >
                 </div>
-                <span class="label-l c-grey-8 order-popup-pay-item__text">
-                  Криптовалюта
-                </span>
-              </div>
-            </label>
-          </div>
-
-          <div class="order-popup-result">
-            <span class="order-popup-result__label">
-              <Sprite name="sale" />
-               Экономия до $4 при покупке от 3 Gb
-            </span>
-            <div class="order-popup-result__inner">
-              <div class="order-popup-result__prop">
-                <span class="label-l order-popup-result__prop-name">
-                  Стоимость за 1 Gb:
-                </span>
-                <span class="title-4 order-popup-result__prop-value">$2</span>
-              </div>
-              <div class="order-popup-result__prop">
-                <span class="title-4 regular order-popup-result__prop-title">
-                  Итого:
-                </span>
-                <span class="title-4 order-popup-result__prop-value">$10</span>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="order-popup__bottom">
-          <Checkbox>
-            Я подтверждаю, что прочитал и <a href="#"
-              >согласен с Условиями и Правилами возврата денег</a
-            >.
-          </Checkbox>
+          <div class="order-popup__bottom">
+            <Checkbox>
+              Я подтверждаю, что прочитал и <a href="#"
+                >согласен с Условиями и Правилами возврата денег</a
+              >.
+            </Checkbox>
 
-          <DefaultBtn type="submit" color="secondary">Купить</DefaultBtn>
-        </div>
-      </form>
+            <DefaultBtn type="submit" color="secondary">Купить</DefaultBtn>
+          </div>
+        </form>
+      </slot>
     </div>
   </div>
 </div>

@@ -1,0 +1,101 @@
+---
+import Checkbox from "@components/_UI/Checkbox/Checkbox.astro";
+import DefaultBtn from "@components/_UI/DefaultBtn/DefaultBtn.astro";
+import TextInput from "@components/_UI/TextInput/TextInput.astro";
+import OrderPopup from "@components/Popup/OrderPopup/OrderPopup.astro";
+---
+
+<OrderPopup>
+  <div class="page-banner__head">
+    <div class="page-banner-rate">
+      <div class="page-banner-rate__inner">
+        <img
+          class="page-banner-rate__logo"
+          src="./img/rate-logo-1.svg"
+          alt=""
+        />
+        <div
+          class="page-banner-rate__stars page-banner-rate__stars_v1"
+          style="--rate: 90%"
+        >
+          <img src="./img/rate-stars-1.svg" alt="" />
+        </div>
+      </div>
+      <div class="page-banner-rate__inner">
+        <img
+          class="page-banner-rate__logo"
+          src="./img/rate-logo-2.svg"
+          alt=""
+        />
+        <div
+          class="page-banner-rate__stars page-banner-rate__stars_v2"
+          style="--rate: 90%"
+        >
+          <img src="./img/rate-stars-2.svg" alt="" />
+          <img src="./img/rate-stars-2_fill.svg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <h1 class="title-2 page-banner__title">Мобильные прокси</h1>
+    <div class="template label-l c-grey-9 page-banner__text">
+      <p>
+        Избегайте блокировки при очистке и легко собирайте данные с помощью
+        резидентных прокси-серверов MangoProxy.
+      </p>
+    </div>
+  </div>
+
+  <div class="template label-l page-banner__text">
+    <ul>
+      <li>Платите только за успешно достигнутый результат</li>
+      <li>
+        Получайте четко локализованные данные в реальном времени без
+        IP-блокировок.
+      </li>
+      <li>Повышайте эффективность и сокращайте затраты на инфраструктуру</li>
+    </ul>
+  </div>
+
+  <div class="order-popup-price">
+    <span class="label-l order-popup-price__desc">от</span><span
+      class="title-4 order-popup-price__value"
+    >
+      $123,50
+    </span><span class="label-l order-popup-price__desc">/ за слот в месяц</span
+    >
+  </div>
+
+  <form
+    slot="form"
+    action="#"
+    class="order-popup-form"
+    data-action="form-submit"
+  >
+    <div class="order-popup-form__head">
+      <h2 class="title-2 order-popup-form__title">Форма заказа</h2>
+      <p class="label-l c-grey-9 order-popup-form__text">
+        Оставте Ваш e-mail и мы вам подберем лучшее предложение!
+      </p>
+    </div>
+
+    <TextInput
+      className="fv"
+      placeholder="E-mail*"
+      clear
+      required
+      data-action="required-email"
+      error="Обязательное поле для заполнения"
+    />
+
+    <div class="order-popup__bottom">
+      <Checkbox>
+        Я подтверждаю, что прочитал и <a href="#"
+          >согласен с Условиями и Правилами возврата денег</a
+        >.
+      </Checkbox>
+
+      <DefaultBtn type="submit" color="secondary">Купить</DefaultBtn>
+    </div>
+  </form>
+</OrderPopup>
