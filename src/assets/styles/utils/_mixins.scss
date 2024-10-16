@@ -27,6 +27,22 @@
   }
 }
 
+@mixin scroll() {
+  &::-webkit-scrollbar {
+    width: 0.4rem;
+    height: 0.4rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $grey-5;
+    border-radius: 1rem;
+  }
+}
+
 @mixin lineClamp($count) {
   overflow: hidden;
   display: -webkit-box;

@@ -7,6 +7,9 @@ import IntegrationLogo from "@components/_UI/IntegrationLogo/IntegrationLogo.ast
 import LocationItem from "@components/_UI/LocationItem/LocationItem.astro";
 import MenuLink from "@components/_UI/MenuLink/MenuLink.astro";
 import Tag from "@components/_UI/Tag/Tag.astro";
+import TextInput from "@components/_UI/TextInput/TextInput.astro";
+import icons from "src/icons.json";
+import { Sprite } from "astro-icon";
 ---
 
 <Layout title="Разводящая">
@@ -25,8 +28,26 @@ import Tag from "@components/_UI/Tag/Tag.astro";
     </div>
 
     <div class="box">
-      <DefaultBtn variant="stroke">Button</DefaultBtn>
-      <DefaultBtn icon variant="stroke">Button</DefaultBtn>
+      <DefaultBtn
+        variant="stroke"
+        component="a"
+        href="./popup/order-popup-1.html"
+        data-vbox
+        data-vbtype="ajax"
+      >
+        Быстрый тест-форма 1
+      </DefaultBtn>
+      <DefaultBtn
+        icon
+        variant="stroke"
+        variant="stroke"
+        component="a"
+        href="./popup/order-popup-2.html"
+        data-vbox
+        data-vbtype="ajax"
+      >
+        Быстрый тест-форма 2
+      </DefaultBtn>
       <DefaultBtn disabled icon variant="stroke">Button</DefaultBtn>
     </div>
 
@@ -70,6 +91,16 @@ import Tag from "@components/_UI/Tag/Tag.astro";
       <DefaultBtn icon color="secondary" size="small">Button</DefaultBtn>
     </div>
 
+    <div class="box box_input">
+      <TextInput placeholder="E-mail*" clear />
+      <TextInput
+        className="invalid"
+        placeholder="E-mail*"
+        clear
+        error="Обязательное поле для заполнения"
+      />
+    </div>
+
     <div class="box">
       <IconBtn />
       <IconBtn disabled />
@@ -101,6 +132,10 @@ import Tag from "@components/_UI/Tag/Tag.astro";
     </MenuLink>
 
     <Tag>Tag</Tag>
+
+    <div class="icons">
+      {icons.map((icon) => <Sprite name={icon} />)}
+    </div>
   </div>
 
   <style is:inline>
@@ -119,6 +154,25 @@ import Tag from "@components/_UI/Tag/Tag.astro";
       flex-direction: column;
       align-items: flex-start;
       gap: 1.2rem;
+    }
+
+    .box_input {
+      width: 100%;
+      max-width: 54.4rem;
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 1.6rem;
+    }
+
+    .icons svg {
+      flex: none;
+      width: 2.4rem;
+      height: 2.4rem;
     }
   </style>
 </Layout>

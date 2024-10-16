@@ -1,12 +1,13 @@
 .checkbox {
   display: flex;
-  align-items: center;
-  gap: 1.2rem;
-  font-size: 1.2rem;
-  line-height: 1.2;
-  color: $grey-placeholder;
+  align-items: flex-start;
+  gap: 0.8rem;
   user-select: none;
   cursor: pointer;
+
+  @include breakpoint($xs-bp) {
+    align-items: center;
+  }
 
   &.invalid {
     .checkbox {
@@ -17,33 +18,49 @@
   }
 
   &__input {
-    &:checked+.checkbox__icon {
-      color: $dark;
+    &:checked~.checkbox__icon {
+      background-color: $c-500;
+      border-color: $grey-13;
+
+      svg {
+        opacity: 1;
+      }
     }
   }
 
   &__icon {
     flex: none;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 0.4rem;
-    margin-top: 0rem;
+    width: 2.4rem;
+    height: 2.4rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 0.1rem solid $grey-border;
-    background-color: $white;
-    color: transparent;
-    transition: 0.3s;
+    border: 0.1rem solid $grey-9;
+    border-radius: 0.5rem;
+    transition: .3s;
 
     svg {
-      width: 60%;
-      height: 60%;
+      width: 1.6rem;
+      height: 1.6rem;
+      transition: .3s;
+      opacity: 0;
     }
   }
 
-  a {
-    text-decoration: underline;
-    text-underline-offset: 0.2em;
+  &__text {
+    @include breakpoint($xs-bp) {
+      @include label-s();
+    }
+
+    a {
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+      color: $c-800;
+      transition: .3s;
+
+      @include hover {
+        text-decoration: none;
+      }
+    }
   }
 }

@@ -1,0 +1,515 @@
+.order-popup {
+  width: 100%;
+  height: 100%;
+  background-color: $grey-2;
+  display: grid;
+  grid-template-columns: 82rem 1fr;
+
+  @include breakpoint($xs-bp) {
+    display: flex;
+    flex-direction: column;
+    padding-top: 7rem;
+    overflow: auto;
+  }
+
+  &__logo {
+    position: absolute;
+    z-index: 2;
+    top: 3.2rem;
+    left: 6.4rem;
+    height: 3.8rem;
+
+    @include breakpoint($xs-bp) {
+      top: 1.6rem;
+      left: 1.6rem;
+    }
+
+    @include img() {
+      object-fit: contain;
+      object-position: left center;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    z-index: 2;
+    top: 3.2rem;
+    right: 6.4rem;
+    color: $white !important;
+
+    @include breakpoint($xs-bp) {
+      top: 1.6rem;
+      right: 1.6rem;
+    }
+  }
+
+  &__container {
+    background-color: $c-500;
+    padding: 6.4rem;
+    overflow: hidden;
+    position: relative;
+
+    @include breakpoint($xs-bp) {
+      flex: none;
+      padding: 6.4rem 0.8rem 4.8rem;
+      overflow: hidden;
+    }
+
+    &::before {
+      content: "";
+      width: 104.8rem;
+      height: 104.8rem;
+      border-radius: 50%;
+      background-color: #FFC229;
+      position: absolute;
+      left: -23.4rem;
+      bottom: -19.1rem;
+      pointer-events: none;
+    }
+  }
+
+  &__content {
+    height: 100%;
+    overflow: auto;
+    @include scroll();
+    display: grid;
+    align-items: center;
+
+    @include breakpoint($xs-bp) {
+      overflow: unset;
+      height: fit-content;
+      display: block;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  &__head {
+    padding: 7rem 3.8rem 0rem 6.4rem;
+    overflow: hidden;
+
+    @include breakpoint($xs-bp) {
+      padding: 1.6rem 1.6rem 2.4rem;
+      overflow: unset;
+    }
+
+    &-container {
+      height: 100%;
+      padding-bottom: 6.4rem;
+      overflow: auto;
+      @include scroll();
+      display: grid;
+      align-items: center;
+
+      @include breakpoint($xs-bp) {
+        height: auto;
+        display: block;
+        height: fit-content;
+        padding: 0;
+        overflow: unset;
+      }
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4rem;
+
+      @include breakpoint($xs-bp) {
+        gap: 3.2rem;
+      }
+    }
+  }
+}
+
+.order-popup .page-banner {
+  &__head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.6rem;
+
+    .page-banner__text {
+      max-width: 55rem;
+    }
+  }
+
+  &-rate {
+    &__logo {
+      height: 3rem;
+
+      @include breakpoint($xs-bp) {
+        height: 1.4rem;
+      }
+    }
+  }
+}
+
+.order-popup-adv {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+
+  @include breakpoint($xs-bp) {
+    display: flex;
+    align-items: stretch;
+    overflow: auto;
+    @include scroll();
+    width: calc(100% + 3.2rem);
+    margin: 0rem -1.6rem;
+    padding: 0rem 1.6rem 0.4rem;
+  }
+
+  &-item {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.6rem;
+    padding: 2.4rem;
+    border: 0.1rem solid $grey-6;
+    border-radius: 0.8rem;
+    background-color: $white;
+
+    @include breakpoint($xs-bp) {
+      flex: none;
+      width: 30.6rem;
+    }
+  }
+}
+
+.order-popup-form {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  max-width: 58.1rem;
+  margin: 0 auto;
+
+  @include breakpoint($xs-bp) {
+    gap: 1.2rem;
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    text-align: center;
+  }
+
+  &__text {
+    @include breakpoint($xs-bp) {
+      @include label-s();
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+}
+
+.order-popup-tariff {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    @include breakpoint($xs-bp) {
+      @include label-s();
+    }
+  }
+
+  &-item {
+    flex: 1;
+    position: relative;
+    height: 5.2rem;
+    background-color: $white;
+    cursor: pointer;
+
+    @include breakpoint($xs-bp) {
+      height: 5.5rem;
+    }
+
+    &:first-child {
+      border-radius: 0.8rem 0 0 0.8rem;
+    }
+
+    &:last-child {
+      border-radius: 0 0.8rem 0.8rem 0;
+    }
+
+    input:checked~ {
+      .order-popup-tariff-item {
+
+        &__container {
+          background-color: $grey-13;
+          padding: 1rem 0.4rem;
+          border-radius: 0.8rem;
+          grid-template-rows: 1fr 1fr;
+          gap: 0.4rem;
+
+          @include breakpoint($xs-bp) {
+            padding: 1rem 0rem;
+          }
+
+          .order-popup-tariff-item__value {
+            color: $c-500;
+          }
+
+          .order-popup-tariff-item__title {
+            opacity: 1;
+          }
+
+          .order-popup-tariff-item__icon::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    &__container {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      translate: 0 -50%;
+      padding: 1.4rem 0.4rem;
+      display: grid;
+      grid-template-rows: 0fr 1fr;
+      transition: .5s;
+
+      @include breakpoint($xs-bp) {
+        padding: 1rem 0rem;
+      }
+    }
+
+    &__title {
+      min-height: 0;
+      opacity: 0;
+      color: $white;
+      text-align: center;
+      transition: .5s;
+    }
+
+    &__inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    &__icon {
+      width: 2.4rem;
+      height: 2.4rem;
+      border-radius: 50%;
+      border: 0.1rem solid $c-500;
+      background-color: $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      @include breakpoint($xs-bp) {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 1.2rem;
+        height: 1.2rem;
+        background-color: $c-500;
+        border-radius: 50%;
+        opacity: 0;
+        transition: .5s;
+
+        @include breakpoint($xs-bp) {
+          width: 0.8rem;
+          height: 0.8rem;
+        }
+      }
+    }
+
+    &__value {
+      transition: .5s;
+    }
+  }
+}
+
+.order-popup-pay {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 0.8rem;
+
+  &-item {
+    padding: 2.4rem;
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+    background-color: $white;
+    border-radius: 1.6rem;
+
+    @include breakpoint($xs-bp) {
+      padding: 0.8rem 0.8rem 0.8rem 1.2rem;
+      gap: 0.8rem;
+      border-radius: 0.8rem;
+    }
+
+    input:checked {
+      &~.order-popup-pay-item__icon::after {
+        opacity: 1;
+      }
+    }
+
+    &__icon {
+      flex: none;
+      width: 2.4rem;
+      height: 2.4rem;
+      border-radius: 50%;
+      border: 0.1rem solid $c-500;
+      background-color: $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 1.2rem;
+        height: 1.2rem;
+        background-color: $c-500;
+        border-radius: 50%;
+        opacity: 0;
+        transition: .5s;
+      }
+    }
+
+    &__logo {
+      width: 100%;
+      height: 2.8rem;
+
+      @include breakpoint($xs-bp) {
+        height: 2.2rem;
+      }
+
+      img {
+        object-fit: contain;
+        object-position: left center;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    &__text {
+      @include breakpoint($xs-bp) {
+        @include label-s();
+      }
+    }
+  }
+}
+
+.order-popup-result {
+  padding: 2.4rem;
+  border-radius: 0.8rem;
+  background-color: rgba(255, 253, 234, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  @include breakpoint($xs-bp) {
+    padding: 1.6rem;
+    gap: 1.6rem;
+    margin: 1.2rem 0rem;
+  }
+
+  &__label {
+    padding: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    background-color: $c-500;
+    border-radius: 0.8rem;
+
+    @include breakpoint($xs-bp) {
+      @include label-s();
+    }
+
+    svg {
+      flex: none;
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+
+    @include breakpoint($xs-bp) {
+      gap: 1.6rem;
+    }
+  }
+
+  &__prop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.6rem;
+
+    &:not(:first-child) {
+      padding-top: 2.4rem;
+      border-top: 0.1rem solid $c-500;
+
+      @include breakpoint($xs-bp) {
+        padding-top: 1.6rem;
+      }
+    }
+
+    &-name {
+      @include breakpoint($xs-bp) {
+        @include label-s();
+      }
+    }
+
+    &-title {
+      @include breakpoint($xs-bp) {
+        @include label-l();
+      }
+    }
+
+    &-value {
+      @include breakpoint($xs-bp) {
+        @include label-l();
+      }
+    }
+  }
+}

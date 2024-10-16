@@ -29,3 +29,29 @@ export const initPasswordInputs = (wrapperSelector?: string) => {
     }
   });
 };
+
+export const initClearInputs = (wrapperSelector?: string) => {
+  const event = new Event("change", { bubbles: true });
+
+  const list = document.querySelectorAll<HTMLElement>(
+    `${wrapperSelector || ""} .text-input[data-clear]`,
+  );
+
+  list.forEach((container) => {
+    const btn = container.querySelector<HTMLButtonElement>(".text-input__btn");
+    const input =
+      container.querySelector<HTMLInputElement>(".text-input__field");
+    console.log(container);
+    console.log(btn);
+    console.log(input);
+
+    if (btn && input) {
+      btn.addEventListener("click", () => {
+        console.log("click");
+
+        input.value = "";
+        input.dispatchEvent(event);
+      });
+    }
+  });
+};

@@ -5,11 +5,13 @@ interface Props extends astroHTML.JSX.InputHTMLAttributes {
   label?: string;
   className?: string;
   password?: boolean;
+  clear?: boolean;
   error?: string;
   textarea?: boolean;
 }
 
-const { label, className, password, error, textarea, ...rest } = Astro.props;
+const { label, className, password, clear, error, textarea, ...rest } =
+  Astro.props;
 ---
 
 <label
@@ -18,16 +20,16 @@ const { label, className, password, error, textarea, ...rest } = Astro.props;
     { "text-input_error": error, "text-input_textarea": textarea },
     className,
   ]}
-  {...{ "data-password": password }}
+  {...{ "data-password": password, "data-clear": clear }}
 >
   {label && <span class="text-caps text-input__label">{label}</span>}
   {
     textarea ? (
-      <textarea class="text-btn text-input__field" {...rest} />
+      <textarea class="label-l text-input__field" {...rest} />
     ) : (
       <input
         type={rest.type ? rest.type : "text"}
-        class="text-btn text-input__field"
+        class="label-l text-input__field"
         {...rest}
       />
     )
@@ -42,9 +44,16 @@ const { label, className, password, error, textarea, ...rest } = Astro.props;
     )
   }
   {
+    clear && (
+      <button type="button" class="text-input__btn">
+        <Sprite name="close" />
+      </button>
+    )
+  }
+  {
     error && (
       <slot>
-        <span class="text-input__error red">{error}</span>
+        <span class="label-m text-input__error">{error}</span>
       </slot>
     )
   }

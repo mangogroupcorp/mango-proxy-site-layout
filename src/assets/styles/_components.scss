@@ -1,5 +1,7 @@
 @import "../../components/Template/Template.scss";
 @import "../../components/Popup/Popup.scss";
+@import "../../components/Popup/QuizePopup/QuizePopup.scss";
+@import "../../components/Popup/OrderPopup/OrderPopup.scss";
 
 // UI
 @import "../../components/_UI/DefaultBtn/DefaultBtn.scss";
@@ -12,6 +14,8 @@
 @import "../../components/_UI/InfoItem/InfoItem.scss";
 @import "../../components/_UI/TariffCard/TariffCard.scss";
 @import "../../components/_UI/BlogCard/BlogCard.scss";
+@import "../../components/_UI/TextInput/TextInput.scss";
+@import "../../components/_UI/Checkbox/Checkbox.scss";
 
 // header/footer/menu
 @import "../../components/Header/Header.scss";
@@ -39,7 +43,6 @@
 @import "../../components/MPInfo/MPInfo.scss";
 @import "../../components/ScraperAdv/ScraperAdv.scss";
 @import "../../components/TariffPlan/TariffPlan.scss";
-@import "../../components/Quize/Quize.scss";
 @import "../../components/Code/Code.scss";
 @import "../../components/WebAdv/WebAdv.scss";
 @import "../../components/TariffInfo/TariffInfo.scss";

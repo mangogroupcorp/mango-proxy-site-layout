@@ -16,10 +16,11 @@ import { initSwipers } from "./utils/swiper";
 import { initHeaderMenu } from "@components/Header/Header";
 import { initTabController } from "./utils/tabController";
 import { initPricingSwiper } from "@components/Pricing/Pricing";
-import { initQuize } from "@components/Quize/Quize";
+import { initQuize } from "@components/Popup/QuizePopup/QuizePopup";
 import { initCode } from "@components/Code/Code";
 import { initInfoCloud } from "@components/InfoCloud/InfoCloud";
 import { initBlogList } from "@components/BlogPage/BlogList/BlogList";
+import { initClearInputs } from "@components/_UI/TextInput/TextInput";
 
 Swiper.use([Navigation, Thumbs, EffectFade, Pagination, Autoplay, Scrollbar]);
 
@@ -38,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initDropdownItems();
   initSwipers();
   initTabController();
+  initClearInputs();
 
   // компоненты
   initHeaderMenu();
@@ -62,5 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     formValidateInit(".vbox-content .fv");
     initQuize(".vbox-content");
+    initClearInputs(".vbox-content");
   });
 });
