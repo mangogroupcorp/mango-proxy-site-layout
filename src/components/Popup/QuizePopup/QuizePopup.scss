@@ -161,12 +161,13 @@
   }
 
   &__btn-next {
-    flex: 1;
+    flex: auto;
   }
 }
 
 .quize-form-item {
-  cursor: pointer;
+  position: relative;
+  user-select: none;
 
   @include hover() {
     .quize-form-item {
@@ -176,11 +177,19 @@
     }
   }
 
-  &__input:checked {
-    &~ {
-      .quize-form-item__container {
-        background-color: rgb($c-500, 0.1);
-        border-color: $c-500;
+  &__input {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
+    &:checked {
+      &~ {
+        .quize-form-item__container {
+          background-color: rgb($c-500, 0.1);
+          border-color: $c-500;
+        }
       }
     }
   }

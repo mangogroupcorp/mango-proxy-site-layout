@@ -12,8 +12,9 @@ export function initInfoCloud() {
     const options: TagCloudOptions = {
       radius: 275,
       maxSpeed: "normal",
-      initSpeed: "slow",
+      initSpeed: "normal",
       useHTML: true,
+      keep: false,
     };
 
     TagCloud(container, texts, options);

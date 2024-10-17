@@ -47,6 +47,8 @@
   }
 
   &__price {
+    width: 11rem;
+    flex: none;
     height: auto;
     display: flex;
     align-items: flex-end;

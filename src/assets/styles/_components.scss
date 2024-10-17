@@ -1,7 +1,4 @@
 @import "../../components/Template/Template.scss";
-@import "../../components/Popup/Popup.scss";
-@import "../../components/Popup/QuizePopup/QuizePopup.scss";
-@import "../../components/Popup/OrderPopup/OrderPopup.scss";
 
 // UI
 @import "../../components/_UI/DefaultBtn/DefaultBtn.scss";
@@ -16,6 +13,11 @@
 @import "../../components/_UI/BlogCard/BlogCard.scss";
 @import "../../components/_UI/TextInput/TextInput.scss";
 @import "../../components/_UI/Checkbox/Checkbox.scss";
+
+// popup
+@import "../../components/Popup/Popup.scss";
+@import "../../components/Popup/QuizePopup/QuizePopup.scss";
+@import "../../components/Popup/OrderPopup/OrderPopup.scss";
 
 // header/footer/menu
 @import "../../components/Header/Header.scss";
