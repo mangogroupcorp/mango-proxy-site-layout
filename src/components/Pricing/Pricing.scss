@@ -83,6 +83,7 @@
       background-color: $c-500;
       position: relative;
       z-index: 1;
+      cursor: pointer;
 
       @include breakpoint($xs-bp) {
         width: 8px;

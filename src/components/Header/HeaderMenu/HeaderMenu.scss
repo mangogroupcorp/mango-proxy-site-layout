@@ -95,6 +95,8 @@
     &._dropped {
       .header-menu-item {
         &__btn {
+          pointer-events: unset;
+
           svg {
             scale: 1 -1;
           }
@@ -129,6 +131,7 @@
       padding: 1.2rem 1.6rem;
       justify-content: space-between;
       font-weight: 700;
+      pointer-events: none;
     }
 
     svg {

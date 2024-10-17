@@ -70,7 +70,14 @@ import Layout from "src/layouts/Layout.astro";
 
     <div class="page-banner__btns">
       <DefaultBtn color="secondary">Купить</DefaultBtn>
-      <DefaultBtn icon>Быстрый тест</DefaultBtn>
+      <DefaultBtn
+        icon
+        component="a"
+        href="https://dashboard.mangoproxy.com/quick-purchase"
+        target="_blank"
+      >
+        Быстрый тест
+      </DefaultBtn>
     </div>
   </PageBanner>
 
@@ -88,7 +95,14 @@ import Layout from "src/layouts/Layout.astro";
         скрапера или задать нам любой вопрос!
       </p>
     </div>
-    <DefaultBtn component="a" href="#" icon slot="head">Связаться</DefaultBtn>
+    <DefaultBtn
+      icon
+      slot="head"
+      type={"button"}
+      onclick="Intercom('showNewMessage')"
+    >
+      Связаться
+    </DefaultBtn>
 
     <div class="rp-info-item">
       <span class="label-m rp-info-item__num">[ 01 ]</span>

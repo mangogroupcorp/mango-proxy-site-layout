@@ -37,7 +37,9 @@ const { ...rest } = Astro.props;
             Свяжитесь с нашим менеджером
           </p>
         </div>
-        <DefaultBtn component="a" href="#" icon>Написать</DefaultBtn>
+        <DefaultBtn type={"button"} icon onclick="Intercom('showNewMessage')">
+          Написать
+        </DefaultBtn>
       </div>
     </div>
   </slot>

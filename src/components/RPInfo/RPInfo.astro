@@ -17,7 +17,9 @@ import { Sprite } from "astro-icon";
             прокси или задать нам любой вопрос!
           </p>
         </div>
-        <DefaultBtn component="a" href="#" icon>Связаться</DefaultBtn>
+        <DefaultBtn icon type={"button"} onclick="Intercom('showNewMessage')">
+          Связаться
+        </DefaultBtn>
       </slot>
     </div>
 

@@ -94,6 +94,10 @@
 
     &__link {
       padding: 0.8rem 1rem 0.8rem 1.4rem;
+
+      &:not(a) {
+        pointer-events: none;
+      }
     }
   }
 

@@ -7,11 +7,13 @@ import { Sprite } from "astro-icon";
 
 <nav class="header-menu">
   <div class="header-menu__container">
-    <div class="header-menu-item" data-dropdown>
-      <span class="label-m header-menu-item__btn" data-btn>
-        Продукты
-        <Sprite name="chevron-down" />
-      </span>
+    <div class="header-menu-item" data-dropdown data-group="menu">
+      <div class="header-menu-item__btn-wrapper" data-btn>
+        <span class="label-m header-menu-item__btn">
+          Продукты
+          <Sprite name="chevron-down" />
+        </span>
+      </div>
       <div class="header-menu-item__container">
         <div class="header-menu-item__content header-menu-prod">
           <div class="header-menu-prod__container">
@@ -21,6 +23,7 @@ import { Sprite } from "astro-icon";
               <span class="label-l header-menu-box__title">Прокси</span>
               <div class="header-menu-prod__list">
                 <MenuLink
+                  href="./prod-rp.html"
                   icon="./img/icons/resedential.svg"
                   title="Резидентские прокси"
                   label="Популярный"
@@ -28,12 +31,14 @@ import { Sprite } from "astro-icon";
                   Глобальный пул, точный таргетинг и отсутствие контрактов
                 </MenuLink>
                 <MenuLink
+                  href="./prod-serv.html"
                   icon="./img/icons/Server proxies.svg"
                   title="Серверные прокси"
                 >
                   Минимальная цена и молниеносная скорость
                 </MenuLink>
                 <MenuLink
+                  href={"./prod-mp.html"}
                   icon="./img/icons/Mpbile.svg"
                   title="Мобильные прокси"
                   label="New"
@@ -41,6 +46,7 @@ import { Sprite } from "astro-icon";
                   Безлимитный трафик и высокая скорость
                 </MenuLink>
                 <MenuLink
+                  href={"./prod-isp.html"}
                   icon="./img/icons/IPS.svg"
                   title="Статические (ISP) прокси"
                 >
@@ -51,59 +57,73 @@ import { Sprite } from "astro-icon";
             <div class="header-menu-box header-menu-prod__box">
               <span class="label-l header-menu-box__title">Скрапинг</span>
               <div class="header-menu-prod__list">
-                <MenuLink icon="./img/icons/SERP.svg" title="Скрапер. SERP">
+                <MenuLink
+                  href={"./scraper-serp.html"}
+                  icon="./img/icons/SERP.svg"
+                  title="Скрапер. SERP"
+                >
                   Глобальный пул, точный таргетинг и отсутствие контрактов
                 </MenuLink>
                 <MenuLink
+                  href={"./scraper-ec.html"}
                   icon="./img/icons/E-commerce.svg"
                   title="Скрапер. E-commerce"
                 >
                   Быстрый парсинг всех популярных платформ электронной коммерции
                 </MenuLink>
-                <MenuLink icon="./img/icons/SERP-web.svg" title="Скрапер. Web">
+                <MenuLink
+                  href={"./scraper-web.html"}
+                  icon="./img/icons/SERP-web.svg"
+                  title="Скрапер. Web"
+                >
                   Сбор данных из любых веб-ресурсов без ограничений и блокировок
                 </MenuLink>
               </div>
             </div>
           </div>
           <div class="header-menu-box header-menu-location">
-            <DefaultBtn component="a" href="#" class="header-menu-box__link">
+            <DefaultBtn
+              component="a"
+              href="./locations.html"
+              class="header-menu-box__link"
+            >
               Локации
               <Sprite name="arrow-link" />
             </DefaultBtn>
 
             <div class="header-menu-location__list">
               <LocationItem
-                href="#"
+                component="div"
                 img="./img/flags/DE.svg"
                 title="Германия"
                 text="50,000 IPs"
               />
               <LocationItem
+                component="div"
                 img="./img/flags/US.svg"
                 title="США"
                 text="720,000 IPs"
               />
               <LocationItem
-                href="#"
+                component="div"
                 img="./img/flags/BR.svg"
                 title="Бразилия"
                 text="4,000,000 IPs"
               />
               <LocationItem
-                href="#"
+                component="div"
                 img="./img/flags/FR.svg"
                 title="Франция"
                 text="100,000 IPs"
               />
               <LocationItem
-                href="#"
+                component="div"
                 img="./img/flags/JP.svg"
                 title="Япония"
                 text="20,000 IPs"
               />
               <LocationItem
-                href="#"
+                component="div"
                 img="./img/flags/PL.svg"
                 title="Польша"
                 text="20,000 IPs"
@@ -113,11 +133,13 @@ import { Sprite } from "astro-icon";
         </div>
       </div>
     </div>
-    <div class="header-menu-item" data-dropdown>
-      <span class="label-m header-menu-item__btn" data-btn>
-        Цены
-        <Sprite name="chevron-down" />
-      </span>
+    <div class="header-menu-item" data-dropdown data-group="menu">
+      <div class="header-menu-item__btn-wrapper" data-btn>
+        <span class="label-m header-menu-item__btn">
+          Цены
+          <Sprite name="chevron-down" />
+        </span>
+      </div>
       <div class="header-menu-item__container">
         <div class="header-menu-item__content header-menu-price">
           <div class="header-menu-price__container">
@@ -125,6 +147,7 @@ import { Sprite } from "astro-icon";
               <span class="header-menu-box__title">Прокси</span>
               <div class="header-menu-price__list">
                 <MenuLink
+                  href={"./prices-rp.html"}
                   icon="./img/icons/resedential.svg"
                   title="Резидентские прокси"
                   label="Популярный"
@@ -133,6 +156,7 @@ import { Sprite } from "astro-icon";
                   Глобальный пул, точный таргетинг и отсутствие контрактов
                 </MenuLink>
                 <MenuLink
+                  href={"./prices-mp.html"}
                   icon="./img/icons/Mpbile.svg"
                   title="Мобильные прокси"
                   label="New"
@@ -141,6 +165,7 @@ import { Sprite } from "astro-icon";
                   Безлимитный трафик и высокая скорость
                 </MenuLink>
                 <MenuLink
+                  href={"./prices-isp.html"}
                   icon="./img/icons/IPS.svg"
                   title="Статические (ISP) прокси"
                   price="от $5/IP"
@@ -148,6 +173,7 @@ import { Sprite } from "astro-icon";
                   Огромная скорость и максимальный траст
                 </MenuLink>
                 <MenuLink
+                  href={"./prices-dc.html"}
                   icon="./img/icons/Server proxies.svg"
                   title="Серверные прокси"
                   price="от $0.3/Gb"
@@ -160,6 +186,7 @@ import { Sprite } from "astro-icon";
               <span class="header-menu-box__title">Скрапинг</span>
               <div class="header-menu-price__list">
                 <MenuLink
+                  href={"./prices-serp.html"}
                   icon="./img/icons/SERP.svg"
                   title="Скрапер. SERP"
                   price="от $1.90/1k"
@@ -167,6 +194,7 @@ import { Sprite } from "astro-icon";
                   Анализ поисковой выдачи Google, Bing и прочих поисковый систем
                 </MenuLink>
                 <MenuLink
+                  href={"./prices-ec.html"}
                   icon="./img/icons/E-commerce.svg"
                   title="Скрапер. E-commerce"
                   price="от $1.90/1k"
@@ -174,6 +202,7 @@ import { Sprite } from "astro-icon";
                   Быстрый парсинг всех популярных платформ электронной коммерции
                 </MenuLink>
                 <MenuLink
+                  href={"./prices-web.html"}
                   icon="./img/icons/SERP-web.svg"
                   title="Скрапер. Web"
                   price="от $1.90/1k"
@@ -197,11 +226,13 @@ import { Sprite } from "astro-icon";
         </div>
       </div>
     </div>
-    <div class="header-menu-item" data-dropdown>
-      <span class="label-m header-menu-item__btn" data-btn>
-        Кейсы
-        <Sprite name="chevron-down" />
-      </span>
+    <div class="header-menu-item" data-dropdown data-group="menu">
+      <div class="header-menu-item__btn-wrapper" data-btn>
+        <a href="./cases.html" class="label-m header-menu-item__btn">
+          Кейсы
+          <Sprite name="chevron-down" />
+        </a>
+      </div>
       <div class="header-menu-item__container">
         <div class="header-menu-item__content header-menu-case">
           <div class="header-menu-box">
@@ -224,30 +255,42 @@ import { Sprite } from "astro-icon";
         </div>
       </div>
     </div>
-    <div class="header-menu-item" data-dropdown>
-      <span class="label-m header-menu-item__btn" data-btn>
-        Ресурсы
-        <Sprite name="chevron-down" />
-      </span>
+    <div class="header-menu-item" data-dropdown data-group="menu">
+      <div class="header-menu-item__btn-wrapper" data-btn>
+        <span class="label-m header-menu-item__btn">
+          Ресурсы
+          <Sprite name="chevron-down" />
+        </span>
+      </div>
       <div class="header-menu-item__container">
         <div class="header-menu-item__content header-menu-source">
           <div class="header-menu-source__list">
-            <MenuLink icon="./img/icons/IP.svg" title="Локации">
+            <MenuLink
+              href={"./locations.html"}
+              icon="./img/icons/IP.svg"
+              title="Локации"
+            >
               Можно использовать со всем популярным софтом
             </MenuLink>
             <MenuLink
+              href={"./integration.html"}
               icon="./img/icons/Simple authentication.svg"
               title="Интеграция"
             >
               Можно использовать со всем популярным софтом
             </MenuLink>
             <MenuLink
+              href={"./dev.html"}
               icon="./img/icons/developer-mode.svg"
               title="Для разработчиков"
             >
               Можно использовать со всем популярным софтом
             </MenuLink>
-            <MenuLink icon="./img/icons/Read.svg" title="Блог">
+            <MenuLink
+              href={"./blog.html"}
+              icon="./img/icons/Read.svg"
+              title="Блог"
+            >
               Можно использовать со всем популярным софтом
             </MenuLink>
           </div>

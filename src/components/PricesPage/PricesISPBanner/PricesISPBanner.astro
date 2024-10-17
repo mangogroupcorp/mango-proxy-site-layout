@@ -112,11 +112,11 @@ import { Sprite } from "astro-icon";
               </div>
               <div class="tariff-card__bottom">
                 <DefaultBtn
-                  component="a"
-                  href="#"
                   icon
                   variant="stroke"
+                  type="button"
                   class="tariff-card__btn"
+                  onclick="Intercom('showNewMessage')"
                 >
                   Консультация
                 </DefaultBtn>
@@ -193,7 +193,12 @@ import { Sprite } from "astro-icon";
         </ul>
       </div>
 
-      <DefaultBtn icon class="tariff-info-content__btn">
+      <DefaultBtn
+        icon
+        type="button"
+        class="tariff-info-content__btn"
+        onclick="Intercom('showNewMessage')"
+      >
         Консультация
       </DefaultBtn>
     </div>

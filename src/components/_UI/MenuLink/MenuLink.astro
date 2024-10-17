@@ -1,5 +1,5 @@
 ---
-interface Props {
+interface Props extends astroHTML.JSX.LinkHTMLAttributes {
   icon: string;
   title: string;
   label?: string;
@@ -9,7 +9,7 @@ interface Props {
 const { icon, title, label, price, ...rest } = Astro.props;
 ---
 
-<a href="#" class="menu-link" {...rest}>
+<a class="menu-link" {...rest}>
   <img src={icon} alt="" class="menu-link__icon" />
   <div class="menu-link__container">
     <div class="menu-link__inner">

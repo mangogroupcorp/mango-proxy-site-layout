@@ -17,7 +17,7 @@ export function initPricingSwiper() {
         effect: "fade",
         scrollbar: {
           el: scrollbarContainer,
-          draggable: true,
+          draggable: false,
           dragSize: 8,
         },
         pagination: {
@@ -34,6 +34,7 @@ export function initPricingSwiper() {
             }
             return bullet.outerHTML;
           },
+          clickable: true,
         },
         on: {
           progress(swiper, progress) {
