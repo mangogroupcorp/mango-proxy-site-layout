@@ -1,0 +1,390 @@
+---
+import Advantages from "@components/Advantages/Advantages.astro";
+import Breadcrumbs from "@components/Breadcrumbs/Breadcrumbs.astro";
+import Code from "@components/Code/Code.astro";
+import FAQ from "@components/FAQ/FAQ.astro";
+import PageBanner from "@components/PageBanner/PageBanner.astro";
+import RPInfo from "@components/RPInfo/RPInfo.astro";
+import ScraperAdv from "@components/ScraperAdv/ScraperAdv.astro";
+import TariffPlan from "@components/TariffPlan/TariffPlan.astro";
+import WebAdv from "@components/WebAdv/WebAdv.astro";
+import DefaultBtn from "@components/_UI/DefaultBtn/DefaultBtn.astro";
+import IconBtn from "@components/_UI/IconBtn/IconBtn.astro";
+import Tag from "@components/_UI/Tag/Tag.astro";
+import TariffCard from "@components/_UI/TariffCard/TariffCard.astro";
+import { Sprite } from "astro-icon";
+import Layout from "src/layouts/Layout.astro";
+---
+
+<Layout title="Скрапер. Web">
+  <Breadcrumbs items={["Главная", "Web Scraper"]} />
+
+  <PageBanner img="./img/page-banner-8.svg">
+    <div class="page-banner__content">
+      <div class="page-banner-rate">
+        <div class="page-banner-rate__inner">
+          <img
+            class="page-banner-rate__logo"
+            src="./img/rate-logo-1.svg"
+            alt=""
+          />
+          <div
+            class="page-banner-rate__stars page-banner-rate__stars_v1"
+            style="--rate: 90%"
+          >
+            <img src="./img/rate-stars-1.svg" alt="" />
+          </div>
+        </div>
+        <div class="page-banner-rate__inner">
+          <img
+            class="page-banner-rate__logo"
+            src="./img/rate-logo-2.svg"
+            alt=""
+          />
+          <div
+            class="page-banner-rate__stars page-banner-rate__stars_v2"
+            style="--rate: 90%"
+          >
+            <img src="./img/rate-stars-2.svg" alt="" />
+            <img src="./img/rate-stars-2_fill.svg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <h1 class="title-1 page-banner__title">
+        Получайте данные с любого веб-сайта с помощью API Web Scraper
+      </h1>
+      <div class="template label-l page-banner__text">
+        <ul>
+          <li>Платите только за успешно достигнутый результат</li>
+          <li>
+            Получайте четко локализованные данные в реальном времени без
+            IP-блокировок.
+          </li>
+          <li>
+            Повышайте эффективность и сокращайте затраты на инфраструктуру
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="page-banner__btns">
+      <DefaultBtn color="secondary">Купить</DefaultBtn>
+      <DefaultBtn
+        icon
+        component="a"
+        href="https://dashboard.mangoproxy.com/ru/quick-purchase"
+        target="_blank"
+      >
+        Быстрый тест
+      </DefaultBtn>
+    </div>
+  </PageBanner>
+
+  <WebAdv />
+
+  <Code />
+
+  <RPInfo>
+    <div class="rp-info__head-inner" slot="head">
+      <h3 class="title-2 rp-info__title">
+        Возможности API-интерфейса Web Scraper
+      </h3>
+      <p class="label-l c-grey-9 rp-info__text">
+        Свяжитесь с нашей командой, чтобы узнать еще больше о возможностях
+        скрапера или задать нам любой вопрос!
+      </p>
+    </div>
+    <DefaultBtn
+      icon
+      slot="head"
+      type={"button"}
+      onclick="Intercom('showNewMessage')"
+    >
+      Связаться
+    </DefaultBtn>
+
+    <div class="rp-info-item">
+      <span class="label-m rp-info-item__num">[ 01 ]</span>
+      <div class="rp-info-item__container">
+        <div class="rp-info-item__head">
+          <h4 class="title-3 rp-info-item__title">
+            Собирайте данные о качестве с любого URL-адреса
+          </h4>
+          <p class="lable-l c-grey-8 rp-info-item__text">
+            С помощью Mango Web Scraper API вы можете обойти системы защиты от
+            парсинга и извлечь большие объемы данных даже с самых сложных
+            веб-сайтов. Наша гарантия – точность, отсутствие недостающих
+            фрагментов и общее качество полученных данных.
+          </p>
+        </div>
+        <div class="rp-info-item__adv">
+          <div class="rp-advantages-item">
+            <Sprite name="cookies" class="rp-advantages-item__icon" />
+            <h4 class="label-l rp-advantages-item__title">
+              Пользовательские заголовки и файлы cookie
+            </h4>
+            <p class="label-m c-grey-8 rp-advantages-item__text">
+              Отправляйте пользовательские заголовки и файлы cookie без
+              дополнительной оплаты, чтобы улучшить контроль над парсингом.
+            </p>
+          </div>
+          <div class="rp-advantages-item">
+            <Sprite name="global-2" class="rp-advantages-item__icon" />
+            <h4 class="label-l rp-advantages-item__title">Глобальный охват</h4>
+            <p class="label-m c-grey-8 rp-advantages-item__text">
+              Наш пул прокси-серверов премиум-класса охватывает 195 стран,
+              предоставляя вам неограниченный доступ к локализованным данным.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rp-info-item">
+      <span class="label-m rp-info-item__num">[ 02 ]</span>
+      <div class="rp-info-item__container">
+        <div class="rp-info-item__head">
+          <h4 class="title-3 rp-info-item__title">
+            Получите не требующую обслуживания инфраструктуру парсинга
+          </h4>
+          <p class="lable-l c-grey-8 rp-info-item__text">
+            Воспользуйтесь преимуществами нашей инфраструктуры сбора веб-данных
+            на базе искусственного интеллекта, которая сразу же готова к
+            использованию.
+          </p>
+        </div>
+        <ul class="template label-l rp-info-item__inc">
+          <li>
+            Нет необходимости разрабатывать или поддерживать парсеры и браузеры.
+          </li>
+          <li>Обход антицарапных систем</li>
+          <li>Направьте свои ресурсы на анализ данных</li>
+        </ul>
+
+        <DefaultBtn component="a" href="#" icon>Попробовать</DefaultBtn>
+      </div>
+    </div>
+
+    <div class="rp-info-item">
+      <span class="label-m rp-info-item__num">[ 03 ]</span>
+      <div class="rp-info-item__container">
+        <div class="rp-info-item__head">
+          <h4 class="title-3 rp-info-item__title">Простая интеграция</h4>
+          <p class="lable-l c-grey-8 rp-info-item__text">
+            Ротационные резидентные прокси Mango легко интегрировать и управлять
+            ими.
+          </p>
+          <ol class="template label-l rp-info-item__inc">
+            <li data-text="Шаг">
+              Поместите URL-адрес конечной точки, учетные данные пользователя
+              API и полезные данные в один запрос.
+            </li>
+            <li data-text="Шаг">
+              Отправьте этот запрос в наш API. Дальше мы обо всем позаботимся –
+              вам больше ничего делать не нужно.
+            </li>
+            <li data-text="Шаг">
+              Получите результат либо непосредственно из API, либо сохраните его
+              в выбранном вами облачном хранилище.
+            </li>
+          </ol>
+        </div>
+        <div class="rp-info-item-doc">
+          <DefaultBtn component="a" href="#" color="secondary">
+            Доступ к дашборду
+          </DefaultBtn>
+          <div class="rp-info-item-doc__list">
+            <img src="./img/doc-1.svg" alt="" class="rp-info-item-doc__logo" />
+            <img src="./img/doc-2.svg" alt="" class="rp-info-item-doc__logo" />
+            <img src="./img/doc-3.svg" alt="" class="rp-info-item-doc__logo" />
+            <img src="./img/doc-4.svg" alt="" class="rp-info-item-doc__logo" />
+            <img src="./img/doc-5.svg" alt="" class="rp-info-item-doc__logo" />
+            <img src="./img/doc-6.svg" alt="" class="rp-info-item-doc__logo" />
+            <img src="./img/doc-7.svg" alt="" class="rp-info-item-doc__logo" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </RPInfo>
+
+  <TariffPlan>
+    <h3 class="title-2 tariff-plan__title" slot="head">
+      Тарифы на API веб-скрейпера
+    </h3>
+    <p class="label-l tariff-plan__text" slot="head">
+      Для новых пользователей у нас предусмотрена единовременная оплата.
+      Он составляет всего 1,7 доллара за 1 ГБ.
+    </p>
+
+    <div class="tariff-plan-tabs" data-tab-controller slot="main-content">
+      <div class="tariff-plan-tabs__btns" data-tab-btns>
+        <DefaultBtn
+          type="button"
+          class="tariff-plan-tabs__btn _active"
+          data-tab-btn="1"
+        >
+          Обычный
+        </DefaultBtn>
+        <DefaultBtn
+          type="button"
+          class="tariff-plan-tabs__btn"
+          data-tab-btn="2"
+        >
+          Для бизнеса
+        </DefaultBtn>
+      </div>
+
+      <div
+        class="swiper tariff-plan__swiper _active"
+        data-swiper-init
+        data-tab="1"
+      >
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <TariffCard />
+          </div>
+          <div class="swiper-slide">
+            <TariffCard
+              title="Scraper Starter"
+              price="$30"
+              token="10 000 токенов"
+              color="grey"
+            >
+              <div class="tariff-card-desc">
+                <p
+                  class="label-m tariff-card-desc__text tariff-card-desc__text_fill"
+                >
+                  Сэкономьте 25%, заплатив $3 за 1 тыс. запросов.
+                </p>
+                <span class="label-m tariff-card-desc__text"
+                  >по сравнению со Scraper Mini</span
+                >
+              </div>
+            </TariffCard>
+          </div>
+          <div class="swiper-slide">
+            <TariffCard
+              title="Scraper Plus"
+              price="$100"
+              token="60 000 токенов"
+              label="самый популярный"
+              color="accent"
+            >
+              <div class="tariff-card-desc">
+                <p
+                  class="label-m tariff-card-desc__text tariff-card-desc__text_fill"
+                >
+                  Сэкономьте 58.3%, заплатив $1.67 за 1 тыс. запросов.
+                </p>
+                <span class="label-m tariff-card-desc__text">
+                  по сравнению со Scraper Mini
+                </span>
+              </div>
+            </TariffCard>
+          </div>
+          <div class="swiper-slide">
+            <TariffCard
+              title="Scraper Ultra"
+              price="$500"
+              token="380 000 токенов"
+              label="лучшее предложение"
+              color="white"
+            >
+              <div class="tariff-card-desc">
+                <p
+                  class="label-m tariff-card-desc__text tariff-card-desc__text_fill"
+                >
+                  Сэкономьте 67%, заплатив $1.32 за 1 тыс. запросов.
+                </p>
+                <span class="label-m tariff-card-desc__text">
+                  по сравнению со Scraper Mini
+                </span>
+              </div>
+            </TariffCard>
+          </div>
+        </div>
+        <IconBtn class="tariff-plan__swiper-btn" data-prev>
+          <Sprite name="arrow-left" />
+        </IconBtn>
+        <IconBtn class="tariff-plan__swiper-btn" data-next>
+          <Sprite name="arrow-right" />
+        </IconBtn>
+      </div>
+
+      <div class="swiper tariff-plan__swiper" data-swiper-init data-tab="2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <TariffCard />
+          </div>
+          <div class="swiper-slide">
+            <TariffCard
+              title="Scraper Starter"
+              price="$30"
+              token="10 000 токенов"
+              color="grey"
+            >
+              <div class="tariff-card-desc">
+                <p
+                  class="label-m tariff-card-desc__text tariff-card-desc__text_fill"
+                >
+                  Сэкономьте 25%, заплатив $3 за 1 тыс. запросов.
+                </p>
+                <span class="label-m tariff-card-desc__text"
+                  >по сравнению со Scraper Mini</span
+                >
+              </div>
+            </TariffCard>
+          </div>
+          <div class="swiper-slide">
+            <TariffCard
+              title="Scraper Plus"
+              price="$100"
+              token="60 000 токенов"
+              color="accent"
+            >
+              <div class="tariff-card-desc">
+                <p
+                  class="label-m tariff-card-desc__text tariff-card-desc__text_fill"
+                >
+                  Сэкономьте 58.3%, заплатив $1.67 за 1 тыс. запросов.
+                </p>
+                <span class="label-m tariff-card-desc__text">
+                  по сравнению со Scraper Mini
+                </span>
+              </div>
+            </TariffCard>
+          </div>
+          <div class="swiper-slide">
+            <TariffCard
+              title="Scraper Ultra"
+              price="$500"
+              token="380 000 токенов"
+              color="white"
+            >
+              <div class="tariff-card-desc">
+                <p
+                  class="label-m tariff-card-desc__text tariff-card-desc__text_fill"
+                >
+                  Сэкономьте 67%, заплатив $1.32 за 1 тыс. запросов.
+                </p>
+                <span class="label-m tariff-card-desc__text">
+                  по сравнению со Scraper Mini
+                </span>
+              </div>
+            </TariffCard>
+          </div>
+        </div>
+        <IconBtn class="tariff-plan__swiper-btn" data-prev>
+          <Sprite name="arrow-left" />
+        </IconBtn>
+        <IconBtn class="tariff-plan__swiper-btn" data-next>
+          <Sprite name="arrow-right" />
+        </IconBtn>
+      </div>
+    </div>
+  </TariffPlan>
+
+  <Advantages />
+  <FAQ />
+</Layout>

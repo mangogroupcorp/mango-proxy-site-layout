@@ -1,0 +1,90 @@
+---
+import Advantages from "@components/Advantages/Advantages.astro";
+import Breadcrumbs from "@components/Breadcrumbs/Breadcrumbs.astro";
+import Cases from "@components/Cases/Cases.astro";
+import FAQ from "@components/FAQ/FAQ.astro";
+import IPGeo from "@components/IPGeo/IPGeo.astro";
+import MPAdvantages from "@components/MPAdvantages/MPAdvantages.astro";
+import MPInfo from "@components/MPInfo/MPInfo.astro";
+import PageBanner from "@components/PageBanner/PageBanner.astro";
+import Pricing from "@components/Pricing/Pricing.astro";
+import DefaultBtn from "@components/_UI/DefaultBtn/DefaultBtn.astro";
+import Layout from "src/layouts/Layout.astro";
+---
+
+<Layout title="Мобильные прокси">
+  <Breadcrumbs items={["Главная", "Мобильные прокси"]} />
+
+  <PageBanner img="./img/page-banner-3.svg">
+    <div class="page-banner__content">
+      <div class="page-banner-rate">
+        <div class="page-banner-rate__inner">
+          <img
+            class="page-banner-rate__logo"
+            src="./img/rate-logo-1.svg"
+            alt=""
+          />
+          <div
+            class="page-banner-rate__stars page-banner-rate__stars_v1"
+            style="--rate: 90%"
+          >
+            <img src="./img/rate-stars-1.svg" alt="" />
+          </div>
+        </div>
+        <div class="page-banner-rate__inner">
+          <img
+            class="page-banner-rate__logo"
+            src="./img/rate-logo-2.svg"
+            alt=""
+          />
+          <div
+            class="page-banner-rate__stars page-banner-rate__stars_v2"
+            style="--rate: 90%"
+          >
+            <img src="./img/rate-stars-2.svg" alt="" />
+            <img src="./img/rate-stars-2_fill.svg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <h1 class="title-1 page-banner__title">Мобильные прокси</h1>
+      <div class="template label-l page-banner__text">
+        Легко собирайте данные и автоматизируйте свои процессы с помощью
+        резидентных прокси-серверов MangoProxy.
+        <br /><br />
+        <ul>
+          <li>
+            <b>Более 10 млн IP-адресов</b> с реальных мобильных устройств
+          </li>
+          <li><b>Неограниченная пропускная способность</b> и сеансы</li>
+          <li>Поддерживает <b>5G/4G/3G/LTE</b></li>
+          <li>
+            <b>Мгновенная смена IP-адресов</b> и параметры автоматической
+            ротации
+          </li>
+          <li><b>Простая интеграция</b> и поддержка API</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="page-banner__btns">
+      <DefaultBtn color="secondary">Купить</DefaultBtn>
+      <DefaultBtn
+        icon
+        component="a"
+        href="https://dashboard.mangoproxy.com/ru/quick-purchase"
+        target="_blank"
+      >
+        Быстрый тест
+      </DefaultBtn>
+    </div>
+  </PageBanner>
+
+  <MPAdvantages />
+  <IPGeo />
+  <Pricing />
+  <MPInfo />
+  <Cases />
+  <Advantages />
+  <FAQ />
+</Layout>

@@ -1,0 +1,111 @@
+---
+import DefaultBtn from "@components/_UI/DefaultBtn/DefaultBtn.astro";
+import Advantages from "@components/Advantages/Advantages.astro";
+import Breadcrumbs from "@components/Breadcrumbs/Breadcrumbs.astro";
+import FAQ from "@components/FAQ/FAQ.astro";
+import InfoBanner from "@components/InfoBanner/InfoBanner.astro";
+import PaymentBanner from "@components/PaymentBanner/PaymentBanner.astro";
+import PricesAdv from "@components/PricesPage/PricesAdv/PricesAdv.astro";
+import PricesSerpBanner from "@components/PricesPage/PricesSerpBanner/PricesSerpBanner.astro";
+import Layout from "src/layouts/Layout.astro";
+---
+
+<Layout title="Цены. E-commerce" theme="dark">
+  <Breadcrumbs items={["Главная", "Цены. E-commerce"]} theme="dark" />
+
+  <PricesSerpBanner>
+    <div class="tariff-plan__head" slot="head">
+      <h3 class="title-1 tariff-plan__title">План E-commerce скрапинга</h3>
+      <p class="label-l tariff-plan__text">
+        Для новых пользователей у нас предусмотрена единовременная оплата.
+        Он составляет всего 1,7 доллара за 1 ГБ.
+      </p>
+    </div>
+  </PricesSerpBanner>
+
+  <PricesAdv title="Без дополнительных комиссий и включено в стоимость">
+    <div class="swiper prices-adv__swiper" data-swiper-init slot="list">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="rp-advantages-item">
+            <img
+              src="./img/icons/global.svg"
+              alt=""
+              class="rp-advantages-item__icon"
+            />
+            <h4 class="title-3 regular rp-advantages-item__title">
+              Покрытие, по всему миру
+            </h4>
+            <p class="label-m c-grey-8 rp-advantages-item__text">
+              Широкая сеть прокси во многих местах.
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="rp-advantages-item">
+            <img
+              src="./img/icons/unlimited-asses.svg"
+              alt=""
+              class="rp-advantages-item__icon"
+            />
+            <h4 class="title-3 regular rp-advantages-item__title">
+              Неограниченное количество сеансов
+            </h4>
+            <p class="label-m c-grey-8 rp-advantages-item__text">
+              Работайте с сотнями IP одновременно.
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="rp-advantages-item">
+            <img
+              src="./img/icons/Support.svg"
+              alt=""
+              class="rp-advantages-item__icon"
+            />
+            <h4 class="title-3 regular rp-advantages-item__title">
+              Специализированная поддержка
+            </h4>
+            <p class="label-m c-grey-8 rp-advantages-item__text">
+              Получайте персональные предложения и помощь там, где она вам
+              нужна.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </PricesAdv>
+
+  <InfoBanner class="info-banner_contain mp-info-banner">
+    <div class="info-banner__content">
+      <div class="info-banner__head">
+        <h3 class="title-2 info-banner__title">Приступить к работе</h3>
+        <p class="label-l c-grey-9 info-banner__text">
+          Ищете прокси-серверы из белого списка для своих бизнес-целей? Mango
+          здесь, чтобы предоставить вам лучшие в своем классе прокси-сервисы для
+          сбора вакансий в различных вертикалях.
+        </p>
+      </div>
+
+      <ul class="template label-l info-banner__list">
+        <li>
+          Наши клиенты используют прокси Mango для победы в конкурентной борьбе
+          в SMM, SEO, исследованиях рынка и во многих других случаях.
+        </li>
+      </ul>
+
+      <DefaultBtn component="a" href="#" icon class="info-banner__btn">
+        Зарегистрироваться
+      </DefaultBtn>
+    </div>
+
+    <div class="info-banner__img">
+      <img src="./img/prices-scraper-ec.svg" alt="" />
+    </div>
+  </InfoBanner>
+
+  <PaymentBanner />
+
+  <Advantages />
+  <FAQ />
+</Layout>

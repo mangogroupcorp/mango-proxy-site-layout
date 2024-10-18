@@ -1,0 +1,147 @@
+---
+import Advantages from "@components/Advantages/Advantages.astro";
+import Breadcrumbs from "@components/Breadcrumbs/Breadcrumbs.astro";
+import Cases from "@components/Cases/Cases.astro";
+import FAQ from "@components/FAQ/FAQ.astro";
+import InfoBanner from "@components/InfoBanner/InfoBanner.astro";
+import IPGeo from "@components/IPGeo/IPGeo.astro";
+import MPInfo from "@components/MPInfo/MPInfo.astro";
+import PageBanner from "@components/PageBanner/PageBanner.astro";
+import Pricing from "@components/Pricing/Pricing.astro";
+import RPAdvantages from "@components/RPAdvantages/RPAdvantages.astro";
+import DefaultBtn from "@components/_UI/DefaultBtn/DefaultBtn.astro";
+import { Sprite } from "astro-icon";
+import Layout from "src/layouts/Layout.astro";
+---
+
+<Layout title="Статические (ISP) прокси">
+  <Breadcrumbs items={["Главная", "Статические (ISP) прокси"]} />
+
+  <PageBanner img="./img/page-banner-4.svg">
+    <div class="page-banner__content">
+      <div class="page-banner-rate">
+        <div class="page-banner-rate__inner">
+          <img
+            class="page-banner-rate__logo"
+            src="./img/rate-logo-1.svg"
+            alt=""
+          />
+          <div
+            class="page-banner-rate__stars page-banner-rate__stars_v1"
+            style="--rate: 90%"
+          >
+            <img src="./img/rate-stars-1.svg" alt="" />
+          </div>
+        </div>
+        <div class="page-banner-rate__inner">
+          <img
+            class="page-banner-rate__logo"
+            src="./img/rate-logo-2.svg"
+            alt=""
+          />
+          <div
+            class="page-banner-rate__stars page-banner-rate__stars_v2"
+            style="--rate: 90%"
+          >
+            <img src="./img/rate-stars-2.svg" alt="" />
+            <img src="./img/rate-stars-2_fill.svg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <h1 class="title-1 page-banner__title">Статические (ISP) прокси</h1>
+      <div class="template label-l page-banner__text">
+        Быстрые прокси-серверы интернет-провайдеров (статические резидентные),
+        созданные для задач веб-скрапинга с интенсивным трафиком.
+        <br /><br />
+        <ul>
+          <li>
+            <b>Более 500 тысяч уникальных IP-адресов</b>, полученных с
+            соблюдением этических норм, в более чем 31 стране.
+          </li>
+          <li><b>99,9% времени</b> безотказной работы</li>
+          <li>Безлимитный трафик</li>
+          <li>Доступ <b>через API</b></li>
+          <li>Выделенные <b>IP-адреса</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="page-banner__btns">
+      <DefaultBtn color="secondary">Купить</DefaultBtn>
+      <DefaultBtn
+        icon
+        component="a"
+        href="https://dashboard.mangoproxy.com/ru/quick-purchase"
+        target="_blank"
+      >
+        Быстрый тест
+      </DefaultBtn>
+    </div>
+  </PageBanner>
+
+  <RPAdvantages>
+    <div class="rp-advantages-item">
+      <img
+        src="./img/icons/IP-rotation-flexibility.svg"
+        alt=""
+        class="rp-advantages-item__icon"
+      />
+      <h4 class="title-3 regular rp-advantages-item__title">
+        Гибкость ротации IP
+      </h4>
+      <p class="label-m c-grey-8 rp-advantages-item__text">
+        Меняйте IP-адреса вручную или через наш API. При необходимости создайте
+        собственные ротационные прокси-серверы интернет-провайдеров — наши
+        функции позволят вам это сделать.
+      </p>
+    </div>
+    <div class="rp-advantages-item">
+      <img src="./img/icons/IP.svg" alt="" class="rp-advantages-item__icon" />
+      <h4 class="title-3 regular rp-advantages-item__title">
+        Премиум-провайдеры
+      </h4>
+      <p class="label-m c-grey-8 rp-advantages-item__text">
+        Мы хотим создавать лучшие прокси-серверы интернет-провайдеров, поэтому
+        весь наш пул состоит из авторитетных и высококачественных
+        интернет-провайдеров.
+      </p>
+    </div>
+    <div class="rp-advantages-item">
+      <img
+        src="./img/icons/unlimited.svg"
+        alt=""
+        class="rp-advantages-item__icon"
+      />
+      <h4 class="title-3 regular rp-advantages-item__title">
+        Неограниченный трафик
+      </h4>
+      <p class="label-m c-grey-8 rp-advantages-item__text">
+        Никаких дополнительных затрат на трафик при использовании модели
+        ценообразования с оплатой за IP.
+      </p>
+    </div>
+    <div class="rp-advantages-item">
+      <img
+        src="./img/icons/proxy.svg"
+        alt=""
+        class="rp-advantages-item__icon"
+      />
+      <h4 class="title-3 regular rp-advantages-item__title">
+        Выделенные IP-адреса
+      </h4>
+      <p class="label-m c-grey-8 rp-advantages-item__text">
+        Каждый прокси-сервер интернет-провайдера принадлежит только вам — никто
+        другой не может использовать те же IP-адреса, что и вы.
+      </p>
+    </div>
+  </RPAdvantages>
+  <IPGeo />
+  <MPInfo title="Еще больше возможностей cтатическиx (ISP) прокси от Mango">
+    <InfoBanner slot="banner" />
+  </MPInfo>
+  <Pricing />
+  <Cases />
+  <Advantages />
+  <FAQ />
+</Layout>
