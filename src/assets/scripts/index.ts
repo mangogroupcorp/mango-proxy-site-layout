@@ -21,10 +21,15 @@ import { initCode } from "@components/Code/Code";
 import { initInfoCloud } from "@components/InfoCloud/InfoCloud";
 import { initBlogList } from "@components/BlogPage/BlogList/BlogList";
 import { initClearInputs } from "@components/_UI/TextInput/TextInput";
+import Intercom from "@intercom/messenger-js-sdk";
 
 Swiper.use([Navigation, Thumbs, EffectFade, Pagination, Autoplay, Scrollbar]);
 
 document.addEventListener("DOMContentLoaded", () => {
+  Intercom({
+    app_id: "cbn8entw",
+  });
+
   const lazyLoad = new LazyLoad({
     elements_selector: ".lazy",
   });
