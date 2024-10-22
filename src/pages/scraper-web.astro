@@ -69,12 +69,17 @@ import Layout from "src/layouts/Layout.astro";
     </div>
 
     <div class="page-banner__btns">
-      <DefaultBtn color="secondary">Купить</DefaultBtn>
+      <DefaultBtn
+        class="cta-purchase"
+        color="secondary"
+        onclick="Intercom('showNewMessage', 'Здравствуйте, я хочу поробовать ваш Веб-скрапер')"
+      >
+        Купить
+      </DefaultBtn>
       <DefaultBtn
         icon
-        component="a"
-        href="https://dashboard.mangoproxy.com/ru/quick-purchase"
-        target="_blank"
+        onclick="Intercom('showNewMessage', 'Здравствуйте, я хочу поробовать ваш Веб-скрапер')"
+        class="cta-quick-purchase"
       >
         Быстрый тест
       </DefaultBtn>

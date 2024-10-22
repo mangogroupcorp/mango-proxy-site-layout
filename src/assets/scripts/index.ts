@@ -23,6 +23,8 @@ import { initBlogList } from "@components/BlogPage/BlogList/BlogList";
 import { initClearInputs } from "@components/_UI/TextInput/TextInput";
 import Intercom from "@intercom/messenger-js-sdk";
 
+declare var ym: any;
+
 Swiper.use([Navigation, Thumbs, EffectFade, Pagination, Autoplay, Scrollbar]);
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -70,5 +72,15 @@ document.addEventListener("DOMContentLoaded", () => {
     formValidateInit(".vbox-content .fv");
     initQuize(".vbox-content");
     initClearInputs(".vbox-content");
+  });
+
+  ["cta-purchase", "cta-quick-purchase"].forEach((className) => {
+    const elements = document.querySelectorAll(`.${className}`);
+
+    elements.forEach((element) => {
+      element.addEventListener("click", () => {
+        ym(98655610, "reachGoal", "click_site_purchase");
+      });
+    });
   });
 });

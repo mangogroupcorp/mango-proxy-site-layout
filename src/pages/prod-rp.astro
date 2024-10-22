@@ -64,12 +64,21 @@ import Layout from "src/layouts/Layout.astro";
     </div>
 
     <div class="page-banner__btns">
-      <DefaultBtn color="secondary">Купить</DefaultBtn>
+      <DefaultBtn
+        component="a"
+        href="https://dashboard.mangoproxy.com/ru/quick-purchase"
+        target="_blank"
+        color="secondary"
+        class="cta-purchase"
+      >
+        Купить
+      </DefaultBtn>
       <DefaultBtn
         icon
         component="a"
         href="https://dashboard.mangoproxy.com/ru/quick-purchase"
         target="_blank"
+        class="cta-quick-purchase"
       >
         Быстрый тест
       </DefaultBtn>

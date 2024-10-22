@@ -58,10 +58,9 @@ const { title, price, ...props } = Astro.props;
               </div>
               <div class="tariff-card__bottom">
                 <DefaultBtn
-                  component="a"
-                  href="#"
                   icon
-                  class="tariff-card__btn"
+                  onclick="Intercom('showNewMessage')"
+                  class="tariff-card__btn cta-purchase"
                 >
                   Купить
                 </DefaultBtn>
@@ -108,7 +107,7 @@ const { title, price, ...props } = Astro.props;
                   icon
                   variant="stroke"
                   type="button"
-                  class="tariff-card__btn"
+                  class="tariff-card__btn cta-quick-purchase"
                   onclick="Intercom('showNewMessage')"
                 >
                   Консультация

@@ -81,7 +81,11 @@ let { items = defaultItems } = Astro.props;
                       {el.priceLabel}
                     </span>
                   </div>
-                  <DefaultBtn component="a" href="#" icon>
+                  <DefaultBtn
+                    onclick="Intercom('showNewMessage')"
+                    icon
+                    class="cta-purchase"
+                  >
                     Купить
                   </DefaultBtn>
                 </div>
@@ -104,7 +108,13 @@ let { items = defaultItems } = Astro.props;
                 / за слот в месяц
               </span>
             </div>
-            <DefaultBtn component="a" href="#" icon>Купить</DefaultBtn>
+            <DefaultBtn
+              onclick="Intercom('showNewMessage')"
+              icon
+              class="cta-purchase"
+            >
+              Купить
+            </DefaultBtn>
           </div>
         </div>
       </div>

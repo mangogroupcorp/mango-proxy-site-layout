@@ -33,6 +33,17 @@ import { Sprite } from "astro-icon";
                 </span>
               </div>
 
+              <DefaultBtn
+                slot="button"
+                icon
+                component="a"
+                href="https://dashboard.mangoproxy.com/ru/quick-purchase"
+                target="_blank"
+                class="tariff-card__btn cta-purchase"
+              >
+                Купить
+              </DefaultBtn>
+
               <div class="tariff-card-desc">
                 <span class="label-l tariff-card-desc__subtitle"
                   >Никаких обязательств</span
@@ -68,6 +79,17 @@ import { Sprite } from "astro-icon";
                   </div>
                 </span>
               </div>
+
+              <DefaultBtn
+                slot="button"
+                icon
+                component="a"
+                href="https://dashboard.mangoproxy.com/ru/quick-purchase"
+                target="_blank"
+                class="tariff-card__btn cta-purchase"
+              >
+                Купить
+              </DefaultBtn>
 
               <div class="tariff-card-desc">
                 <span class="label-l tariff-card-desc__subtitle"
@@ -105,6 +127,17 @@ import { Sprite } from "astro-icon";
                 </span>
               </div>
 
+              <DefaultBtn
+                slot="button"
+                icon
+                component="a"
+                href="https://dashboard.mangoproxy.com/ru/quick-purchase"
+                target="_blank"
+                class="tariff-card__btn cta-purchase"
+              >
+                Купить
+              </DefaultBtn>
+
               <div class="tariff-card-desc">
                 <span class="label-l tariff-card-desc__subtitle">
                   <b>$999</b> + НДС / Ежемесячная оплата
@@ -140,6 +173,17 @@ import { Sprite } from "astro-icon";
                   </div>
                 </span>
               </div>
+
+              <DefaultBtn
+                slot="button"
+                icon
+                component="a"
+                href="https://dashboard.mangoproxy.com/ru/quick-purchase"
+                target="_blank"
+                class="tariff-card__btn cta-purchase"
+              >
+                Купить
+              </DefaultBtn>
 
               <div class="tariff-card-desc">
                 <span class="label-l tariff-card-desc__subtitle">
@@ -197,7 +241,11 @@ import { Sprite } from "astro-icon";
           </ul>
         </div>
 
-        <DefaultBtn icon class="tariff-info-content__btn">
+        <DefaultBtn
+          onclick="Intercom('showNewMessage')"
+          icon
+          class="tariff-info-content__btn"
+        >
           Консультация
         </DefaultBtn>
       </div>

@@ -55,46 +55,56 @@ const {
     </slot>
   </div>
   <div class="tariff-card__bottom">
-    {
-      color === "black" && (
-        <DefaultBtn
-          component="a"
-          href="#"
-          icon
-          variant="stroke"
-          class="tariff-card__btn"
-        >
-          Купить
-        </DefaultBtn>
-      )
-    }
-    {
-      color === "grey" && (
-        <DefaultBtn component="a" href="#" icon class="tariff-card__btn">
-          Купить
-        </DefaultBtn>
-      )
-    }
-    {
-      color === "accent" && (
-        <DefaultBtn
-          component="a"
-          href="#"
-          icon
-          color="primary"
-          class="tariff-card__btn"
-        >
-          Купить
-        </DefaultBtn>
-      )
-    }
-    {
-      color === "white" && (
-        <DefaultBtn component="a" href="#" icon class="tariff-card__btn">
-          Купить
-        </DefaultBtn>
-      )
-    }
+    <slot name="button">
+      {
+        color === "black" && (
+          <DefaultBtn
+            icon
+            variant="stroke"
+            onclick="Intercom('showNewMessage')"
+            class="tariff-card__btn cta-purchase"
+          >
+            Купить
+          </DefaultBtn>
+        )
+      }
+      {
+        color === "grey" && (
+          <DefaultBtn
+            icon
+            onclick="Intercom('showNewMessage')"
+            class="tariff-card__btn cta-purchase"
+          >
+            Купить
+          </DefaultBtn>
+        )
+      }
+      {
+        color === "accent" && (
+          <DefaultBtn
+            onclick="Intercom('showNewMessage')"
+            icon
+            color="primary"
+            class="tariff-card__btn cta-purchase"
+          >
+            Купить
+          </DefaultBtn>
+        )
+      }
+      {
+        color === "white" && (
+          <DefaultBtn
+            component="a"
+            href="#"
+            icon
+            onclick="Intercom('showNewMessage')"
+            class="tariff-card__btn cta-purchase"
+          >
+            Купить
+          </DefaultBtn>
+        )
+      }
+    </slot>
 
     <slot name="info">
       <div class="tariff-card-info">

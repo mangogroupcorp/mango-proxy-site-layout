@@ -164,7 +164,14 @@ const { ...rest } = Astro.props;
         </p>
       </div>
 
-      <DefaultBtn component="a" href="#" icon>Консультация</DefaultBtn>
+      <DefaultBtn
+        onclick="Intercom('showNewMessage')"
+        component="a"
+        href="#"
+        icon
+      >
+        Консультация
+      </DefaultBtn>
     </div>
   </div>
 </section>
