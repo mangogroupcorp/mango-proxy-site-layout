@@ -16,8 +16,9 @@ const { ...rest } = Astro.props;
       <div class="tariff-plan__head">
         <h3 class="title-1 tariff-plan__title">План SERP-скрапинга</h3>
         <p class="label-l tariff-plan__text">
-          Для новых пользователей у нас предусмотрена единовременная оплата.
-          Он составляет всего 1,7 доллара за 1 ГБ.
+          Для новых пользователей у нас предусмотрено единовременное
+          предложение. Вы можете приобрести 3 Гб премиальноого прокси-трафика
+          всего за $6.
         </p>
       </div>
     </slot>
@@ -26,20 +27,34 @@ const { ...rest } = Astro.props;
       <div class="swiper-wrapper">
         <slot name="slide">
           <div class="swiper-slide">
-            <TariffCard />
+            <TariffCard
+              title="Scraper Mini"
+              price="$20"
+              token="10 000 запросов"
+              color="grey"
+            >
+              <div class="tariff-card-desc">
+                <span class="label-l tariff-card-desc__subtitle"
+                  >$2 за 1 тыс запросов</span
+                >
+                <span class="label-m tariff-card-desc__text">
+                  другие тарифы →
+                </span>
+              </div>
+            </TariffCard>
           </div>
           <div class="swiper-slide">
             <TariffCard
               title="Scraper Starter"
-              price="$30"
-              token="10 000 токенов"
+              price="$45"
+              token="25 000 запросов"
               color="grey"
             >
               <div class="tariff-card-desc">
                 <p
                   class="label-m tariff-card-desc__text tariff-card-desc__text_fill"
                 >
-                  Сэкономьте 25%, заплатив $3 за 1 тыс. запросов.
+                  Сэкономьте 10%, заплатив $1.8 за 1 тыс. запросов.
                 </p>
                 <span class="label-m tariff-card-desc__text"
                   >по сравнению со Scraper Mini</span
@@ -50,15 +65,15 @@ const { ...rest } = Astro.props;
           <div class="swiper-slide">
             <TariffCard
               title="Scraper Basic"
-              price="$40"
-              token="20 000 токенов"
+              price="$80"
+              token="50 000 запросов"
               color="grey"
             >
               <div class="tariff-card-desc">
                 <p
                   class="label-m tariff-card-desc__text tariff-card-desc__text_fill"
                 >
-                  Сэкономьте 50%, заплатив $2 за 1 тыс. запросов.
+                  Сэкономьте 20%, заплатив $1.6 за 1 тыс. запросов.
                 </p>
                 <span class="label-m tariff-card-desc__text">
                   по сравнению со Scraper Mini
@@ -69,8 +84,8 @@ const { ...rest } = Astro.props;
           <div class="swiper-slide">
             <TariffCard
               title="Scraper Plus"
-              price="$100"
-              token="60 000 токенов"
+              price="$140"
+              token="100 000 запросов"
               label="самый популярный"
               color="accent"
             >
@@ -78,7 +93,7 @@ const { ...rest } = Astro.props;
                 <p
                   class="label-m tariff-card-desc__text tariff-card-desc__text_fill"
                 >
-                  Сэкономьте 58.3%, заплатив $1.67 за 1 тыс. запросов.
+                  Сэкономьте 30%, заплатив $1.4 за 1 тыс. запросов.
                 </p>
                 <span class="label-m tariff-card-desc__text">
                   по сравнению со Scraper Mini
@@ -90,14 +105,14 @@ const { ...rest } = Astro.props;
             <TariffCard
               title="Scraper Pro"
               price="$250"
-              token="180 000 токенов"
+              token="200 000 запросов"
               color="grey"
             >
               <div class="tariff-card-desc">
                 <p
                   class="label-m tariff-card-desc__text tariff-card-desc__text_fill"
                 >
-                  Сэкономьте  65.3%, заплатив $1.39 за 1 тыс. запросов.
+                  Сэкономьте  40%, заплатив $1.2 за 1 тыс. запросов.
                 </p>
                 <span class="label-m tariff-card-desc__text">
                   по сравнению со Scraper Mini
@@ -108,8 +123,8 @@ const { ...rest } = Astro.props;
           <div class="swiper-slide">
             <TariffCard
               title="Scraper Ultra"
-              price="$500"
-              token="380 000 токенов"
+              price="$400"
+              token="400 000 запросов"
               label="лучшее предложение"
               color="white"
             >
@@ -117,7 +132,7 @@ const { ...rest } = Astro.props;
                 <p
                   class="label-m tariff-card-desc__text tariff-card-desc__text_fill"
                 >
-                  Сэкономьте 67%, заплатив $1.32 за 1 тыс. запросов.
+                  Сэкономьте 50%, заплатив $1 за 1 тыс. запросов.
                 </p>
                 <span class="label-m tariff-card-desc__text">
                   по сравнению со Scraper Mini
@@ -149,7 +164,14 @@ const { ...rest } = Astro.props;
         </p>
       </div>
 
-      <DefaultBtn component="a" href="#" icon>Консультация</DefaultBtn>
+      <DefaultBtn
+        onclick="Intercom('showNewMessage')"
+        component="a"
+        href="#"
+        icon
+      >
+        Консультация
+      </DefaultBtn>
     </div>
   </div>
 </section>

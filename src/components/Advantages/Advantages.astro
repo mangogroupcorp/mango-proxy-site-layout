@@ -33,7 +33,7 @@ import { Sprite } from "astro-icon";
               <img src="./img/advantages-reviews-6.png" alt="" />
             </div>
             <div class="advantages-reviews__img">
-              <img src="./img/advantages-reviews-7.png" alt="" />
+              <img src="./img/review-cpabazuka.webp" alt="" />
             </div>
             <div class="advantages-reviews__img">
               <img src="./img/advantages-reviews-8.png" alt="" />
@@ -48,29 +48,48 @@ import { Sprite } from "astro-icon";
         >
           <div class="swiper-wrapper">
             {
-              [...new Array(8)].map((el, index) => (
+              [
+                {
+                  name: "Игорь",
+                  company: "22Byte",
+                  comment: `Клиентоориентированность на высоком уровне, индивидуальная
+                      работа с каждым, помощь в сложных и экстренных ситуациях,
+                      большой функционал и высокая скорость обслуживания
+                      байт.`,
+                  imgUrl: "./img/review-22byte.png",
+                },
+                {
+                  name: "Andrey",
+                  company: "MarketLab",
+                  comment: `Повезло найти довольно хороший сервис по работе с прокси. Круглосуточная поддержка, классное отношение к клиенту и лояльные цены на рынке делают этот сервис одним из самых востребованных для нашей компании.`,
+                  imgUrl: "./img/review-mlab-logo.webp",
+                },
+                {
+                  name: "Александр,",
+                  company: "CpaBazuka",
+                  comment: `Быстрые, качественные прокси. Ни разу за время использования не подводили. Не возникало проблем с заливкой трафика на google и facebook. Очень приятная команда, которая заботится о своих пользователях. Служба поддержки работает круглосуточно и отвечает очень быстро. Соотношение цена/качество очень радует. В целом очень доволен и продолжаю работать с этим сервисом!`,
+                  imgUrl: "./img/review-cpabazuka.webp",
+                },
+              ].map((el, index) => (
                 <div class="swiper-slide">
                   <div class="advantages-reviews-item">
                     <div class="advantages-reviews-item__head">
                       <img
-                        src={`./img/advantages-reviews-${index + 1}.png`}
+                        src={el.imgUrl}
                         alt=""
                         class="advantages-reviews-item__img"
                       />
                       <div class="advantages-reviews-item__head-inner">
                         <span class="title-4 regular advantages-reviews-item__title">
-                          Андрей
+                          {el.name}
                         </span>
                         <span class="label-l c-grey-8 advantages-reviews-item__subtitle">
-                          MarketLab
+                          {el.company}
                         </span>
                       </div>
                     </div>
                     <p class="label-l advantages-reviews-item__text">
-                      Клиентоориентированность на высоком уровне, индивидуальная
-                      работа с каждым, помощь в сложных и экстренных ситуациях,
-                      большой функционал и <b>высокая скорость</b> обслуживания
-                      байт.
+                      {el.comment}
                     </p>
                   </div>
                 </div>
@@ -140,10 +159,11 @@ import { Sprite } from "astro-icon";
           <div class="advantages-item__container">
             <span class="title-1 advantages-item__value">16%</span>
             <p class="label-l c-grey-8 advantages-item__text">
-              Lacus arcu ultricies condimentum mauris cras. Netus felis
-              ullamcorper ut suscipit non commodo nulla tristique. Lacus arcu
-              ultricies condimentum mauris cras. Netus felis ullamcorper ut
-              suscipit non commodo nulla
+              Mango Proxy предоставляет гибкую ценовую политику, адаптированную
+              под любые запросы клиентов. Выбирайте подходящий тариф в
+              зависимости от объема использования и типа прокси. Мы стремимся
+              обеспечить доступные цены для всех, от малого бизнеса до крупных
+              компаний, сохраняя высокое качество услуг.
             </p>
           </div>
         </div>

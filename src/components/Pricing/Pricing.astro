@@ -2,6 +2,36 @@
 import DefaultBtn from "@components/_UI/DefaultBtn/DefaultBtn.astro";
 import InfoItem from "@components/_UI/InfoItem/InfoItem.astro";
 import { Sprite } from "astro-icon";
+
+type Item = {
+  firstLabel: string;
+  secondLabel?: string;
+  priceValue: string;
+  priceLabel: string;
+};
+
+const defaultItems: Item[] = [
+  {
+    firstLabel: "100 портов",
+    secondLabel: "10% скидка",
+    priceValue: "$60",
+    priceLabel: "/ за слот в месяц",
+  },
+  {
+    firstLabel: "30 дней",
+    secondLabel: "10% скидка",
+    priceValue: "$39.99",
+    priceLabel: "/ за слот в месяц",
+  },
+  {
+    firstLabel: "60 дней",
+    secondLabel: "10% скидка",
+    priceValue: "$39.99",
+    priceLabel: "/ за слот в месяц",
+  },
+];
+
+let { items = defaultItems } = Astro.props;
 ---
 
 <section class="pricing">
@@ -26,124 +56,93 @@ import { Sprite } from "astro-icon";
           </div>
         </div>
       </div>
-
       <div class="swiper pricing__swiper" data-swiper>
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="pricing-item">
-              <div class="pricing-item-info" data-info>
-                <span class="title-3 regular c-500 pricing-item-info__value">
-                  60 дней</span
-                >
-                <span class="title-4 regular c-500 pricing-item-info__desc">
-                  10% скидка</span
-                >
+          {
+            items.map((el: Item) => (
+              <div class="swiper-slide">
+                <div class="pricing-item">
+                  <div class="pricing-item-info" data-info>
+                    <span class="title-3 regular c-500 pricing-item-info__value">
+                      {el.firstLabel}
+                    </span>
+                    {el.secondLabel && (
+                      <span class="title-4 regular c-500 pricing-item-info__desc">
+                        {el.secondLabel}
+                      </span>
+                    )}
+                  </div>
+                  <div class="pricing-item__price">
+                    <span class="lablel-l pricing-item__price-desc">от</span>
+                    <span class="title-2 pricing-item__price-value">
+                      {el.priceValue}
+                    </span>
+                    <span class="lablel-l pricing-item__price-desc">
+                      {el.priceLabel}
+                    </span>
+                  </div>
+                  <DefaultBtn
+                    onclick="Intercom('showNewMessage')"
+                    icon
+                    class="cta-purchase"
+                  >
+                    Купить
+                  </DefaultBtn>
+                </div>
               </div>
-              <div class="pricing-item__price">
-                <span class="lablel-l pricing-item__price-desc">от</span>
-                <span class="title-2 pricing-item__price-value">$39.99</span>
-                <span class="lablel-l pricing-item__price-desc">
-                  / за слот в месяц
-                </span>
-              </div>
-              <DefaultBtn component="a" href="#" icon>Купить</DefaultBtn>
+            ))
+          }
+          <div class="pricing-item">
+            <div class="pricing-item-info" data-info>
+              <span class="title-3 regular c-500 pricing-item-info__value">
+                60 дней</span
+              >
+              <span class="title-4 regular c-500 pricing-item-info__desc">
+                15% скидка</span
+              >
             </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="pricing-item">
-              <div class="pricing-item-info" data-info>
-                <span class="title-3 regular c-500 pricing-item-info__value">
-                  60 дней</span
-                >
-                <span class="title-4 regular c-500 pricing-item-info__desc">
-                  10% скидка</span
-                >
-              </div>
-              <div class="pricing-item__price">
-                <span class="lablel-l pricing-item__price-desc">от</span>
-                <span class="title-2 pricing-item__price-value">$59,99</span>
-                <span class="lablel-l pricing-item__price-desc">
-                  / за слот в месяц
-                </span>
-              </div>
-              <DefaultBtn component="a" href="#" icon>Купить</DefaultBtn>
+            <div class="pricing-item__price">
+              <span class="lablel-l pricing-item__price-desc">от</span>
+              <span class="title-2 pricing-item__price-value">$159,99</span>
+              <span class="lablel-l pricing-item__price-desc">
+                / за слот в месяц
+              </span>
             </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="pricing-item">
-              <div class="pricing-item-info" data-info>
-                <span class="title-3 regular c-500 pricing-item-info__value">
-                  60 дней</span
-                >
-                <span class="title-4 regular c-500 pricing-item-info__desc">
-                  5% скидка</span
-                >
-              </div>
-              <div class="pricing-item__price">
-                <span class="lablel-l pricing-item__price-desc">от</span>
-                <span class="title-2 pricing-item__price-value">$123,50</span>
-                <span class="lablel-l pricing-item__price-desc">
-                  / за слот в месяц
-                </span>
-              </div>
-              <DefaultBtn component="a" href="#" icon>Купить</DefaultBtn>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="pricing-item">
-              <div class="pricing-item-info" data-info>
-                <span class="title-3 regular c-500 pricing-item-info__value">
-                  60 дней</span
-                >
-                <span class="title-4 regular c-500 pricing-item-info__desc">
-                  15% скидка</span
-                >
-              </div>
-              <div class="pricing-item__price">
-                <span class="lablel-l pricing-item__price-desc">от</span>
-                <span class="title-2 pricing-item__price-value">$159,99</span>
-                <span class="lablel-l pricing-item__price-desc">
-                  / за слот в месяц
-                </span>
-              </div>
-              <DefaultBtn component="a" href="#" icon>Купить</DefaultBtn>
-            </div>
+            <DefaultBtn
+              onclick="Intercom('showNewMessage')"
+              icon
+              class="cta-purchase"
+            >
+              Купить
+            </DefaultBtn>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div
-      class="swiper pricing__info"
-      data-swiper-init
-      data-props={`{"slidesPerView":"auto","spaceBetween":8,"breakpoints":{"601":{"slidesPerView":3,"spaceBetween":24}}}`}
-    >
-      <div class="swiper-wrapper">
-        <InfoItem
-          class="swiper-slide"
-          icon="percentage"
-          title="Массовые скидки"
-        >
-          Увеличьте свою экономию, приобретая более длительные планы мобильных
-          прокси, получая при этом все те же преимущества.
-        </InfoItem>
-        <InfoItem
-          class="swiper-slide"
-          icon="speed"
-          title="Неограниченный трафик"
-        >
-          Увеличьте свою экономию, приобретая более длительные планы мобильных
-          прокси, получая при этом все те же преимущества.
-        </InfoItem>
-        <InfoItem
-          class="swiper-slide"
-          icon="setting"
-          title="Панель самообслуживания"
-        >
-          Увеличьте свою экономию, приобретая более длительные планы мобильных
-          прокси, получая при этом все те же преимущества.
-        </InfoItem>
-      </div>
+  <div
+    class="swiper pricing__info"
+    data-swiper-init
+    data-props={`{"slidesPerView":"auto","spaceBetween":8,"breakpoints":{"601":{"slidesPerView":3,"spaceBetween":24}}}`}
+  >
+    <div class="swiper-wrapper">
+      <InfoItem class="swiper-slide" icon="percentage" title="Массовые скидки">
+        Увеличьте свою экономию, приобретая более длительные планы мобильных
+        прокси, получая при этом все те же преимущества.
+      </InfoItem>
+      <InfoItem class="swiper-slide" icon="speed" title="Неограниченный трафик">
+        Увеличьте свою экономию, приобретая более длительные планы мобильных
+        прокси, получая при этом все те же преимущества.
+      </InfoItem>
+      <InfoItem
+        class="swiper-slide"
+        icon="setting"
+        title="Панель самообслуживания"
+      >
+        Увеличьте свою экономию, приобретая более длительные планы мобильных
+        прокси, получая при этом все те же преимущества.
+      </InfoItem>
     </div>
   </div>
 </section>

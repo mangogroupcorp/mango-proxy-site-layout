@@ -2,6 +2,8 @@
 import DefaultBtn from "@components/_UI/DefaultBtn/DefaultBtn.astro";
 import IconBtn from "@components/_UI/IconBtn/IconBtn.astro";
 import { Sprite } from "astro-icon";
+
+const { title, price, ...props } = Astro.props;
 ---
 
 <section class="prices-isp-banner">
@@ -27,7 +29,9 @@ import { Sprite } from "astro-icon";
             <div class="tariff-card tariff-card_grey">
               <div class="tariff-card__top">
                 <div class="tariff-card__head">
-                  <h4 class="title-3 regular tariff-card__title">ISP прокси</h4>
+                  <h4 class="title-3 regular tariff-card__title">
+                    {title ?? "ISP прокси"}
+                  </h4>
                   <!--  -->
                   <div class="tariff-card-select">
                     <span class="label-l tariff-card-select__text">
@@ -39,24 +43,24 @@ import { Sprite } from "astro-icon";
                     <div class="tariff-card__price-inner">
                       <span class="label-l tariff-card__price-desc">от</span>
                       <span class="title-2 tariff-card__price-value">
-                        $750</span
+                        {price ?? "$5"}</span
                       >
                       <span class="label-l tariff-card__price-desc">
-                        / в месяц
+                        / за один IP-адрес
                       </span>
                     </div>
                     <span class="tariff-card__price-desc">
-                      Цена за IP: $1.50
+                      Цена варьируется в зависимости от объема закупаемых
+                      IP-адресов
                     </span>
                   </span>
                 </div>
               </div>
               <div class="tariff-card__bottom">
                 <DefaultBtn
-                  component="a"
-                  href="#"
                   icon
-                  class="tariff-card__btn"
+                  onclick="Intercom('showNewMessage')"
+                  class="tariff-card__btn cta-purchase"
                 >
                   Купить
                 </DefaultBtn>
@@ -72,25 +76,13 @@ import { Sprite } from "astro-icon";
                     <span class="tariff-card-info__icon">
                       <Sprite name="check" class="tariff-card-info__icon" />
                     </span>
-                     Более 2,5 млн частных IP-пулов
+                     Более 10 млн качественных IP-адресов
                   </span>
                   <span class="label-l tariff-card-info__item">
                     <span class="tariff-card-info__icon">
                       <Sprite name="check" class="tariff-card-info__icon" />
                     </span>
                      API-доступ
-                  </span>
-                  <span class="label-l tariff-card-info__item">
-                    <span class="tariff-card-info__icon">
-                      <Sprite name="check" class="tariff-card-info__icon" />
-                    </span>
-                     Поддержка 5G/4G/3G
-                  </span>
-                  <span class="label-l tariff-card-info__item">
-                    <span class="tariff-card-info__icon">
-                      <Sprite name="check" class="tariff-card-info__icon" />
-                    </span>
-                     Auto Rotate Toggle
                   </span>
                 </div>
               </div>
@@ -115,7 +107,7 @@ import { Sprite } from "astro-icon";
                   icon
                   variant="stroke"
                   type="button"
-                  class="tariff-card__btn"
+                  class="tariff-card__btn cta-quick-purchase"
                   onclick="Intercom('showNewMessage')"
                 >
                   Консультация
@@ -132,7 +124,7 @@ import { Sprite } from "astro-icon";
                     <span class="tariff-card-info__icon">
                       <Sprite name="check" class="tariff-card-info__icon" />
                     </span>
-                     Более 2,5 млн частных IP-пулов
+                     Более 10 млн качественных IP-адресов
                   </span>
                   <span class="label-l tariff-card-info__item">
                     <span class="tariff-card-info__icon">
@@ -171,7 +163,7 @@ import { Sprite } from "astro-icon";
         <Sprite name="business" class="tariff-info-content__head-icon" />
         <div class="tariff-info-content__head-inner">
           <h4 class="title-4 tariff-info-content__title">
-            Вам нужно больше 1 ТБ?
+            Нужны особые условия?
           </h4>
           <p class="label-l tariff-info-content__text">
             Ваш бизнес, ваши правила. Получите индивидуальный план и откройте
@@ -188,7 +180,7 @@ import { Sprite } from "astro-icon";
           <li>99.99% доступности сети</li>
           <li>Бесплатный менеджер прокси</li>
           <li>Полное охватывание данных</li>
-          <li>Индивидуальная цена за Гб</li>
+          <li>Индивидуальная цена за IP</li>
           <li>Индивидуальные решения</li>
         </ul>
       </div>

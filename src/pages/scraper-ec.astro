@@ -54,7 +54,7 @@ import Layout from "src/layouts/Layout.astro";
       </h1>
       <div class="template label-l page-banner__text">
         <ul>
-          <li>Платите только за успешно достигнутый результат</li>
+          <li>99.9% отработки запросов</li>
           <li>
             Получайте локализованные данные электронной коммерции без блокировки
             IP-адресов.
@@ -68,12 +68,17 @@ import Layout from "src/layouts/Layout.astro";
     </div>
 
     <div class="page-banner__btns">
-      <DefaultBtn color="secondary">Купить</DefaultBtn>
+      <DefaultBtn
+        class="cta-purchase"
+        color="secondary"
+        onclick="Intercom('showNewMessage', 'Здравствуйте, я хочу поробовать ваш e-commerce скрапер')"
+      >
+        Купить
+      </DefaultBtn>
       <DefaultBtn
         icon
-        component="a"
-        href="https://dashboard.mangoproxy.com/quick-purchase"
-        target="_blank"
+        onclick="Intercom('showNewMessage', 'Здравствуйте, я хочу поробовать ваш e-commerce скрапер')"
+        class="cta-quick-purchase"
       >
         Быстрый тест
       </DefaultBtn>
@@ -313,8 +318,7 @@ import Layout from "src/layouts/Layout.astro";
         <div class="rp-info-item__head">
           <h4 class="title-3 rp-info-item__title">Простая интеграция</h4>
           <p class="lable-l c-grey-8 rp-info-item__text">
-            Ротационные резидентные прокси Mango легко интегрировать и управлять
-            ими.
+            «Mango Proxy» легко интегрировать и управлять ими.
           </p>
           <ol class="template label-l rp-info-item__inc">
             <li data-text="Шаг">

@@ -7,7 +7,7 @@ import InfoCloud from "@components/InfoCloud/InfoCloud.astro";
 import InfoSlider from "@components/InfoSlider/InfoSlider.astro";
 import PaymentBanner from "@components/PaymentBanner/PaymentBanner.astro";
 import Price from "@components/Price/Price.astro";
-import PriceInfo from "@components/TariffInfo/TariffInfo.astro";
+import PriceInfo from "@components/RpTariffInfo/RpTariffInfo.astro";
 import { Sprite } from "astro-icon";
 import Layout from "src/layouts/Layout.astro";
 ---
@@ -45,8 +45,9 @@ import Layout from "src/layouts/Layout.astro";
         <DefaultBtn
           component="a"
           icon
-          href="https://dashboard.mangoproxy.com/quick-purchase"
+          href="https://dashboard.mangoproxy.com/ru/quick-purchase"
           target="_blank"
+          class="cta-quick-purchase"
         >
           Быстрый тест
         </DefaultBtn>

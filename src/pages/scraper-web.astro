@@ -56,10 +56,10 @@ import Layout from "src/layouts/Layout.astro";
       </h1>
       <div class="template label-l page-banner__text">
         <ul>
-          <li>Платите только за успешно достигнутый результат</li>
+          <li>99.9% отработки запросов</li>
           <li>
             Получайте четко локализованные данные в реальном времени без
-            IP-блокировок.
+            IP-блокировок и капч.
           </li>
           <li>
             Повышайте эффективность и сокращайте затраты на инфраструктуру
@@ -69,12 +69,17 @@ import Layout from "src/layouts/Layout.astro";
     </div>
 
     <div class="page-banner__btns">
-      <DefaultBtn color="secondary">Купить</DefaultBtn>
+      <DefaultBtn
+        class="cta-purchase"
+        color="secondary"
+        onclick="Intercom('showNewMessage', 'Здравствуйте, я хочу поробовать ваш Веб-скрапер')"
+      >
+        Купить
+      </DefaultBtn>
       <DefaultBtn
         icon
-        component="a"
-        href="https://dashboard.mangoproxy.com/quick-purchase"
-        target="_blank"
+        onclick="Intercom('showNewMessage', 'Здравствуйте, я хочу поробовать ваш Веб-скрапер')"
+        class="cta-quick-purchase"
       >
         Быстрый тест
       </DefaultBtn>
@@ -172,8 +177,8 @@ import Layout from "src/layouts/Layout.astro";
         <div class="rp-info-item__head">
           <h4 class="title-3 rp-info-item__title">Простая интеграция</h4>
           <p class="lable-l c-grey-8 rp-info-item__text">
-            Ротационные резидентные прокси Mango легко интегрировать и управлять
-            ими.
+            Ротационные резидентные прокси «Mango Proxy» легко интегрировать и
+            управлять ими.
           </p>
           <ol class="template label-l rp-info-item__inc">
             <li data-text="Шаг">
@@ -213,8 +218,8 @@ import Layout from "src/layouts/Layout.astro";
       Тарифы на API веб-скрейпера
     </h3>
     <p class="label-l tariff-plan__text" slot="head">
-      Для новых пользователей у нас предусмотрена единовременная оплата.
-      Он составляет всего 1,7 доллара за 1 ГБ.
+      Для новых пользователей у нас предусмотрено единовременное предложение. Вы
+      можете приобрести 3 Гб премиальноого прокси-трафика всего за $6.
     </p>
 
     <div class="tariff-plan-tabs" data-tab-controller slot="main-content">

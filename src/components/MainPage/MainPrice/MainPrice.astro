@@ -19,7 +19,7 @@ import { Sprite } from "astro-icon";
           </div>
           <div class="template label-l main-price-adv-item__desc">
             <ul>
-              <li><b>90M+</b> IP адресов</li>
+              <li><b>10M+</b> IP адресов</li>
               <li><b>220+</b> локаций</li>
               <li><b>$0,99 = 1GB</b> лучшая цена</li>
               <li><b>100 000+</b> довольных клиентов</li>
@@ -94,11 +94,13 @@ import { Sprite } from "astro-icon";
             </p>
           </div>
           <DefaultBtn
-            component="button"
-            onclick="Intercom('showNewMessage', 'Здравствуйте! Обращаюсь с сайта, хотел бы получить персональное предложение по цене.')"
             icon
+            component="a"
+            href="https://dashboard.mangoproxy.com/ru/quick-purchase"
+            target="_blank"
+            class="cta-quick-purchase"
           >
-            Написать
+            Попробовать
           </DefaultBtn>
         </div>
       </div>

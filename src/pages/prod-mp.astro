@@ -49,31 +49,36 @@ import Layout from "src/layouts/Layout.astro";
 
       <h1 class="title-1 page-banner__title">Мобильные прокси</h1>
       <div class="template label-l page-banner__text">
-        Избегайте блокировки при очистке и легко собирайте данные с помощью
-        резидентных прокси-серверов MangoProxy.
+        Отличное решение для сбора данных и обхода любых региональных
+        ограничений.
         <br /><br />
         <ul>
           <li>
-            <b>Более 2,5 млн IP-адресов</b> с реальных мобильных устройств
+            <b>IP-адресов адреса только с реальных мобильных устройств</b>
           </li>
-          <li><b>Неограниченная пропускная способность</b> и сеансы</li>
-          <li>Поддерживает <b>5G/4G/3G/LTE</b></li>
+          <li><b>Неограниченный трафик</b> и высокая пропускная способность</li>
+          <li>Поддержка <b>5G/4G/3G/LTE</b></li>
           <li>
             <b>Мгновенная смена IP-адресов</b> и параметры автоматической
             ротации
           </li>
-          <li><b>Простая интеграция</b> и поддержка API</li>
+          <li><b>99.9% успешных подключений</b></li>
         </ul>
       </div>
     </div>
 
     <div class="page-banner__btns">
-      <DefaultBtn color="secondary">Купить</DefaultBtn>
+      <DefaultBtn
+        class="cta-purchase"
+        color="secondary"
+        onclick="Intercom('showNewMessage', 'Здравствуйте, я хочу приобрести мобильные прокси')"
+      >
+        Купить
+      </DefaultBtn>
       <DefaultBtn
         icon
-        component="a"
-        href="https://dashboard.mangoproxy.com/quick-purchase"
-        target="_blank"
+        onclick="Intercom('showNewMessage', 'Здравствуйте, я хочу приобрести мобильные прокси')"
+        class="cta-quick-purchase"
       >
         Быстрый тест
       </DefaultBtn>
@@ -82,7 +87,26 @@ import Layout from "src/layouts/Layout.astro";
 
   <MPAdvantages />
   <IPGeo />
-  <Pricing />
+  <Pricing
+    items={[
+      {
+        firstLabel: "7 дней",
+
+        priceValue: "$18",
+        priceLabel: "/ за один порт",
+      },
+      {
+        firstLabel: "30 дней",
+        priceValue: "$80",
+        priceLabel: "/ за один порт",
+      },
+      {
+        firstLabel: "60 дней",
+        priceValue: "$160",
+        priceLabel: "/ за один порт",
+      },
+    ]}
+  />
   <MPInfo />
   <Cases />
   <Advantages />

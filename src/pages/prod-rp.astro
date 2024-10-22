@@ -55,8 +55,8 @@ import Layout from "src/layouts/Layout.astro";
         резидентных прокси-серверов MangoProxy.
         <br /><br />
         <ul>
-          <li><b>100M+</b> Резидентные IP-адреса</li>
-          <li><b>Бесплатно геотаргетинг</b></li>
+          <li><b>10M+</b> Резидентные IP-адреса</li>
+          <li><b>Широкий геотаргетинг</b></li>
           <li><b>∼99,95%</b> показатели успеха</li>
           <li><b>∼0.6 сек.</b> время ответа</li>
         </ul>
@@ -64,12 +64,21 @@ import Layout from "src/layouts/Layout.astro";
     </div>
 
     <div class="page-banner__btns">
-      <DefaultBtn color="secondary">Купить</DefaultBtn>
+      <DefaultBtn
+        component="a"
+        href="https://dashboard.mangoproxy.com/ru/quick-purchase"
+        target="_blank"
+        color="secondary"
+        class="cta-purchase"
+      >
+        Купить
+      </DefaultBtn>
       <DefaultBtn
         icon
         component="a"
-        href="https://dashboard.mangoproxy.com/quick-purchase"
+        href="https://dashboard.mangoproxy.com/ru/quick-purchase"
         target="_blank"
+        class="cta-quick-purchase"
       >
         Быстрый тест
       </DefaultBtn>

@@ -1,76 +1,30 @@
 ---
-import DefaultBtn from "@components/_UI/DefaultBtn/DefaultBtn.astro";
-import Layout from "../layouts/Layout.astro";
+import Advantages from "@components/Advantages/Advantages.astro";
+import Cases from "@components/Cases/Cases.astro";
+import FAQ from "@components/FAQ/FAQ.astro";
+import IPCount from "@components/IPCount/IPCount.astro";
+import IPGeo from "@components/IPGeo/IPGeo.astro";
+import MainAPI from "@components/MainPage/MainAPI/MainAPI.astro";
+import MainGuarantee from "@components/MainPage/MainGuarantee/MainGuarantee.astro";
+import MainPartners from "@components/MainPage/MainPartners/MainPartners.astro";
+import MainPrice from "@components/MainPage/MainPrice/MainPrice.astro";
+import PageBanner from "@components/PageBanner/PageBanner.astro";
+import SupportBanner from "@components/SupportBanner/SupportBanner.astro";
+import Tools from "@components/Tools/Tools.astro";
+import Layout from "src/layouts/Layout.astro";
 ---
 
-<Layout title="Разводящая">
-  <div class="page-container">
-    <DefaultBtn component="a" href="./ui.html">UI</DefaultBtn>
-    <DefaultBtn component="a" href="./main.html">Главная</DefaultBtn>
-    <hr />
-    <DefaultBtn component="a" href="./prod-rp.html">
-      Продукт. Резидентские прокси
-    </DefaultBtn>
-    <DefaultBtn component="a" href="./prod-mp.html">
-      Продукт. Мобильные прокси
-    </DefaultBtn>
-    <DefaultBtn component="a" href="./prod-isp.html">
-      Продукт. Статические (ISP) прокси
-    </DefaultBtn>
-    <DefaultBtn component="a" href="./prod-serv.html">
-      Продукт. Серверные прокси
-    </DefaultBtn>
-    <hr />
-    <DefaultBtn component="a" href="./scraper-serp.html">
-      Скрапер. SERP
-    </DefaultBtn>
-    <DefaultBtn component="a" href="./scraper-ec.html">
-      Скрапер. E-commerce
-    </DefaultBtn>
-    <DefaultBtn component="a" href="./scraper-web.html">
-      Скрапер. Web
-    </DefaultBtn>
-    <hr />
-    <DefaultBtn component="a" href="./prices-rp.html">
-      Цены. Резидентские прокси
-    </DefaultBtn>
-    <DefaultBtn component="a" href="./prices-mp.html">
-      Цены. Мобильные прокси
-    </DefaultBtn>
-    <DefaultBtn component="a" href="./prices-isp.html">
-      Цены. Статические (ISP) прокси
-    </DefaultBtn>
-    <DefaultBtn component="a" href="./prices-dc.html">
-      Цены. Серверные прокси
-    </DefaultBtn>
-    <DefaultBtn component="a" href="./prices-serp.html">Цены. SERP</DefaultBtn>
-    <DefaultBtn component="a" href="./prices-ec.html">
-      Цены. E-commerce
-    </DefaultBtn>
-    <DefaultBtn component="a" href="./prices-web.html">Цены. Web</DefaultBtn>
-    <hr />
-    <DefaultBtn component="a" href="./cases.html">Кейсы</DefaultBtn>
-    <DefaultBtn component="a" href="./case.html">Страница кейса</DefaultBtn>
-    <hr />
-    <DefaultBtn component="a" href="./locations.html">Локации</DefaultBtn>
-    <DefaultBtn component="a" href="./location.html">
-      Страница отдельной страны
-    </DefaultBtn>
-    <DefaultBtn component="a" href="./integration.html">Интеграции</DefaultBtn>
-    <DefaultBtn component="a" href="./dev.html">Для разработчиков</DefaultBtn>
-    <DefaultBtn component="a" href="./blog.html">Блог</DefaultBtn>
-    <DefaultBtn component="a" href="./blog-detail.html">
-      Страница статьи
-    </DefaultBtn>
-  </div>
-
-  <style is:inline>
-    .page-container {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 2rem;
-      padding: 5rem 2rem;
-    }
-  </style>
+<Layout title="Главная">
+  <PageBanner />
+  <MainPrice />
+  <IPCount />
+  <IPGeo />
+  <MainAPI />
+  <Tools />
+  <Cases />
+  <SupportBanner />
+  <Advantages />
+  <MainGuarantee />
+  <MainPartners />
+  <FAQ />
 </Layout>

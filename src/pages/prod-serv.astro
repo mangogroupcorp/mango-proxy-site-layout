@@ -13,7 +13,7 @@ import DefaultBtn from "@components/_UI/DefaultBtn/DefaultBtn.astro";
 import Layout from "src/layouts/Layout.astro";
 ---
 
-<Layout title="Продукт. Серверные прокси">
+<Layout title="Продукт. Datacenter прокси">
   <Breadcrumbs items={["Главная", "Datacenter прокси"]} />
 
   <PageBanner img="./img/page-banner-5.svg">
@@ -56,8 +56,7 @@ import Layout from "src/layouts/Layout.astro";
         <br /><br />
         <ul>
           <li>
-            <b>Более 500 тысяч уникальных IP-адресов</b>, полученных с
-            соблюдением этических норм, в более чем 31 стране.
+            <b>Более 200 тысяч уникальных IP-адресов</b>
           </li>
           <li><b>99,9% времени</b> безотказной работы</li>
           <li>Безлимитный трафик</li>
@@ -68,12 +67,17 @@ import Layout from "src/layouts/Layout.astro";
     </div>
 
     <div class="page-banner__btns">
-      <DefaultBtn color="secondary">Купить</DefaultBtn>
+      <DefaultBtn
+        class="cta-purchase"
+        color="secondary"
+        onclick="Intercom('showNewMessage', 'Здравствуйте, я хочу приобрести серверные прокси')"
+      >
+        Купить
+      </DefaultBtn>
       <DefaultBtn
         icon
-        component="a"
-        href="https://dashboard.mangoproxy.com/quick-purchase"
-        target="_blank"
+        onclick="Intercom('showNewMessage', 'Здравствуйте, я хочу приобрести серверные прокси')"
+        class="cta-quick-purchase"
       >
         Быстрый тест
       </DefaultBtn>
@@ -100,7 +104,7 @@ import Layout from "src/layouts/Layout.astro";
       <h4 class="title-3 regular rp-advantages-item__title">Надежность</h4>
       <p class="label-m c-grey-8 rp-advantages-item__text">
         Все IP-адреса наших центров обработки данных получены от тщательно
-        проверенных поставщиков, что позволяет нам добиться огромного времени
+        проверенных провайдеров, что позволяет нам добиться огромного времени
         безотказной работы в 99,9%, что делает их идеальными кандидатами
         для долгосрочного проекта.
       </p>
@@ -114,7 +118,7 @@ import Layout from "src/layouts/Layout.astro";
       <h4 class="title-3 regular rp-advantages-item__title">Цена</h4>
       <p class="label-m c-grey-8 rp-advantages-item__text">
         Все IP-адреса наших центров обработки данных получены от тщательно
-        проверенных поставщиков, что позволяет нам добиться огромного времени
+        проверенных провайдеров, что позволяет нам добиться огромного времени
         безотказной работы в 99,9%, что делает их идеальными кандидатами
         для долгосрочного проекта.
       </p>
@@ -149,7 +153,28 @@ import Layout from "src/layouts/Layout.astro";
       <img src="./img/main-api-card-1.png" alt="" />
     </div>
   </InfoBanner>
-  <Pricing />
+  <Pricing
+    items={[
+      {
+        firstLabel: "от 1 IP",
+        secondLabel: "",
+        priceValue: "$1",
+        priceLabel: "/ за один порт",
+      },
+      {
+        firstLabel: "от 250 IP",
+        secondLabel: "",
+        priceValue: "$0,5",
+        priceLabel: "/ за один порт",
+      },
+      {
+        firstLabel: "от 500 IP",
+        secondLabel: "",
+        priceValue: "$0,3",
+        priceLabel: "/ за один порт",
+      },
+    ]}
+  />
   <Cases />
   <Advantages />
   <FAQ />
