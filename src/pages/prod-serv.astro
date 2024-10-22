@@ -148,7 +148,28 @@ import Layout from "src/layouts/Layout.astro";
       <img src="./img/main-api-card-1.png" alt="" />
     </div>
   </InfoBanner>
-  <Pricing />
+  <Pricing
+    items={[
+      {
+        firstLabel: "от 1 IP",
+        secondLabel: "",
+        priceValue: "$1",
+        priceLabel: "/ за один порт",
+      },
+      {
+        firstLabel: "от 250 IP",
+        secondLabel: "",
+        priceValue: "$0,5",
+        priceLabel: "/ за один порт",
+      },
+      {
+        firstLabel: "от 500 IP",
+        secondLabel: "",
+        priceValue: "$0,3",
+        priceLabel: "/ за один порт",
+      },
+    ]}
+  />
   <Cases />
   <Advantages />
   <FAQ />

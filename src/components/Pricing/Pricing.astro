@@ -2,7 +2,15 @@
 import DefaultBtn from "@components/_UI/DefaultBtn/DefaultBtn.astro";
 import InfoItem from "@components/_UI/InfoItem/InfoItem.astro";
 import { Sprite } from "astro-icon";
-const items = [
+
+type Item = {
+  firstLabel: string;
+  secondLabel?: string;
+  priceValue: string;
+  priceLabel: string;
+};
+
+const defaultItems: Item[] = [
   {
     firstLabel: "100 портов",
     secondLabel: "10% скидка",
@@ -22,6 +30,8 @@ const items = [
     priceLabel: "/ за слот в месяц",
   },
 ];
+
+let { items = defaultItems } = Astro.props;
 ---
 
 <section class="pricing">
@@ -49,16 +59,18 @@ const items = [
       <div class="swiper pricing__swiper" data-swiper>
         <div class="swiper-wrapper">
           {
-            items.map((el) => (
+            items.map((el: Item) => (
               <div class="swiper-slide">
                 <div class="pricing-item">
                   <div class="pricing-item-info" data-info>
                     <span class="title-3 regular c-500 pricing-item-info__value">
                       {el.firstLabel}
                     </span>
-                    <span class="title-4 regular c-500 pricing-item-info__desc">
-                      {el.secondLabel}
-                    </span>
+                    {el.secondLabel && (
+                      <span class="title-4 regular c-500 pricing-item-info__desc">
+                        {el.secondLabel}
+                      </span>
+                    )}
                   </div>
                   <div class="pricing-item__price">
                     <span class="lablel-l pricing-item__price-desc">от</span>

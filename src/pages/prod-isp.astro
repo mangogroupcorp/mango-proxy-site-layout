@@ -139,7 +139,28 @@ import Layout from "src/layouts/Layout.astro";
   <MPInfo title="Еще больше возможностей cтатическиx (ISP) прокси от Mango">
     <InfoBanner slot="banner" />
   </MPInfo>
-  <Pricing />
+  <Pricing
+    items={[
+      {
+        firstLabel: "от 1 IP",
+        secondLabel: "",
+        priceValue: "$7",
+        priceLabel: "/ за один порт",
+      },
+      {
+        firstLabel: "от 250 IP",
+        secondLabel: "",
+        priceValue: "$5",
+        priceLabel: "/ за один порт",
+      },
+      {
+        firstLabel: "от 500 IP",
+        secondLabel: "",
+        priceValue: "$3",
+        priceLabel: "/ за один порт",
+      },
+    ]}
+  />
   <Cases />
   <Advantages />
   <FAQ />

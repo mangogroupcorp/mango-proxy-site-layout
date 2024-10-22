@@ -82,7 +82,26 @@ import Layout from "src/layouts/Layout.astro";
 
   <MPAdvantages />
   <IPGeo />
-  <Pricing />
+  <Pricing
+    items={[
+      {
+        firstLabel: "7 дней",
+
+        priceValue: "$18",
+        priceLabel: "/ за один порт",
+      },
+      {
+        firstLabel: "30 дней",
+        priceValue: "$80",
+        priceLabel: "/ за один порт",
+      },
+      {
+        firstLabel: "60 дней",
+        priceValue: "$160",
+        priceLabel: "/ за один порт",
+      },
+    ]}
+  />
   <MPInfo />
   <Cases />
   <Advantages />
